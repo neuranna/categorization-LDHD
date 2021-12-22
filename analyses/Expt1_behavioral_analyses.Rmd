@@ -24,20 +24,7 @@ library(patchwork)
 
 ```{r read data, echo=FALSE}
 
-dat = read.csv('Expt1_data/study1_responses.csv')
-# clean the dataframe
-dat = rename(dat, Dimension=dimension, Participant=participant_number,
-             Response=selected, Accuracy=correct,
-             Category=category, Image.Name=image_path)
-dat = dat %>%
-  mutate(cBNT = scale(BNT)) %>%
-  mutate(Group = recode(Group, 'APH'='Aphasia',
-                        'PD'='Parkinsons',
-                        'NT'='Neurotypical')) %>%
-  mutate(Accuracy = as.numeric(Accuracy)) %>%
-  mutate(HitRate = ifelse((Accuracy==1 & Response=='TRUE'), 1, 0)) %>%
-  mutate(FalseAlarm = ifelse((Accuracy==0 & Response=='TRUE'), 1, 0)) %>%
-  mutate(CorrectAnswer = ifelse(Accuracy==1, Response, xor(Response, 1)))
+dat = read.csv('../data/Expt1_data/study1_responses.csv')
 
 # Set up the contrasts and factor structure
 # group - dummy coding with aphasia as the reference level
@@ -46,17 +33,11 @@ dat$Group = factor(dat$Group, levels=c('Aphasia', 'Neurotypical', 'Parkinsons'))
 dat$Dimension = factor(dat$Dimension, levels=c('HD', 'LD'))
 contrasts(dat$Dimension) = c(-0.5, 0.5)
 colnames(attr(dat$Dimension, "contrasts")) = "LD>HD"
-         
-#Remove null rows
-dat = dat %>%
- filter(!(Participant %in% c(10,19,31,100)))
-dat$Participant = paste(dat$Participant, dat$Group, sep='_')
 dat$Participant = factor(dat$Participant)
 
 # separate Hit Rate and False Alarm data
 dat.HR = dat %>% filter(CorrectAnswer=='TRUE') 
 dat.FA = dat %>% filter(CorrectAnswer=='FALSE')
-
 ```
 
 # Summary 

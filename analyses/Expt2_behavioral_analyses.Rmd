@@ -22,22 +22,7 @@ library(emmeans)
 # Read and clean the data
 
 ```{r read data, echo=FALSE}
-dat = read.csv('Expt2_data/study2.csv')
-
-# clean the dataframe
-dat = rename(dat, Dimension=Block.Type,Participant=participantID,
-             CorrectAnswer=inCategory)
-dat = dat %>%
-  mutate(cBNT = scale(BNT)) %>%
-  mutate(Group = recode(Group, 'Aphasia'='Aphasia',
-                      'PD'='Parkinsons',
-                      'NT'='Neurotypical')) %>%
-  mutate(Accuracy = as.numeric(Accuracy)) %>% 
-  mutate(HitRate = ifelse((Accuracy==1 & Response=='Y'), 1, 0)) %>%
-  mutate(FalseAlarm = ifelse((Accuracy==0 & Response=='Y'), 1, 0)) %>%
-  separate(Image.Name, c('Image.Name', NA), -4)
-
-dat$FalseAlarm[is.na(dat$FalseAlarm)]=0
+dat = read.csv('../data/Expt2_data/study2.csv')
 
 # Set up the contrasts and factor structure
 # group - dummy coding with neurotypical as the reference level
@@ -46,8 +31,6 @@ dat$Group = factor(dat$Group, levels=c('Aphasia', 'Neurotypical', 'Parkinsons'))
 dat$Dimension = factor(dat$Dimension, levels=c('HD', 'LD'))
 contrasts(dat$Dimension) = c(-0.5, 0.5)
 colnames(attr(dat$Dimension, "contrasts")) = "LD>HD"
-
-dat$Participant = paste(dat$Participant, dat$Group, sep='_')
 dat$Participant = factor(dat$Participant) 
 
 # separate Hit Rate and False Alarm data
