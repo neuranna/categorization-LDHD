@@ -1,0 +1,472 @@
+---
+title: "Expt3_main_analyses"
+author: "Anna Ivanova"
+date: "3/16/2021"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+rm(list = ls())    # clear workspace
+
+knitr::opts_chunk$set(echo = TRUE)
+library(lmerTest)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(patchwork)
+library(hypr)
+```
+
+
+# Setup
+```{r load and prepare data, echo=FALSE}
+# load data
+dat.langloc.lang <- read.csv('Expt3_neuro_data/LHlang_langlocSN_langlocSN.csv')
+dat.langloc.cat <- read.csv('Expt3_neuro_data/LHlang_langlocSN_Categorization.csv')
+dat.MDloc.MD <- read.csv('Expt3_neuro_data/MD_spatialWM_spatialWM.csv')
+dat.MDloc.cat <- read.csv('Expt3_neuro_data/MD_spatialWM_Categorization.csv')
+dat.MDloc.lang <- read.csv('Expt3_neuro_data/MD_spatialWM_langlocSN.csv')
+dat.cat.cat <- read.csv('Expt3_neuro_data/Catparcels_categorization_categorization.csv')
+dat.cat.lang <- read.csv('Expt3_neuro_data/Catparcels_categorization_langlocSN.csv')
+dat.cat.MD <- read.csv('Expt3_neuro_data/Catparcels_categorization_spatialFIN.csv')
+
+# combine
+dat.langloc <- rbind(dat.langloc.lang, dat.langloc.cat)
+dat.MDloc <- rbind(dat.MDloc.MD, dat.MDloc.cat, dat.MDloc.lang)
+dat.cat <- rbind(dat.cat.lang, dat.cat.cat, dat.cat.MD)
+
+# change participant names
+dat.langloc$Subject = substr(dat.langloc$Subject,1,3)
+dat.MDloc$Subject = substr(dat.MDloc$Subject,1,3)
+dat.cat$Subject = substr(dat.cat$Subject,1,3)
+
+# name & order ROIs
+dat.MDloc = dat.MDloc %>%
+  mutate(Hemisphere = ifelse(ROI %in% c('1','2','3','4','5','6','7','8','9','10'), 'L', 'R'),
+         ROI = recode(ROI, 
+                       '1'='1',
+                        '2'='2',
+                        '3'='3',
+                        '4'='4',
+                        '5'='5',
+                        '6'='6',
+                        '7'='7',
+                        '8'='8',
+                        '9'='9',
+                        '10'='10',
+                        '11'='1',
+                        '12'='2',
+                        '13'='3',
+                        '14'='4',
+                        '15'='5',
+                        '16'='6',
+                        '17'='7',
+                        '18'='8',
+                        '19'='9',
+                        '20'='10'))
+dat.MDloc$ROI = factor(dat.MDloc$ROI, levels = c(1,2,3,4,5,6,7,8,9,10))
+
+dat.langloc$ROI <- factor(dat.langloc$ROI, order=TRUE, levels =c('6','4','5','2','1','3'))
+dat.langloc = dat.langloc %>%
+ mutate(ROI = recode(dat.langloc$ROI,
+       '1'='PostTemp', '2'='AntTemp', '3'='AngG', '4'='IFG', '5'='MFG', '6'='IFGorb'))
+dat.cat$ROI <- factor(dat.cat$ROI, levels=c('1','11'), labels=c('1','2'))
+
+# Set up the contrasts and factor structure for hemisphere (sum coding)
+dat.MDloc$Hemisphere = factor(dat.MDloc$Hemisphere, levels=c('L', 'R'))
+contrasts(dat.MDloc$Hemisphere) = c(-0.5, 0.5)
+colnames(attr(dat.MDloc$Hemisphere, "contrasts")) = "R>L"
+
+# filter irrelevant effects
+dat.langloc <- dat.langloc %>% filter(Effect %in% c('S', 'N', 'LD', 'HD'))
+dat.langloc$Effect <- factor(dat.langloc$Effect, levels =c('S', 'N', 'LD', 'HD'))
+dat.MDloc <- dat.MDloc %>% filter(dat.MDloc$Effect %in% c('H', 'E', 'HD', 'LD', 'S', 'N'))
+dat.MDloc$Effect <- factor(dat.MDloc$Effect, levels =c('H', 'E', 'LD', 'HD', 'S', 'N'))
+dat.cat <- dat.cat %>% filter(Effect %in% c('S', 'N', 'LD', 'HD', 'H', 'E'))
+dat.cat$Effect <- factor(dat.cat$Effect, levels = c('S', 'N', 'LD', 'HD', 'H', 'E'))
+```
+
+# MD
+
+## MD stats
+
+### General
+
+```{r MD code-sent stats}
+# specify the hypotheses and corresponding contrasts
+h = hypr(~0.5*(HD+LD), LD~HD, H~E, 0.5*(H+E)~0.5*(HD+LD), N~0.5*(HD+LD), S~0.5*(HD+LD), levels=c('H', 'E', 'LD', 'HD', 'S', 'N'))
+
+contrasts(dat.MDloc$Effect) = contr.hypothesis(h)
+colnames(attr(dat.MDloc$Effect, 'contrasts')) = c('LD-HD', 'H-E', 'HE-HDLD', 'N-HDLD', 'S-HDLD')
+contrasts(dat.MDloc$Effect)
+
+# run the model
+m1 = lmer(EffectSize ~ Effect*Hemisphere + (1 | ROI) + (1 | Subject), data=dat.MDloc, REML=FALSE)
+summary(m1)
+```
+
+### By ROI
+
+```{r MD ROI stats Python, echo=FALSE}
+# Contrast effects in each ROI, FDR-corrected
+
+model.dfs <- list()
+index = 1
+
+dat.MDloc.stats = dat.MDloc %>%
+  mutate(ROI = recode(ROI,
+                       '1'='postParietal',
+                        '2'='midParietal',
+                        '3'='antParietal',
+                        '4'='supFrontal',
+                        '5'='precentral_A',
+                        '6'='precentral_B',
+                        '7'='midFrontal',
+                        '8'='midFrontalOrb',
+                        '9'='insula',
+                        '10'='medialFrontal'))
+
+for (h in c('L', 'R')) {
+  for (roi in unique(dat.MDloc.stats$ROI)) {
+    data.roi = dat.MDloc.stats %>% filter(ROI==roi) %>% filter(Hemisphere==h)
+    model = lmer(EffectSize ~ Effect + (1|Subject), data=data.roi, REML=FALSE)
+    model.df = data.frame(c('Intercept', 'LD-HD', 'H-E', 'HE-HDLD', 'N-HDLD', 'S-HDLD'),
+                          summary(model)$coefficients[,'Estimate'],
+                          summary(model)$coefficients[,'Pr(>|t|)']) %>% 
+      mutate(ROI=roi, Hemisphere=h)
+    names(model.df) = c('Regression Term', 'Beta', 'p.value', 'ROI', 'Hemisphere')
+    model.df = model.df[,c(5,4,1,2,3)] %>%
+      mutate(Beta = round(Beta, 2)) 
+    model.dfs[[index]] <- model.df
+    index = index+1
+  }
+}
+
+stats_df = do.call("rbind", model.dfs)
+# FDR correction
+stats_df = stats_df %>%
+  group_by(`Regression Term`) %>%
+  mutate(p.value = p.adjust(p.value, method="fdr")) %>%
+  mutate(p.value.FDR = ifelse(p.value>=0.001, as.character(round(p.value, 3)), '<.001'))
+stats_df$p.value = NULL
+
+write.table(stats_df, file = "MD ROI stats.csv", sep = ",", quote = FALSE, row.names = F)
+```
+
+## MD plots
+
+### MD by hemi
+
+```{r MD hemi plot, echo=FALSE}
+y.weighted.LH = dat.MDloc %>% 
+  filter(Hemisphere=='L') %>%
+  filter(Effect %in% c('H', 'E', 'HD', 'LD')) %>%
+  group_by(Effect, Subject) %>% 
+  summarize(EffectSize = weighted.mean(EffectSize, LocalizerSize))
+
+y.weighted.RH = dat.MDloc %>% 
+  filter(Hemisphere=='R') %>%
+  filter(Effect %in% c('H', 'E', 'HD', 'LD')) %>%
+  group_by(Effect, Subject) %>% 
+  summarize(EffectSize = weighted.mean(EffectSize, LocalizerSize))
+
+plot_md.LH = ggplot(y.weighted.LH)+
+  stat_summary(mapping = aes(x = "MD System - Left", y = EffectSize, fill=Effect), 
+               geom = 'col', fun.y = 'mean', color = 'black', alpha=0.85,
+               position='dodge')+
+  geom_point(mapping = aes(x = "MD System - Left", y = EffectSize, fill=Effect),
+             shape=21, size=1, alpha=0.5, stroke=1.5,
+             position=position_jitterdodge(jitter.width=0.1, jitter.height=0,
+                                           dodge.width = 0.9),
+             show.legend = FALSE)+
+  stat_summary(mapping = aes(x = "MD System - Left", y = EffectSize, group=Effect), 
+               geom = 'errorbar', fun.data = 'mean_se', 
+               color = 'black', size = 1.5, width=0,
+               position = position_dodge(width=0.9))+
+  geom_hline(yintercept=0, size=0.5, color='gray40')+
+  scale_fill_manual(values=c('#0830D0', '#99A5D8', '#0A730A', '#98CD92'),
+                    labels=c('HardWM', 'EasyWM', 'LD Categories', 'HD Categories'))+
+  scale_color_manual(values=c('#0830D0', '#99A5D8', '#0A730A', '#98CD92'))+
+  labs(x = NULL, y = "BOLD response", fill=NULL)+ 
+  coord_cartesian(ylim=c(-0.5,5.5))+
+  theme_classic()+ 
+  theme(axis.title.y = element_text(size=14), axis.text.y = element_text(size=12), 
+        axis.text.x = element_text(size=14), 
+        legend.position=c(0.75,0.85), legend.text = element_text(size=11)) 
+
+plot_md.LH
+
+plot_md.RH = ggplot(y.weighted.RH)+
+  stat_summary(mapping = aes(x = "MD System - Right", y = EffectSize, fill=Effect), 
+               geom = 'col', fun.y = 'mean', color = 'black', alpha=0.85,
+               position='dodge')+
+  geom_point(mapping = aes(x = "MD System - Right", y = EffectSize, fill=Effect),
+             shape=21, size=1, alpha=0.5, stroke=1.5,
+             position=position_jitterdodge(jitter.width=0.1, jitter.height=0,
+                                           dodge.width = 0.9),
+             show.legend = FALSE)+
+  stat_summary(mapping = aes(x = "MD System - Right", y = EffectSize, group=Effect), 
+               geom = 'errorbar', fun.data = 'mean_se', 
+               color = 'black', size = 1.5, width=0,
+               position = position_dodge(width=0.9))+
+  geom_hline(yintercept=0, size=0.5, color='gray40')+
+  scale_fill_manual(values=c('#0830D0', '#99A5D8', '#0A730A', '#98CD92'),
+                    labels=c('HardWM', 'EasyWM', 'LD Categories', 'HD Categories'))+
+  scale_color_manual(values=c('#0830D0', '#99A5D8', '#0A730A', '#98CD92'))+
+  labs(x = NULL, y = "BOLD response", fill=NULL)+ 
+  coord_cartesian(ylim=c(-0.5,5.5))+
+  theme_classic()+ 
+  theme(axis.title.y = element_text(size=14), axis.text.y = element_text(size=12), 
+        axis.text.x = element_text(size=14), 
+        legend.position='none', legend.text = element_text(size=12)) 
+
+plot_md.RH
+```
+
+
+
+### MD by ROI
+
+```{r spatialWM plot, echo=FALSE}
+
+plot_md.ROI.LH = ggplot(dat.MDloc %>% 
+                          filter(Hemisphere=='L') %>%
+                          filter(Effect %in% c('H', 'E', 'HD', 'LD')))+
+  stat_summary(mapping = aes(x = ROI, y = EffectSize, fill = Effect), 
+               geom = 'col', fun.y = 'mean', color = 'black', 
+               width=0.75, position='dodge', alpha=0.85)+
+  geom_point(mapping = aes(x = ROI, y = EffectSize, fill = Effect),
+             shape=21, size=0.5, alpha=0.4, 
+             position=position_jitterdodge(jitter.width=0.15, jitter.height=0, dodge.width=.75),
+             show.legend = FALSE)+
+  stat_summary(mapping = aes(x = ROI, y = EffectSize, group=Effect), 
+               geom = 'errorbar', fun.data = 'mean_se',  position=position_dodge(.75), 
+               color = 'black',size = 1, width=0)+
+  geom_hline(yintercept=0, size=0.5, color='gray40')+
+  labs(x=NULL, y=NULL)+
+  coord_cartesian(ylim=c(-1,9))+
+  scale_fill_manual(values=c('#0830D0', '#99A5D8', '#0A730A', '#98CD92'))+
+  scale_color_manual(values=c('#0830D0', '#99A5D8', '#0A730A', '#98CD92'))+
+  theme_classic()+
+  theme(axis.text.y = element_text(size=12), 
+        axis.text.x = element_text(size=14),
+        legend.position='none') 
+
+plot_md.ROI.RH = ggplot(dat.MDloc %>% filter(Hemisphere=='R') %>%
+                            filter(Effect %in% c('H', 'E', 'HD', 'LD')))+
+  stat_summary(mapping = aes(x = ROI, y = EffectSize, fill = Effect), 
+               geom = 'col', fun.y = 'mean', color = 'black', 
+               width=0.75, position='dodge', alpha=0.85)+
+  geom_point(mapping = aes(x = ROI, y = EffectSize, fill = Effect),
+             shape=21, size=0.5, alpha=0.4, 
+             position=position_jitterdodge(jitter.width=0.15, jitter.height=0, dodge.width=.75),
+             show.legend = FALSE)+
+  geom_hline(yintercept=0, size=0.5, color='gray40')+
+  stat_summary(mapping = aes(x = ROI, y = EffectSize, group=Effect), 
+               geom = 'errorbar', fun.data = 'mean_se',  position=position_dodge(.75), 
+               color = 'black',size = 1, width=0)+
+  labs(x=NULL, y=NULL)+
+  coord_cartesian(ylim=c(-1,9))+
+  scale_fill_manual(values=c('#0830D0', '#99A5D8', '#0A730A', '#98CD92'))+
+  scale_color_manual(values=c('#0830D0', '#99A5D8', '#0A730A', '#98CD92'))+
+  theme_classic()+
+  theme(axis.text.y = element_text(size=12), 
+        axis.text.x = element_text(size=14),
+        legend.position='none') 
+  
+
+plot_md.ROI.LH
+plot_md.ROI.RH
+```
+
+# Language
+
+## Language stats
+
+### General
+
+```{r language stats}
+# specify hypotheses and corresponding contrasts
+h = hypr(~0.5*(HD+LD), LD~HD, S~0.5*(LD+HD), N~0.5*(LD+HD), levels=c('S', 'N', 'LD', 'HD'))
+contrasts(dat.langloc$Effect) = contr.hypothesis(h)
+colnames(attr(dat.langloc$Effect, 'contrasts')) = c('LD-HD', 'S-LDHD', 'N-LDHD')
+
+contrasts(dat.langloc$Effect)
+
+m1 = lmer(EffectSize ~ Effect + (1 | ROI) + (1 | Subject), data=dat.langloc, REML=FALSE)
+summary(m1)
+```
+
+### By ROI
+
+```{r lang ROI stats, echo=FALSE}
+# Contrast effects in each ROI, FDR-corrected
+library(scales)
+
+model.dfs <- list()
+index = 1
+
+# run a regression model for each ROI & save the results as a df
+for (roi in unique(dat.langloc$ROI)) {
+  data.roi = dat.langloc %>% filter(ROI==roi)
+  model = lmer(EffectSize ~ Effect + (1|Subject), data=data.roi, REML=FALSE)
+  model.df = data.frame(c('Intercept', 'LD-HD', 'S-LDHD', 'N-LDHD'),
+                        summary(model)$coefficients[,'Estimate'],
+                        summary(model)$coefficients[,'Pr(>|t|)']) %>% 
+    mutate(ROI=roi)
+  names(model.df) = c('Regression Term', 'Beta', 'p.value', 'ROI')
+  model.df = model.df[,c(4,1,2,3)] %>%
+    mutate(Beta = round(Beta, 2))
+  model.dfs[[index]] <- model.df
+  index = index+1
+}
+
+stats_df = do.call("rbind", model.dfs)
+# FDR correction
+stats_df = stats_df %>%
+  group_by(`Regression Term`) %>%
+  mutate(p.value = p.adjust(p.value, method="fdr")) %>%
+  mutate(p.value.FDR = ifelse(p.value>=0.001, as.character(round(p.value, 3)), '<.001'))
+stats_df$p.value = NULL
+
+write.table(stats_df, file = "lang ROI stats.csv", sep = ",", quote = FALSE, row.names = F)
+```
+
+## Language plots
+### Lang average
+
+```{r language en-sent, echo=FALSE}
+y.weighted <- dat.langloc %>% 
+  group_by(Effect, Subject) %>% 
+  summarize(EffectSize = weighted.mean(EffectSize, LocalizerSize))
+
+plot_lang = ggplot(y.weighted)+
+  stat_summary(mapping = aes(x = 'Language System', y = EffectSize, fill=Effect), 
+               geom = 'col', fun.y = 'mean', color = 'black', alpha=.85,
+               position='dodge')+
+  geom_point(mapping = aes(x = 'Language System', y = EffectSize, fill=Effect),
+             shape=21, size=1, alpha=0.5, stroke=1.5,
+             position=position_jitterdodge(jitter.width=0.1, jitter.height=0,
+                                           dodge.width = 0.9),
+             show.legend = FALSE)+
+  stat_summary(mapping = aes(x = 'Language System', y = EffectSize, group=Effect), 
+               geom = 'errorbar', fun.data = 'mean_se', 
+               color = 'black', size = 1.5, width=0,
+               position = position_dodge(width=0.9))+
+  geom_hline(yintercept=0, size=0.5, color='gray40')+
+  scale_fill_manual(values=c('#990000', '#CA6D6D', '#0A730A', '#98CD92'),
+                    labels=c('Sentences', 'Nonwords', 'LD Categories', 'HD Categories'))+
+  scale_color_manual(values=c('#0830D0', '#99A5D8', '#0A730A', '#98CD92'))+
+  labs(x = NULL, y = "BOLD response", fill=NULL)+ 
+  coord_cartesian(ylim=c(-1,5))+
+  theme_classic()+ 
+  theme(axis.title.y = element_text(size=14), axis.text.y = element_text(size=12), 
+        axis.text.x = element_text(size=14), 
+        legend.position=c(0.75,0.85), legend.text = element_text(size=11)) 
+
+plot_lang
+```
+
+### Lang by ROI
+
+```{r plot lang by ROI}
+
+plot_lang.ROI = ggplot(dat.langloc)+
+  stat_summary(mapping = aes(x = ROI, y = EffectSize, fill = Effect), 
+               geom = 'col', fun.y = 'mean', color = 'black', 
+               width=0.75, position='dodge', alpha=0.85,
+               show.legend=FALSE)+
+  geom_point(mapping = aes(x = ROI, y = EffectSize, fill = Effect),
+             shape=21, size=0.5, alpha=0.4, 
+             position=position_jitterdodge(jitter.width=0.15, jitter.height=0, dodge.width=.75),
+             show.legend = FALSE)+
+  stat_summary(mapping = aes(x = ROI, y = EffectSize, group=Effect), 
+               geom = 'errorbar', fun.data = 'mean_se',  position=position_dodge(.75), 
+               color = 'black',size = 1, width=0)+
+  geom_hline(yintercept=0, size=0.5, color='gray40')+
+  labs(x=NULL, y=NULL)+
+  coord_cartesian(ylim=c(-1,5))+
+  scale_fill_manual(values=c('#990000', '#CA6D6D', '#0A730A', '#98CD92'))+
+  scale_color_manual(values=c('#0830D0', '#99A5D8', '#0A730A', '#98CD92'))+
+  theme_classic()+
+  theme(axis.text.y = element_text(size=12), 
+        axis.text.x = element_text(size=14)) 
+
+plot_lang.ROI
+```
+
+
+# GSS Categorization ROIs - LD>HD
+
+## Stats
+
+```{r MD code-sent stats}
+# set the hypotheses and contrasts
+h = hypr(~0.5*(LD+HD), HD~LD, H~E, S~N, 0.5*(H+E)~0.5*(HD+LD), S~0.5*(HD+LD), 
+         levels=c('S', 'N', 'LD', 'HD', 'H', 'E'))
+contrasts(dat.cat$Effect) = contr.hypothesis(h)
+colnames(attr(dat.cat$Effect, 'contrasts')) = c('HD-LD', 'H-E', 'S-N', 'HE-HDLD', 'S-HDLD')
+contrasts(dat.cat$Effect)
+
+dat.cat.ROI1 = dat.cat %>% filter(ROI=='1')
+dat.cat.ROI2 = dat.cat %>% filter(ROI=='2')
+m.ROI1 = lmer(EffectSize ~ Effect + (1 | Subject),
+              data=dat.cat.ROI1, REML=FALSE)
+summary(m.ROI1)
+m.ROI2 = lmer(EffectSize ~ Effect + (1 | Subject),
+              data=dat.cat.ROI2, REML=FALSE)
+summary(m.ROI2)
+```
+
+## Plot
+
+```{r language en-sent, echo=FALSE}
+plot_cat.ROI = ggplot(dat.cat)+
+  stat_summary(mapping = aes(x = ROI, y = EffectSize, fill = Effect), 
+               geom = 'col', fun.y = 'mean', color = 'black', 
+               width=0.75, position='dodge', alpha=0.85)+
+  geom_point(mapping = aes(x = ROI, y = EffectSize, fill = Effect),
+             shape=21, size=0.5, alpha=0.4, 
+             position=position_jitterdodge(jitter.width=0.15, jitter.height=0, dodge.width=.75),
+             show.legend = FALSE)+
+  stat_summary(mapping = aes(x = ROI, y = EffectSize, group=Effect), 
+               geom = 'errorbar', fun.data = 'mean_se',  position=position_dodge(.75), 
+               color = 'black',size = 1, width=0)+
+  geom_hline(yintercept=0, size=0.5, color='gray40')+
+  labs(x=NULL, y="BOLD response", fill=NULL)+
+  coord_cartesian(ylim=c(-1,5))+
+  scale_fill_manual(values=c('#990000', '#CA6D6D', '#0A730A', '#98CD92', '#0830D0', '#99A5D8'),
+                    labels=c('Sentences', 'Nonwords', 'LD Categories', 'HD Categories',
+                             'HardWM', 'EasyWM'))+
+  scale_color_manual(values=c('#0830D0', '#99A5D8', '#0A730A', '#98CD92', '#0830D0', '#99A5D8'))+
+  scale_x_discrete(
+        labels=c("fROI 1", "fROI 2"))+
+  theme_classic()+
+  theme(axis.title.y = element_text(size=14), 
+    axis.text.y = element_text(size=14), 
+        axis.text.x = element_text(size=14), 
+        legend.text = element_text(size=12)) 
+
+plot_cat.ROI
+#ggsave("Plots/GSS_plot.png", height=8, width=14, units="cm")
+```
+
+
+# COMBINE ALL
+
+```{r big figure, echo=FALSE}
+
+(plot_lang | plot_spacer() | plot_lang.ROI | plot_layout(widths = c(1,0.1,2.5)))
+ggsave("Plots/lang_plot.png", height=8, width=24, units="cm")
+```
+
+```{r big figure 2, echo=FALSE}
+
+(plot_md.LH | plot_spacer() | plot_md.ROI.LH | plot_layout(widths = c(1,0.1,2.5)))
+ggsave("Plots/MD_plot_LH.png", height=8, width=24, units="cm")
+(plot_md.RH | plot_spacer() | plot_md.ROI.RH | plot_layout(widths = c(1,0.1,2.5)))
+ggsave("Plots/MD_plot_RH.png", height=8, width=24, units="cm")
+```
+

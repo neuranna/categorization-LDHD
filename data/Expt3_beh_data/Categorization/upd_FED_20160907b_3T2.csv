@@ -1,0 +1,433 @@
+RunNum,BlockType,Category,Onset,Response,ResponseTime,Accuracy,ImageName,GoTrial
+1,1,things with doors,1473265376.51,NA,2.01366901398,1,overalls.jpg,0
+1,1,things with doors,1473265378.53,NA,2.00104689598,1,frog.jpg,0
+1,1,things with doors,1473265380.53,NA,2.03231215477,1,snowblower.jpg,0
+1,1,things with doors,1473265382.56,Y,0.687711954117,1,double decker bus.jpg,1
+1,1,things with doors,1473265384.57,NA,2.01629185677,1,001017_0528_0293_lslp.jpg,0
+1,1,things with doors,1473265386.59,Y,0.732614040375,1,Porsche 911 Carrera.jpg,1
+1,1,things with doors,1473265388.6,Y,0.842819929123,1,model village 2.jpg,1
+1,1,things with doors,1473265390.63,NA,2.01867008209,1,wire cutter.jpg,0
+1,1,things with doors,1473265392.65,NA,2.00082993507,1,970801_0397_1002_oslp.jpg,0
+1,1,things with doors,1473265394.65,NA,2.0338101387,1,carving fork.jpg,0
+1,1,things with doors,1473265396.68,Y,1.5598988533,1,closet 3.jpg,1
+1,1,things with doors,1473265398.68,NA,2.02357316017,1,nail.jpg,0
+1,2,home appliances,1473265403.26,Y,0.700896978378,1,970801_3007_1068_oslp.jpg,1
+1,2,home appliances,1473265405.28,NA,2.01379990578,1,utility knife.jpg,0
+1,2,home appliances,1473265407.29,NA,2.00108885765,1,paintbrush.jpg,0
+1,2,home appliances,1473265409.29,NA,2.00910186768,1,violin.jpg,0
+1,2,home appliances,1473265411.3,Y,1.03844809532,1,970801_0387_1043_oslp.jpg,1
+1,2,home appliances,1473265413.32,NA,2.01298689842,1,turtleneck.jpg,0
+1,2,home appliances,1473265415.33,Y,0.953585863113,1,970801_4231_1059_oslp.jpg,1
+1,2,home appliances,1473265417.36,NA,2.02031803131,1,watermelon.jpg,0
+1,2,home appliances,1473265419.38,NA,2.03049993515,1,rabbi.jpg,0
+1,2,home appliances,1473265421.41,NA,2.00598502159,1,wrench.jpg,0
+1,2,home appliances,1473265423.42,NA,2.03027296066,1,wheelchair.jpg,0
+1,2,home appliances,1473265425.45,Y,0.766310930252,1,970801_2963_1041_oslp.jpg,1
+1,1,small objects,1473265430.12,NA,2.01270604134,1,portico.jpg,0
+1,1,small objects,1473265432.13,NA,2.03247308731,1,U-Go_Esteem_Alloy_Transit_Lightweight_Wheelchair_Main[1].jpg,0
+1,1,small objects,1473265434.16,NA,2.03369498253,1,harpsichord.jpg,0
+1,1,small objects,1473265436.2,Y,0.721873998642,1,keys 7.jpg,1
+1,1,small objects,1473265438.2,Y,0.835758924484,1,3d_scanning_small_objects.jpg,1
+1,1,small objects,1473265440.22,NA,2.00952005386,1,drum set.jpg,0
+1,1,small objects,1473265442.23,Y,0.819391012192,1,pins.jpg,1
+1,1,small objects,1473265444.23,NA,2.03024101257,1,gate.jpg,0
+1,1,small objects,1473265446.26,Y,1.15128803253,1,needle 2.jpg,1
+1,1,small objects,1473265448.29,Y,0.765205860138,1,nut and bolt 6.jpg,1
+1,1,small objects,1473265450.31,NA,2.01082611084,1,football player.jpg,0
+1,1,small objects,1473265452.32,NA,2.00184512138,1,facade.jpg,0
+1,2,vegetables,1473265456.93,NA,2.03052711487,1,oboe.jpg,0
+1,2,vegetables,1473265458.96,NA,2.00089597702,1,lemons.jpg,0
+1,2,vegetables,1473265460.96,NA,2.03272080421,1,mittens.jpg,0
+1,2,vegetables,1473265462.99,NA,2.02591085434,1,kettle.jpg,0
+1,2,vegetables,1473265465.02,Y,0.82544708252,1,vegetables 1.jpg,1
+1,2,vegetables,1473265467.02,Y,0.632900953293,1,970801_3330_1053_oslps.jpg,1
+1,2,vegetables,1473265469.04,Y,0.668300867081,1,970801_3734_1027_oslp.jpg,1
+1,2,vegetables,1473265471.06,Y,0.765835046768,1,970801_0382_1056_oslp.jpg,1
+1,2,vegetables,1473265473.07,NA,2.02068710327,1,locomotive.jpg,0
+1,2,vegetables,1473265475.09,NA,2.0256960392,1,plum.jpg,0
+1,2,vegetables,1473265477.11,Y,0.755743980408,1,cabbage 2.jpg,1
+1,2,vegetables,1473265479.12,NA,2.01630401611,1,pickaxe.jpg,0
+1,1,things that are red,1473265497.7,Y,1.29828691483,1,010205_0645_0242_lslp.jpg,1
+1,1,things that are red,1473265499.71,Y,0.705286026001,1,970801_0292_1067_oslp.jpg,1
+1,1,things that are red,1473265501.73,NA,2.01050114632,1,cheeseknife.jpg,0
+1,1,things that are red,1473265503.74,NA,2.02922010422,1,double bass.jpg,0
+1,1,things that are red,1473265505.77,NA,2.01476812363,1,jetski.jpg,0
+1,1,things that are red,1473265507.78,NA,2.01336884499,1,frame.jpg,0
+1,1,things that are red,1473265509.8,NA,2.00471401215,1,fireplace.jpg,0
+1,1,things that are red,1473265511.8,NA,2.01769709587,1,jeans.jpg,0
+1,1,things that are red,1473265513.82,NA,2.0098631382,1,cantaloupe.jpg,0
+1,1,things that are red,1473265515.83,Y,0.620226860046,1,000802_c437_0041_cslp.jpg,1
+1,1,things that are red,1473265517.83,Y,1.00441884995,1,970801_2623_1064_oslp.jpg,1
+1,1,things that are red,1473265519.85,NA,2.01245617867,1,coffee maker.jpg,0
+1,2,clothes,1473265524.2,NA,2.01312112808,1,accordion.jpg,0
+1,2,clothes,1473265526.21,NA,2.00620794296,1,970801_2621_1114_oslp.jpg,0
+1,2,clothes,1473265528.22,NA,2.02777600288,1,toothbrush 9.jpg,0
+1,2,clothes,1473265530.24,NA,2.00088381767,0,970801_1642_1100_oslp.jpg,1
+1,2,clothes,1473265532.25,NA,2.00217604637,1,baby crocodile head.jpg,0
+1,2,clothes,1473265534.25,NA,2.0276081562,1,shrimp 5.jpg,0
+1,2,clothes,1473265536.28,Y,0.692148923874,1,menShorts.jpg,1
+1,2,clothes,1473265538.29,NA,2.01845002174,1,coins.jpg,0
+1,2,clothes,1473265540.31,NA,2.03144192696,0,970801_1642_1101_oslp.jpg,1
+1,2,clothes,1473265542.34,Y,0.762417078018,1,970801_0441_1054_oslp.jpg,1
+1,2,clothes,1473265544.36,NA,2.03271389008,1,double bed.jpg,0
+1,2,clothes,1473265546.39,Y,0.628028154373,1,010208_0649_0151_lslp.jpg,1
+1,2,insects,1473265551.21,NA,2.00703001022,1,train.jpg,0
+1,2,insects,1473265553.22,NA,2.00065588951,1,muffin tray.jpg,0
+1,2,insects,1473265555.22,Y,0.987239122391,1,images.jpg,1
+1,2,insects,1473265557.22,Y,1.86793279648,1,970801_0960_1058_oslp.jpg,1
+1,2,insects,1473265559.23,NA,2.00913786888,1,tape measure.jpg,0
+1,2,insects,1473265561.23,Y,0.919528961182,1,Colorado_potato_beetle_leptinotarsa_decemlineata_insect.jpg,1
+1,2,insects,1473265563.26,NA,2.02116703987,1,turkey.jpg,0
+1,2,insects,1473265565.28,Y,0.692437887192,1,insect.jpg,1
+1,2,insects,1473265567.29,NA,2.02544093132,1,oven.jpg,0
+1,2,insects,1473265569.31,NA,2.00769090652,1,police officer.jpg,0
+1,2,insects,1473265571.32,Y,1.16571211815,1,Will-we-feed-the-world-on-insects.jpg,1
+1,2,insects,1473265573.33,NA,2.0279250145,1,window.jpg,0
+1,1,animals with stripes,1473265577.72,Y,0.734249830246,1,zebra.jpg,1
+1,1,animals with stripes,1473265579.73,Y,1.17022109032,1,cl-042.jpg,1
+1,1,animals with stripes,1473265581.75,NA,2.01081800461,1,blueberries.jpg,0
+1,1,animals with stripes,1473265583.76,NA,2.03376197815,1,atv.jpg,0
+1,1,animals with stripes,1473265585.8,Y,1.22177696228,1,tropical-angel-fish-stripes-13716477.jpg,1
+1,1,animals with stripes,1473265587.8,NA,2.02534890175,1,kangaroo.jpg,0
+1,1,animals with stripes,1473265589.82,NA,2.03293609619,1,pillow.jpg,0
+1,1,animals with stripes,1473265591.86,Y,1.16069793701,1,badger.jpg,1
+1,1,animals with stripes,1473265593.86,NA,2.02663993835,1,bolt cutter.jpg,0
+1,1,animals with stripes,1473265595.89,NA,2.02834415436,1,socks.jpg,0
+1,1,animals with stripes,1473265597.92,NA,2.00091314316,1,turnips.jpg,0
+1,1,animals with stripes,1473265599.92,Y,1.1211309433,1,deer stripes.jpg,1
+1,2,animals that live in water,1473265618.31,Y,1.23046398163,1,California-Sea_Lion_624.jpg,1
+1,2,animals that live in water,1473265620.32,NA,2.01767897606,1,saxophone.jpg,0
+1,2,animals that live in water,1473265622.34,Y,1.28982210159,1,000802_c141_0021_cslp.jpg,1
+1,2,animals that live in water,1473265624.37,NA,2.0186188221,1,ukulele.jpg,0
+1,2,animals that live in water,1473265626.39,Y,1.28905200958,1,000802_c141_0048_cslp.jpg,1
+1,2,animals that live in water,1473265628.39,NA,2.02694487572,1,decorative pillow.jpg,0
+1,2,animals that live in water,1473265630.42,Y,1.16209220886,1,000802_c141_0056_cslp.jpg,1
+1,2,animals that live in water,1473265632.42,NA,2.02019715309,1,iguana003.jpg,0
+1,2,animals that live in water,1473265634.44,Y,1.08753323555,1,000802_c141_0000_cslp.jpg,1
+1,2,animals that live in water,1473265636.45,NA,2.01042199135,1,bell.jpg,0
+1,2,animals that live in water,1473265638.46,NA,2.01314496994,1,funnyclown.jpg,0
+1,2,animals that live in water,1473265640.47,NA,2.00413799286,1,bed.jpg,0
+1,1,things that are white,1473265645.06,NA,2.02259302139,1,peaches.jpg,0
+1,1,things that are white,1473265647.08,Y,0.955835819244,1,baby carriage 11.jpg,1
+1,1,things that are white,1473265649.09,Y,1.10853719711,1,nurse 88.jpg,1
+1,1,things that are white,1473265651.11,NA,2.01744604111,1,sportcoat.jpg,0
+1,1,things that are white,1473265653.13,NA,2.00469398499,1,sauce pot.jpg,0
+1,1,things that are white,1473265655.13,NA,2.02621793747,1,scuba diver.jpg,0
+1,1,things that are white,1473265657.16,Y,0.893216133118,1,boat 23.jpg,1
+1,1,things that are white,1473265659.16,NA,2.01735782623,1,lettuce.jpg,0
+1,1,things that are white,1473265661.18,Y,1.28922104836,1,970801_1011_1061_oslp.jpg,1
+1,1,things that are white,1473265663.18,NA,2.01790189743,1,hacksaw.jpg,0
+1,1,things that are white,1473265665.2,Y,0.883248806,1,white suit 1.jpg,1
+1,1,things that are white,1473265667.23,NA,2.02029299736,1,drill.jpg,0
+1,2,objects that hold water,1473265671.88,Y,1.97090411186,0,000802_c141_0038_cslp.jpg,0
+1,2,objects that hold water,1473265673.89,Y,1.17376899719,1,Brick and wooden well 1.jpg,1
+1,2,objects that hold water,1473265675.91,Y,1.30225300789,1,jansen+co+my+jug+yellow.jpg,1
+1,2,objects that hold water,1473265677.93,NA,2.01723003387,1,wall.jpg,0
+1,2,objects that hold water,1473265679.94,Y,0.853261947632,1,970801_1940_1042_oslp.jpg,1
+1,2,objects that hold water,1473265681.95,NA,2.02011394501,1,banjo.jpg,0
+1,2,objects that hold water,1473265683.97,NA,2.00088596344,1,bedroom.jpg,0
+1,2,objects that hold water,1473265685.97,NA,2.00855612755,1,bicycle.jpg,0
+1,2,objects that hold water,1473265687.98,Y,1.76156878471,1,hot water bottle 1.jpg,1
+1,2,objects that hold water,1473265689.98,NA,2.0266559124,1,socket wrench.jpg,0
+1,2,objects that hold water,1473265692,NA,2.03058791161,1,bread maker.jpg,0
+1,2,objects that hold water,1473265694.03,NA,2.00103092194,1,awning.jpg,0
+1,1,things that are brown,1473265698.62,Y,1.36933684349,1,cutting board 15.jpg,1
+1,1,things that are brown,1473265700.63,NA,2.00730490685,1,cape.jpg,0
+1,1,things that are brown,1473265702.63,NA,2.00243711472,1,cabbage.jpg,0
+1,1,things that are brown,1473265704.63,NA,2.0326089859,1,bolt.jpg,0
+1,1,things that are brown,1473265706.67,NA,2.00101399422,1,broccoli.jpg,0
+1,1,things that are brown,1473265708.67,NA,2.00283789635,1,car.jpg,0
+1,1,things that are brown,1473265710.67,Y,1.21907305717,1,football 9.jpg,1
+1,1,things that are brown,1473265712.7,Y,0.997923851013,1,glass bottles 1.jpg,1
+1,1,things that are brown,1473265714.72,Y,0.79957985878,1,black bear walking 1.jpg,1
+1,1,things that are brown,1473265716.73,NA,2.0204000473,1,970801_1011_1115_oslp.jpg,0
+1,1,things that are brown,1473265718.75,Y,1.58907079697,1,narope sarastro.jpg,1
+1,1,things that are brown,1473265720.78,NA,2.01098489761,1,blackberries.jpg,0
+2,2,farm animals,1473265816.08,NA,2.02464795113,1,T.jpg,0
+2,2,farm animals,1473265818.1,NA,2.01004004478,0,970801_0383_1049_oslp.jpg,1
+2,2,farm animals,1473265820.11,NA,2.01702308655,1,piano.jpg,0
+2,2,farm animals,1473265822.13,NA,2.01239705086,1,screwdriver.jpg,0
+2,2,farm animals,1473265824.14,Y,1.11429905891,1,970801_0104_1010_oslp.jpg,1
+2,2,farm animals,1473265826.17,Y,0.871536016464,1,970801_0104_1028_oslps.jpg,1
+2,2,farm animals,1473265828.19,Y,0.838037014008,1,970801_3340_3042_oslp.jpg,1
+2,2,farm animals,1473265830.21,NA,2.02067518234,1,saucer.jpg,0
+2,2,farm animals,1473265832.24,Y,0.967736959457,1,970801_0383_1020_oslp.jpg,1
+2,2,farm animals,1473265834.25,NA,2.00937104225,1,carrots.jpg,0
+2,2,farm animals,1473265836.26,NA,2.00880289078,1,shark.jpg,0
+2,2,farm animals,1473265838.26,NA,2.00608897209,1,000802_c141_0001_cslp.jpg,0
+2,1,things that are round,1473265842.63,NA,2.02215600014,1,gondola.jpg,0
+2,1,things that are round,1473265844.65,NA,2.02955412865,1,t-shirt.jpg,0
+2,1,things that are round,1473265846.68,NA,2.00266599655,1,leaf blower.jpg,0
+2,1,things that are round,1473265848.68,NA,2.0274078846,1,kilt.jpg,0
+2,1,things that are round,1473265850.71,Y,0.789380788803,1,rounded_39.jpg,1
+2,1,things that are round,1473265852.72,NA,2.01803803444,1,rubiks cube.jpg,0
+2,1,things that are round,1473265854.74,NA,2.00247001648,1,970801_0397_1019_oslp.jpg,0
+2,1,things that are round,1473265856.74,Y,0.723618030548,1,dartboard.jpg,1
+2,1,things that are round,1473265858.75,Y,1.13630700111,1,Old-wooden-wheel.jpg,1
+2,1,things that are round,1473265860.76,NA,2.01328492165,1,skateboard.jpg,0
+2,1,things that are round,1473265862.77,Y,0.853338003159,1,wedgwood-sterling-plate-032677419458.jpg,1
+2,1,things that are round,1473265864.8,Y,0.7402780056,1,table.jpg,1
+2,1,animals with stripes,1473265869.06,Y,1.4295938015,1,5991975153_08980f66a8_b.jpg,1
+2,1,animals with stripes,1473265871.1,Y,0.566251039505,1,zebra.jpg,1
+2,1,animals with stripes,1473265873.11,NA,2.01620101929,1,kangaroo.jpg,0
+2,1,animals with stripes,1473265875.12,NA,2.0008699894,1,stripes-.jpg,0
+2,1,animals with stripes,1473265877.12,Y,1.1226940155,1,striped hyena.jpg,1
+2,1,animals with stripes,1473265879.13,NA,2.02150607109,1,bagpipes.jpg,0
+2,1,animals with stripes,1473265881.15,NA,2.03218698502,1,shark.jpg,0
+2,1,animals with stripes,1473265883.18,NA,2.00353503227,1,atv.jpg,0
+2,1,animals with stripes,1473265885.19,NA,2.00625300407,1,pillow.jpg,0
+2,1,animals with stripes,1473265887.19,Y,0.920418977737,1,rodent stripes.jpg,1
+2,1,animals with stripes,1473265889.19,NA,2.0147061348,1,turnips.jpg,0
+2,1,animals with stripes,1473265891.21,NA,2.00532388687,1,socks.jpg,0
+2,2,musical instruments,1473265895.73,NA,2.01463413239,1,teaspoon.jpg,0
+2,2,musical instruments,1473265897.74,Y,0.588273048401,1,bugle.jpg,1
+2,2,musical instruments,1473265899.75,NA,2.0260989666,1,belt.jpg,0
+2,2,musical instruments,1473265901.78,NA,2.00338101387,1,710-1560_PI_TPS2127122.jpg,0
+2,2,musical instruments,1473265903.78,NA,2.01526403427,1,pumpkin.jpg,0
+2,2,musical instruments,1473265905.79,NA,2.00015091896,1,apron.jpg,0
+2,2,musical instruments,1473265907.79,Y,0.688135147095,1,clarinet 3.jpg,1
+2,2,musical instruments,1473265909.8,NA,2.00844120979,1,socks.jpg,0
+2,2,musical instruments,1473265911.81,Y,0.721878051758,1,vibraphone.jpg,1
+2,2,musical instruments,1473265913.82,NA,2.00778388977,1,bikini.jpg,0
+2,2,musical instruments,1473265915.82,Y,0.597616195679,1,guitar 2.jpg,1
+2,2,musical instruments,1473265917.84,NA,2.03168916702,1,baker.jpg,0
+2,1,long thin objects,1473265936.28,NA,2.00580000877,1,laundry basket.jpg,0
+2,1,long thin objects,1473265938.28,NA,2.00360798836,1,glasses.jpg,0
+2,1,long thin objects,1473265940.28,NA,2.01191902161,1,chair.jpg,0
+2,1,long thin objects,1473265942.3,Y,1.48676300049,1,cigar 2.jpg,1
+2,1,long thin objects,1473265944.33,Y,0.938428878784,1,long screw 2.jpg,1
+2,1,long thin objects,1473265946.35,NA,2.01407194138,1,cranberries.jpg,0
+2,1,long thin objects,1473265948.36,Y,0.865831136703,1,asparagus spears.jpg,1
+2,1,long thin objects,1473265950.38,NA,2.01113295555,1,chihuahua.jpg,0
+2,1,long thin objects,1473265952.39,NA,2.03574419022,1,000802_c141_0008_cslp.jpg,0
+2,1,long thin objects,1473265954.43,Y,1.19466400146,0,blimp.jpg,0
+2,1,long thin objects,1473265956.44,Y,1.94721984863,0,Black_Stapler.jpg,0
+2,1,long thin objects,1473265958.46,Y,0.804879903793,1,silver candlestick 1.jpg,1
+2,2,things that fly,1473265962.75,NA,2.01503181458,1,stepladder.jpg,0
+2,2,things that fly,1473265964.77,NA,2.0176320076,1,blowtorch.jpg,0
+2,2,things that fly,1473265966.79,Y,0.757668972015,1,970801_2955_1012_oslpd.jpg,1
+2,2,things that fly,1473265968.82,NA,2.01978802681,1,strawberry.jpg,0
+2,2,things that fly,1473265970.84,NA,2.03278589249,1,beaver.jpg,0
+2,2,things that fly,1473265972.87,NA,2.03068089485,1,butter knife.jpg,0
+2,2,things that fly,1473265974.9,NA,2.00302410126,1,go-kart.jpg,0
+2,2,things that fly,1473265976.9,Y,0.919136047363,1,970801_4251_1026_oslp.jpg,1
+2,2,things that fly,1473265978.94,Y,0.770043849945,1,970801_4253_1086_oslp.jpg,1
+2,2,things that fly,1473265980.96,NA,2.00780200958,1,steel drum.jpg,0
+2,2,things that fly,1473265982.97,NA,2.00436782837,1,robe.jpg,0
+2,2,things that fly,1473265984.97,Y,0.923774003983,1,blue butterfly.jpg,1
+2,1,things that are green,1473265989.43,NA,2.02477502823,1,penguin.jpg,0
+2,1,things that are green,1473265991.45,NA,2.01421689987,1,scientist.jpg,0
+2,1,things that are green,1473265993.47,Y,0.695195913315,1,010205_0642_0247_lslp.jpg,1
+2,1,things that are green,1473265995.48,Y,0.504664182663,1,010308_0689_0409_lslp.jpg,1
+2,1,things that are green,1473265997.51,NA,2.01554584503,1,970801_2502_2031_oslpj.jpg,0
+2,1,things that are green,1473265999.53,NA,2.00455999374,1,swan.jpg,0
+2,1,things that are green,1473266001.53,Y,0.481342077255,1,000802_c294_0052_cslp.jpg,1
+2,1,things that are green,1473266003.55,NA,2.01031184196,1,970801_1642_1099_oslp.jpg,0
+2,1,things that are green,1473266005.56,NA,2.02969503403,1,whale.jpg,0
+2,1,things that are green,1473266007.59,NA,2.03108596802,1,970801_0116_1039_oslp.jpg,0
+2,1,things that are green,1473266009.62,Y,0.523761987686,1,970801_0959_1088_oslp.jpg,1
+2,1,things that are green,1473266011.63,NA,2.0063188076,1,stairs.jpg,0
+2,2,animals that live in water,1473266015.84,NA,2.02020096779,1,bathrobe.jpg,0
+2,2,animals that live in water,1473266017.86,Y,1.12203001976,1,lobster 3.jpg,1
+2,2,animals that live in water,1473266019.86,NA,2.00967907906,1,bed.jpg,0
+2,2,animals that live in water,1473266021.87,NA,2.03284478188,1,dairy cow.jpg,0
+2,2,animals that live in water,1473266023.9,Y,0.752935171127,1,000802_c141_0040_cslp.jpg,1
+2,2,animals that live in water,1473266025.9,NA,2.02233099937,1,Peacock-tail-down.jpg,0
+2,2,animals that live in water,1473266027.93,NA,2.02106499672,1,truck_01.jpg,0
+2,2,animals that live in water,1473266029.95,Y,0.817089080811,1,000802_c141_0035_cslp.jpg,1
+2,2,animals that live in water,1473266031.98,Y,0.735256910324,1,000802_c141_0055_cslp.jpg,1
+2,2,animals that live in water,1473266034,Y,0.664237976074,1,000802_c141_0007_cslp.jpg,1
+2,2,animals that live in water,1473266036.02,NA,2.02756714821,1,iguana003.jpg,0
+2,2,animals that live in water,1473266038.05,NA,2.03023815155,1,winter-1122021_960_720.jpg,0
+2,1,things with doors,1473266056.51,NA,2.02100801468,1,cello.jpg,0
+2,1,things with doors,1473266058.53,Y,0.690222978592,1,model village 2.jpg,1
+2,1,things with doors,1473266060.54,NA,2.03058815002,1,001017_0528_0293_lslp.jpg,0
+2,1,things with doors,1473266062.58,Y,0.996848106384,1,greenhouse.jpg,1
+2,1,things with doors,1473266064.59,NA,2.01547193527,1,frog.jpg,0
+2,1,things with doors,1473266066.6,NA,2.03257107735,1,juicer.jpg,0
+2,1,things with doors,1473266068.63,NA,2.00637102127,1,carving fork.jpg,0
+2,1,things with doors,1473266070.64,Y,0.827829837799,1,refrigerator 7.jpg,1
+2,1,things with doors,1473266072.65,Y,0.832441091537,1,Porsche 911 Carrera.jpg,1
+2,1,things with doors,1473266074.67,NA,2.02036905289,1,overalls.jpg,0
+2,1,things with doors,1473266076.69,NA,2.01106595993,1,circular saw.jpg,0
+2,1,things with doors,1473266078.7,NA,2.0331299305,1,wire cutter.jpg,0
+2,2,non food things found in the kitchen,1473266083.5,NA,2.00665903091,1,tuba.jpg,0
+2,2,non food things found in the kitchen,1473266085.51,Y,1.07441520691,1,970801_4233_1077_oslp.jpg,1
+2,2,non food things found in the kitchen,1473266087.53,Y,0.869405031204,1,970801_2943_1117_oslps.jpg,1
+2,2,non food things found in the kitchen,1473266089.55,NA,2.02110409737,1,trenchcoat.jpg,0
+2,2,non food things found in the kitchen,1473266091.57,Y,0.89568400383,1,970801_4233_1076_oslp.jpg,1
+2,2,non food things found in the kitchen,1473266093.58,NA,2.0099439621,1,tire iron.jpg,0
+2,2,non food things found in the kitchen,1473266095.59,NA,2.03236198425,1,apple.jpg,0
+2,2,non food things found in the kitchen,1473266097.62,Y,1.09005618095,1,970801_2964_1046_oslp.jpg,1
+2,2,non food things found in the kitchen,1473266099.62,NA,2.00884318352,1,asparagus.jpg,0
+2,2,non food things found in the kitchen,1473266101.63,NA,2.00634884834,1,christmas stockings.jpg,0
+2,2,non food things found in the kitchen,1473266103.64,NA,2.00102996826,1,van.jpg,0
+2,2,non food things found in the kitchen,1473266105.64,Y,0.718267202377,1,970801_2963_2020_oslp.jpg,1
+2,2,insects,1473266110.3,Y,1.37480688095,1,images.jpg,1
+2,2,insects,1473266112.32,Y,0.535822868347,1,970801_0959_1051_oslp.jpg,1
+2,2,insects,1473266114.34,Y,0.702471017838,1,Will-we-feed-the-world-on-insects.jpg,1
+2,2,insects,1473266116.37,NA,2.01829695702,1,contortionist.jpg,0
+2,2,insects,1473266118.39,NA,2.00746488571,1,gorilla.jpg,0
+2,2,insects,1473266120.39,NA,2.03163504601,1,muffin tray.jpg,0
+2,2,insects,1473266122.43,NA,2.01357698441,1,shirt.jpg,0
+2,2,insects,1473266124.44,NA,2.01054000854,1,turkey.jpg,0
+2,2,insects,1473266126.45,Y,1.36211109161,1,970801_0959_1114_oslp.jpg,1
+2,2,insects,1473266128.46,NA,2.02203917503,1,oven.jpg,0
+2,2,insects,1473266130.48,NA,2.03279089928,1,seal.jpg,0
+2,2,insects,1473266132.51,NA,2.02827501297,1,pineapple.jpg,0
+2,1,things that are soft,1473266137.13,NA,2.01357698441,1,paring knife.jpg,0
+2,1,things that are soft,1473266139.15,NA,2.03254890442,1,sedan.jpg,0
+2,1,things that are soft,1473266141.18,Y,1.18435788155,1,fur hat.jpg,1
+2,1,things that are soft,1473266143.2,Y,1.59356594086,1,feather duster.jpg,1
+2,1,things that are soft,1473266145.23,NA,2.02284193039,1,teacher.jpg,0
+2,1,things that are soft,1473266147.26,Y,0.822910070419,1,sofa.jpg,1
+2,1,things that are soft,1473266149.27,Y,0.841622114182,1,fluffy_chicks.jpg,1
+2,1,things that are soft,1473266151.29,NA,2.03184700012,1,arch.jpg,0
+2,1,things that are soft,1473266153.32,NA,2.00867795944,1,refrigerator.jpg,0
+2,1,things that are soft,1473266155.33,NA,2.01166296005,1,motorcycle.jpg,0
+2,1,things that are soft,1473266157.34,Y,0.882275104523,1,tumblr_llfth2iV6F1qfh5vvo1_500.jpg,1
+2,1,things that are soft,1473266159.37,NA,2.02962803841,1,snake.jpg,0
+3,1,things that are white,1473266249.09,Y,0.837558984756,1,970801_0383_1007_oslp.jpg,1
+3,1,things that are white,1473266251.1,NA,2.0215690136,1,raincoat.jpg,0
+3,1,things that are white,1473266253.12,Y,0.894917011261,1,970801_1011_1061_oslp.jpg,1
+3,1,things that are white,1473266255.13,Y,0.775927782059,1,970801_3331_1073_oslp.jpg,1
+3,1,things that are white,1473266257.16,Y,0.767171144485,1,970801_3735_1093_oslp.jpg,1
+3,1,things that are white,1473266259.18,NA,2.0187869072,1,sauce pot.jpg,0
+3,1,things that are white,1473266261.2,NA,2.02813410759,1,peaches.jpg,0
+3,1,things that are white,1473266263.22,NA,2.03127384186,1,scuba diver.jpg,0
+3,1,things that are white,1473266265.26,NA,2.00513005257,1,drill.jpg,0
+3,1,things that are white,1473266267.26,NA,2.02920103073,1,lute.jpg,0
+3,1,things that are white,1473266269.29,NA,2.01619291306,1,hammer.jpg,0
+3,1,things that are white,1473266271.31,Y,1.0917198658,1,daisies.jpg,1
+3,2,objects used for for transportation,1473266275.62,NA,2.00910902023,1,xylophone.jpg,0
+3,2,objects used for for transportation,1473266277.63,Y,0.887054204941,1,970801_3737_2055_oslp.jpg,1
+3,2,objects used for for transportation,1473266279.63,NA,2.00621390343,1,teapot.jpg,0
+3,2,objects used for for transportation,1473266281.64,Y,0.959034919739,1,970801_4750_1025_oslp.jpg,1
+3,2,objects used for for transportation,1473266283.65,NA,2.02602791786,1,waffle iron.jpg,0
+3,2,objects used for for transportation,1473266285.67,Y,0.623042106628,1,in_future_cars_might_decide_if_driver_is_drunk.jpg,1
+3,2,objects used for for transportation,1473266287.68,Y,0.737623929977,1,hot air balloon 1.jpg,1
+3,2,objects used for for transportation,1473266289.7,Y,0.76705288887,1,970801_0371_1069_oslp.jpg,1
+3,2,objects used for for transportation,1473266291.71,NA,2.02940702438,1,steamer.jpg,0
+3,2,objects used for for transportation,1473266293.74,NA,2.00311207771,1,raisins.jpg,0
+3,2,objects used for for transportation,1473266295.75,NA,2.03279805183,1,tank top.jpg,0
+3,2,objects used for for transportation,1473266297.78,NA,2.0027179718,1,trombone.jpg,0
+3,2,objects found in the laundry room,1473266302.07,NA,2.01535606384,1,plate.jpg,0
+3,2,objects found in the laundry room,1473266304.08,Y,1.22086000443,1,010306_0686_0951_lslp.jpg,1
+3,2,objects found in the laundry room,1473266306.11,NA,2.02867484093,1,mango.jpg,0
+3,2,objects found in the laundry room,1473266308.14,NA,2.00969910622,1,viola.jpg,0
+3,2,objects found in the laundry room,1473266310.15,NA,2.03090906143,0,970801_4750_1015_oslp.jpg,1
+3,2,objects found in the laundry room,1473266312.18,NA,2.01926016808,1,suv.jpg,0
+3,2,objects found in the laundry room,1473266314.2,Y,0.961915969849,1,drying rack.jpg,1
+3,2,objects found in the laundry room,1473266316.2,Y,0.769083023071,1,970801_0479_1055_oslp.jpg,1
+3,2,objects found in the laundry room,1473266318.22,Y,0.698487997055,1,000802_c643_0079_cslp2.jpg,1
+3,2,objects found in the laundry room,1473266320.23,NA,2.01527690887,1,handbell.jpg,0
+3,2,objects found in the laundry room,1473266322.24,Y,1.79439711571,0,sandals.jpg,0
+3,2,objects found in the laundry room,1473266324.28,NA,2.01854610443,1,table saw.jpg,0
+3,1,things with doors,1473266328.69,Y,0.668807029724,1,greenhouse.jpg,1
+3,1,things with doors,1473266330.71,NA,2.0101518631,1,circular saw.jpg,0
+3,1,things with doors,1473266332.72,Y,0.555130958557,1,Porsche 911 Carrera.jpg,1
+3,1,things with doors,1473266334.72,NA,2.01930904388,1,001017_0528_0293_lslp.jpg,0
+3,1,things with doors,1473266336.74,NA,2.01356601715,1,wire cutter.jpg,0
+3,1,things with doors,1473266338.75,Y,0.687095880508,1,wardrobe.jpg,1
+3,1,things with doors,1473266340.76,NA,2.01731610298,1,970801_0397_1002_oslp.jpg,0
+3,1,things with doors,1473266342.77,NA,2.02880787849,1,cello.jpg,0
+3,1,things with doors,1473266344.8,Y,0.788074970245,1,oven 1.jpg,1
+3,1,things with doors,1473266346.81,NA,2.01180195808,1,frog.jpg,0
+3,1,things with doors,1473266348.82,NA,2.0336329937,1,carving fork.jpg,0
+3,1,things with doors,1473266350.85,NA,2.02794599533,1,overalls.jpg,0
+3,2,objects that hold water,1473266369.38,NA,2.02578401566,1,bicycle.jpg,0
+3,2,objects that hold water,1473266371.41,Y,1.35161805153,1,water jug 4.jpg,1
+3,2,objects that hold water,1473266373.44,Y,1.1374540329,1,jansen+co+my+jug+yellow.jpg,1
+3,2,objects that hold water,1473266375.45,NA,2.00750017166,1,bow tie.jpg,0
+3,2,objects that hold water,1473266377.46,NA,2.00049185753,1,sled.jpg,0
+3,2,objects that hold water,1473266379.46,Y,0.721209049225,1,copper kettle.jpg,1
+3,2,objects that hold water,1473266381.46,NA,2.01158213615,1,banjo.jpg,0
+3,2,objects that hold water,1473266383.47,NA,2.01594805717,1,toaster.jpg,0
+3,2,objects that hold water,1473266385.49,Y,0.720436096191,1,970801_1940_1042_oslp.jpg,1
+3,2,objects that hold water,1473266387.49,NA,2.01418018341,1,970801_0397_1038_oslp.jpg,0
+3,2,objects that hold water,1473266389.51,NA,2.0001912117,1,awning.jpg,0
+3,2,objects that hold water,1473266391.51,Y,1.48512601852,1,water dish 4.jpg,1
+3,1,things that are blue,1473266395.87,Y,0.763570785522,1,970801_0194_1001_oslp.jpg,1
+3,1,things that are blue,1473266397.89,NA,2.02057814598,1,firefighter.jpg,0
+3,1,things that are blue,1473266399.91,Y,0.791884899139,1,970801_1381_1118_oslp.jpg,1
+3,1,things that are blue,1473266401.91,NA,2.02980303764,1,rice cooker.jpg,0
+3,1,things that are blue,1473266403.94,NA,2.01568293571,1,970801_2943_1055_oslp.jpg,0
+3,1,things that are blue,1473266405.96,Y,0.724509954453,1,970801_9580_1100_oslp.jpg,1
+3,1,things that are blue,1473266407.97,Y,0.865633010864,1,970801_3725_1076_oslp.jpg,1
+3,1,things that are blue,1473266409.97,NA,2.02643084526,1,panda.jpg,0
+3,1,things that are blue,1473266412,NA,2.00063300133,1,grilled vegetables on skewer.jpg,0
+3,1,things that are blue,1473266414,NA,2.01207494736,1,monk.jpg,0
+3,1,things that are blue,1473266416.01,NA,2.0332300663,1,sailboat 9.jpg,0
+3,1,things that are blue,1473266418.04,NA,2.01532006264,1,skirt.jpg,0
+3,2,birds,1473266422.33,NA,2.02071809769,1,giraffe.jpg,0
+3,2,birds,1473266424.35,Y,0.530070066452,1,970801_0382_1104_oslp.jpg,1
+3,2,birds,1473266426.36,NA,2.0230948925,1,Basketball.jpg,0
+3,2,birds,1473266428.39,NA,2.01357722282,1,jet plane.jpg,0
+3,2,birds,1473266430.4,NA,2.0063970089,1,grasshopper.jpg,0
+3,2,birds,1473266432.41,NA,2.00737404823,1,000802_c141_0043_cslp.jpg,0
+3,2,birds,1473266434.41,Y,0.856032133102,1,970801_0383_1010_oslpw.jpg,1
+3,2,birds,1473266436.42,NA,2.01313900948,1,Christmas pillow 4.jpg,0
+3,2,birds,1473266438.43,NA,2.00172019005,1,plastic fly.jpg,0
+3,2,birds,1473266440.43,Y,0.718533992767,1,970801_0383_1055_oslp.jpg,1
+3,2,birds,1473266442.46,Y,0.70741891861,1,970801_0383_1014_oslp.jpg,1
+3,2,birds,1473266444.48,NA,2.02220606804,1,sneakers.jpg,0
+3,1,things that are orange,1473266448.82,NA,2.02453613281,1,soup spoon.jpg,0
+3,1,things that are orange,1473266450.85,Y,0.717781066895,1,970801_2943_1064_oslp.jpg,1
+3,1,things that are orange,1473266452.86,NA,2.01475787163,1,000802_c437_0045_cslp.jpg,0
+3,1,things that are orange,1473266454.87,NA,2.00011515617,1,pig.jpg,0
+3,1,things that are orange,1473266456.87,Y,0.752579927444,1,010125_0628_0077_lslp.jpg,1
+3,1,things that are orange,1473266458.87,Y,1.24298095703,1,001025_0531_0250_lslp.jpg,1
+3,1,things that are orange,1473266460.89,NA,2.0188190937,0,970801_0021_1059_oslp.jpg,1
+3,1,things that are orange,1473266462.91,NA,2.00587201118,1,guitar.jpg,0
+3,1,things that are orange,1473266464.92,NA,2.03300404549,1,koala.jpg,0
+3,1,things that are orange,1473266466.95,NA,2.00388097763,1,970801_1224_1052_oslp.jpg,0
+3,1,things that are orange,1473266468.95,Y,1.05101394653,1,001010_0525_0020_lslp.jpg,1
+3,1,things that are orange,1473266470.99,NA,2.03026294708,1,janitor.jpg,0
+3,2,things that fly,1473266489.24,Y,1.26402521133,1,970801_0383_1079_oslp.jpg,1
+3,2,things that fly,1473266491.25,NA,2.01360201836,1,steel drum.jpg,0
+3,2,things that fly,1473266493.26,NA,2.01838898659,1,steeple.jpg,0
+3,2,things that fly,1473266495.28,Y,1.0785279274,1,970801_0387_1021_oslp.jpg,1
+3,2,things that fly,1473266497.31,NA,2.01131391525,1,swimmer.jpg,0
+3,2,things that fly,1473266499.32,NA,2.03227591515,1,trumpet.jpg,0
+3,2,things that fly,1473266501.35,NA,2.00792503357,1,station wagon.jpg,0
+3,2,things that fly,1473266503.36,Y,0.721570014954,1,970801_4251_1026_oslp.jpg,1
+3,2,things that fly,1473266505.36,Y,0.897974014282,1,bumble bee 1.jpg,1
+3,2,things that fly,1473266507.38,NA,2.00727295876,1,stepladder.jpg,0
+3,2,things that fly,1473266509.39,NA,2.00631403923,1,go-kart.jpg,0
+3,2,things that fly,1473266511.39,NA,2.02842712402,1,butter knife.jpg,0
+3,1,long thin objects,1473266515.66,Y,1.04012608528,1,PR60208.jpg,1
+3,1,long thin objects,1473266517.68,NA,2.02361607552,1,mug.jpg,0
+3,1,long thin objects,1473266519.71,Y,0.72230887413,1,long dagger.jpg,1
+3,1,long thin objects,1473266521.71,Y,1.14626383781,1,red bottle 4.jpg,1
+3,1,long thin objects,1473266523.74,Y,0.933109998703,0,pipe.jpg,0
+3,1,long thin objects,1473266525.76,Y,1.33274292946,0,Black_Stapler.jpg,0
+3,1,long thin objects,1473266527.77,NA,2.01036000252,1,cups.jpg,0
+3,1,long thin objects,1473266529.78,Y,0.988377094269,1,pen 61.jpg,1
+3,1,long thin objects,1473266531.78,Y,1.17011189461,1,file.jpg,1
+3,1,long thin objects,1473266533.8,NA,2.02566194534,1,laundry basket.jpg,0
+3,1,long thin objects,1473266535.82,NA,2.00103712082,1,chihuahua.jpg,0
+3,1,long thin objects,1473266537.83,NA,2.00484013557,1,000802_c141_0008_cslp.jpg,0
+3,1,things that are soft,1473266542.29,NA,2.02342510223,1,refrigerator.jpg,0
+3,1,things that are soft,1473266544.31,Y,0.719306945801,1,fur hat.jpg,1
+3,1,things that are soft,1473266546.34,NA,2.02350401878,1,arch.jpg,0
+3,1,things that are soft,1473266548.36,Y,0.919507980347,1,candy-floss-flavourart-5827-p.jpg,1
+3,1,things that are soft,1473266550.4,NA,2.01957297325,1,paring knife.jpg,0
+3,1,things that are soft,1473266552.42,Y,0.994649887085,1,petBed.jpg,1
+3,1,things that are soft,1473266554.43,NA,2.02748417854,1,submarine.jpg,0
+3,1,things that are soft,1473266556.46,NA,2.00457787514,1,sedan.jpg,0
+3,1,things that are soft,1473266558.46,NA,2.03499412537,1,thumbtack.jpg,0
+3,1,things that are soft,1473266560.5,Y,0.721648931503,1,feather.jpg,1
+3,1,things that are soft,1473266562.5,Y,0.697162151337,1,cats-animals-kittens-background.jpg,1
+3,1,things that are soft,1473266564.52,NA,2.0148768425,1,turtle.jpg,0
+3,2,dangerous animals,1473266569.14,NA,2.01315712929,1,pets.jpg,0
+3,2,dangerous animals,1473266571.15,NA,2.03234910965,1,harmonica.jpg,0
+3,2,dangerous animals,1473266573.18,NA,2.00316786766,1,chisel.jpg,0
+3,2,dangerous animals,1473266575.19,Y,1.01913309097,1,crocodile.jpg,1
+3,2,dangerous animals,1473266577.22,NA,2.01844596863,0,lizard 141.jpg,1
+3,2,dangerous animals,1473266579.24,NA,2.00561881065,1,butterfly-05.jpg,0
+3,2,dangerous animals,1473266581.24,NA,2.00915694237,1,frying pan.jpg,0
+3,2,dangerous animals,1473266583.25,Y,1.91888189316,1,Hippopotamus-Hippopotamus-009.jpg,1
+3,2,dangerous animals,1473266585.27,NA,2.01009202003,1,onion.jpg,0
+3,2,dangerous animals,1473266587.28,Y,1.08760499954,1,snake 40.jpg,1
+3,2,dangerous animals,1473266589.28,Y,0.779296159744,1,tiger prowling.jpg,1
+3,2,dangerous animals,1473266591.32,NA,2.02117204666,1,cucumbers.jpg,0

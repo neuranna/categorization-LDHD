@@ -1,0 +1,21 @@
+***study2***
+
+itemID - image trial number
+participantID
+file - can ignore 
+Group - Neurotypical (NT), Parkinson's (PD), Aphasia 
+AGE (in years)
+Education - 1: up to 16 years, 2: up to 18 years, 3: college degree, 4: post-graduate degree
+Gender - Male (1) or Female (2)
+BNT - Boston Naming Test score
+TPO - time post onset (months)
+Block Type - same as category dimension: high (HD), low (LD)
+Category - category name 
+Onset - trial start time (Unix Time)
+Response - yes (Y), no (N) or no response (NA)
+ResponseTime (in seconds)
+Accuracy - was the response correct? TRUE, FALSE
+Image name - the file name of the image
+inCategory - does this image belong to the stated category? yes (1), no (0)
+
+

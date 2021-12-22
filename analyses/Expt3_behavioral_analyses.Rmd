@@ -1,0 +1,217 @@
+---
+title: "Expt3_behavioral_analyses"
+author: "Anna Ivanova"
+date: "3/16/2021"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+rm(list = ls())    # clear workspace
+
+knitr::opts_chunk$set(echo = TRUE)
+library(lme4)
+library(lmerTest)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(patchwork)
+```
+
+# Categorization
+## Read and clean the data
+
+```{r read data, echo=FALSE}
+# supporting function
+read_beh_file <- function(subID) {
+  df <- read.csv(paste('Expt3_beh_data/Categorization/', subID, sep=''))
+  df$Participant=subID
+  return(df)
+}
+
+files = list.files(path='Expt3_beh_data/Categorization/', pattern="*.csv")
+dat = do.call(rbind, 
+              lapply(files, function(x) read_beh_file(x)))
+
+# clean the dataframe
+#dat$Response[is.na(dat$Response)] = 'N'
+dat = dat %>%
+  rename(CorrectAnswer=GoTrial) %>%
+  mutate(Dimension = recode(BlockType, '1'='LD', '2'='HD')) %>%
+  mutate(HitRate = ifelse((Accuracy==1 & Response=='Y'), 1, 0)) %>%
+  mutate(FalseAlarm = ifelse((Accuracy==0 & Response=='Y'), 1, 0)) 
+         
+dat$BlockType = NULL
+dat$Onset = NULL
+
+# Set up the contrasts and factor structure for dimension (sum coding)
+dat$Dimension = factor(dat$Dimension, levels=c('HD', 'LD'))
+contrasts(dat$Dimension) = c(-0.5, 0.5)
+colnames(attr(dat$Dimension, "contrasts")) = "LD>HD"
+
+# separate Hit Rate and False Alarm data
+dat.HR = dat %>% filter(CorrectAnswer=='1')
+dat.FA = dat %>% filter(CorrectAnswer=='0')
+```
+
+## Descriptive Stats
+
+```{r descriptive stats Cat, echo=FALSE}
+# get one value per participant and then average for each condition
+dat.means.HR = dat.HR %>% 
+  group_by(Participant, Dimension) %>%
+  summarize(HitRate = mean(HitRate)) %>%
+  group_by(Dimension) %>%
+  summarize(HitRate.mean = mean(HitRate), 
+            HitRate.sd = sd(HitRate)) 
+
+dat.means.FA = dat.FA %>% 
+  group_by(Participant, Dimension) %>%
+  summarize(FalseAlarm = mean(FalseAlarm)) %>%
+  group_by(Dimension) %>%
+  summarize(FalseAlarm.mean = mean(FalseAlarm), 
+            FalseAlarm.sd = sd(FalseAlarm)) 
+            
+dat.means.RT = dat %>%
+  filter(Response=='Y') %>%
+    group_by(Participant, Dimension) %>%
+  summarize(RT = mean(ResponseTime, na.rm=TRUE)) %>%
+    group_by(Dimension) %>%
+  summarize(RT.mean = mean(RT, na.rm=TRUE),
+            RT.sd = sd(RT, na.rm=TRUE))
+```
+
+## Hit Rate
+
+We are aiming to estimate the effect of dimensionality on the Hit Rate / False Alarm Rate / Response Time. We are treating category and participant as random effects. 
+
+### Stats
+
+```{r stats HR, echo=FALSE}
+m.HR = glmer(HitRate ~ Dimension + (1|Category) + (1|Participant), 
+                      family = binomial(), 
+                      data = dat.HR)
+summary(m.HR)
+```
+
+### Plot
+
+```{r plot HR, echo=FALSE}
+dat2plot.HR = dat.HR %>%
+  group_by(Dimension,Participant) %>%
+  summarize(HitRate=mean(HitRate))
+
+ggplot(data=dat2plot.HR, mapping=aes(x='Neurotypical', y=HitRate, fill=Dimension))+
+  stat_summary(geom = 'col', fun.y = 'mean', width=0.5, 
+               position='dodge')+
+  stat_summary(geom = 'errorbar', fun.data = 'mean_se', width=0.2,
+               position=position_dodge(width=0.5))+
+  geom_point(position=position_jitterdodge(dodge.width=0.5, jitter.height=0, jitter.width=0.05))+
+  coord_cartesian(ylim=c(0.5,1))+
+  scale_fill_manual(values=c('gray50', 'lightgray'))+
+  theme_classic()
+```
+
+## False alarm
+
+### Stats
+
+```{r stats FA, echo=FALSE}
+m.FA = glmer(FalseAlarm ~ Dimension + (1|Category) + (1|Participant), 
+                      family = binomial(), 
+                      data = dat.FA,
+             glmerControl(optimizer = "bobyqa", optCtrl = list(maxfun = 100000)))
+summary(m.FA)
+```
+
+### Plot
+
+```{r plot FA, echo=FALSE}
+dat2plot.FA = dat.FA %>%
+  group_by(Dimension,Participant) %>%
+  summarize(FalseAlarm=mean(FalseAlarm))
+
+ggplot(data=dat2plot.FA, mapping=aes(x='Neurotypical', y=FalseAlarm, fill=Dimension))+
+  stat_summary(geom = 'col', fun.y = 'mean', width=0.5, 
+               position='dodge')+
+  stat_summary(geom = 'errorbar', fun.data = 'mean_se', width=0.2,
+               position=position_dodge(width=0.5))+
+  geom_point(position=position_jitterdodge(dodge.width=0.5, jitter.height=0, jitter.width=0.01))+
+  scale_fill_manual(values=c('gray50', 'lightgray'))+
+  theme_classic()
+```
+
+## Reaction time
+
+### Stats
+
+```{r stats RT, echo=FALSE}
+dat.RT = dat %>% filter(Response=='Y')
+m.RT = lmer(ResponseTime ~ Dimension + (1|Category) + (1|Participant), data = dat.RT, REML=FALSE)
+summary(m.RT)
+```
+
+### Plot
+
+```{r plot FA, echo=FALSE}
+dat2plot.RT = dat.RT %>%
+  group_by(Dimension,Participant) %>%
+  summarize(Response.Time=mean(ResponseTime))
+
+ggplot(data=dat2plot.RT, mapping=aes(x='Neurotypical', y=Response.Time, fill=Dimension))+
+  stat_summary(geom = 'col', fun.y = 'mean', width=0.5, 
+               position='dodge')+
+  stat_summary(geom = 'errorbar', fun.data = 'mean_se', width=0.2,
+               position=position_dodge(width=0.5))+
+  geom_point(position=position_jitterdodge(dodge.width=0.5, jitter.height=0, jitter.width=0.01))+
+  scale_fill_manual(values=c('gray50', 'lightgray'))+
+  theme_classic()
+```
+
+
+# MD localizer
+
+## Read and clean the data
+
+```{r read data MD, echo=FALSE}
+# supporting function
+read_beh_file <- function(subID) {
+  df <- read.csv(paste('Expt3_beh_data/MD_Loc/', subID, sep=''))
+  return(df)
+}
+
+files = list.files(path='Expt3_beh_data/MD_Loc/', pattern="*.csv")
+dat = do.call(rbind, 
+              lapply(files, function(x) read_beh_file(x)))
+
+# clean
+dat = dat %>% rename(Participant=SubjID)
+
+# Set up the contrasts and factor structure for dimension (sum coding)
+dat$Condition = factor(dat$Condition, levels=c('Easy', 'Hard'))
+contrasts(dat$Condition) = c(-0.5, 0.5)
+colnames(attr(dat$Condition, "contrasts")) = "Hard>Easy"
+```
+
+## Stats
+
+```{r descriptive stats MD, echo=FALSE}
+# get one value per participant and then average for each condition
+dat.means = dat %>% 
+  group_by(Participant, Condition) %>%
+  summarize(Accuracy = mean(Accuracy), RT = mean(RT, na.rm=TRUE)) %>%
+  group_by(Condition) %>%
+  summarize(Accuracy.mean = mean(Accuracy), 
+            Accuracy.sd = sd(Accuracy), 
+            RT.mean = mean(RT, na.rm=TRUE),
+            RT.sd = sd(RT, na.rm=TRUE))
+```
+
+
+```{r stats MD, echo=FALSE}
+m.acc = glmer(Accuracy ~ Condition + (1|Participant), family = binomial(), data = dat)
+summary(m.acc)
+
+m.RT = lmer(RT ~ Condition + (1|Participant), data = dat, REML=FALSE)
+summary(m.RT)
+```

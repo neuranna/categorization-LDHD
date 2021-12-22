@@ -1,0 +1,2177 @@
+﻿Participant,Group,Category,Dimension,TrialTime,corAns,Miss,session
+1,NT,things that are blue,LD,26.13798118,4,0,1
+1,NT,dangerous animals,HD,0.177871943,0,0,1
+1,NT,animals that live in water,HD,34.69991398,3,1,1
+1,NT,clothes,HD,27.87222099,4,0,1
+1,NT,objects that hold water,HD,46.96325493,4,2,1
+1,NT,vegetables,HD,30.937639,4,0,1
+1,NT,fruit,HD,21.35592484,4,0,1
+1,NT,objects used for transportation,HD,23.45527887,3,0,1
+1,NT,things that are very large,LD,40.75972819,4,1,1
+1,NT,birds,HD,27.37410402,4,0,1
+1,NT,long thin objects,LD,35.04143,4,0,1
+1,NT,objects found in the laundry room,HD,47.39559817,4,0,1
+1,NT,small objects,LD,31.77641916,4,0,1
+1,NT,things that are brown,LD,31.28789592,4,0,1
+1,NT,things made of wood,LD,62.65284181,3,1,1
+1,NT,things that are round,LD,64.12206101,3,0,1
+1,NT,things that fly,HD,49.14247704,4,1,1
+1,NT,musical instruments,HD,0.173375845,0,0,1
+1,NT,things with handles,LD,34.5712142,3,0,1
+1,NT,animals with stripes,LD,33.75149798,3,0,1
+1,NT,farm animals,HD,0.171933174,0,0,1
+1,NT,things that are red,LD,40.40291905,3,0,1
+1,NT,things with doors,LD,39.87637401,3,0,1
+1,NT,tools,HD,55.41658187,4,1,1
+1,NT,things that are yellow,LD,0.173986912,0,0,1
+1,NT,things that are green,LD,40.33497,4,0,1
+1,NT,non food things found in the kitchen,HD,61.67383385,3,1,1
+1,NT,things that are soft,LD,0.72439909,0,0,1
+1,NT,things that are orange,LD,45.26685119,4,0,1
+1,NT,things that are white,LD,57.47299814,4,1,1
+1,NT,home appliances,HD,29.34250498,4,0,1
+1,NT,insects,HD,27.8119669,4,0,1
+1,NT,musical instruments,HD,40.59080815,3,0,2
+1,NT,things with handles,LD,37.17244291,4,0,2
+1,NT,home appliances,HD,31.92855001,4,1,2
+1,NT,things that are yellow,LD,19.82269382,4,0,2
+1,NT,clothes,HD,21.2771368,4,0,2
+1,NT,things that are round,LD,20.25230193,4,0,2
+1,NT,birds,HD,36.15767598,4,0,2
+1,NT,long thin objects,LD,31.87666488,4,0,2
+1,NT,fruit,HD,25.76299191,4,0,2
+1,NT,things that are blue,LD,24.574054,4,0,2
+1,NT,objects found in the laundry room,HD,24.8695271,4,0,2
+1,NT,things that are red,LD,19.71706796,4,0,2
+1,NT,things with doors,LD,25.78847098,4,0,2
+1,NT,small objects,LD,32.07701588,4,0,2
+1,NT,things that are brown,LD,27.14329195,3,1,2
+1,NT,animals with stripes,LD,0.153483868,0,0,2
+1,NT,farm animals,HD,28.08471584,4,0,2
+1,NT,tools,HD,40.11463904,4,0,2
+1,NT,things that are green,LD,32.47855306,4,0,2
+1,NT,animals that live in water,HD,29.45832396,4,0,2
+1,NT,things that are orange,LD,28.36240101,4,1,2
+1,NT,things that fly,HD,40.81249404,3,0,2
+1,NT,vegetables,HD,1.853274107,0,0,2
+1,NT,things that are white,LD,2.295668125,0,0,2
+1,NT,things that are soft,LD,42.88393116,4,0,2
+1,NT,things made of wood,LD,2.484338045,0,0,2
+1,NT,non food things found in the kitchen,HD,30.11665392,2,0,2
+1,NT,insects,HD,22.63729501,4,0,2
+1,NT,objects used for transportation,HD,30.52259803,4,0,2
+1,NT,dangerous animals,HD,46.623806,4,0,2
+1,NT,things that are very large,LD,28.20663595,3,1,2
+1,NT,objects that hold water,HD,27.10525703,4,0,2
+2,PD,small objects,LD,23.10081196,4,0,1
+2,PD,animals with stripes,LD,27.73265386,4,0,1
+2,PD,things that are yellow,LD,19.57624698,4,2,1
+2,PD,fruit,HD,21.56940293,4,0,1
+2,PD,things that are brown,LD,18.8906219,4,0,1
+2,PD,objects used for transportation,HD,25.58498502,4,0,1
+2,PD,insects,HD,22.23438001,4,0,1
+2,PD,non food things found in the kitchen,HD,39.87927198,4,0,1
+2,PD,clothes,HD,22.43240595,4,0,1
+2,PD,things with doors,LD,26.36114717,4,0,1
+2,PD,long thin objects,LD,24.32093716,4,1,1
+2,PD,things that are red,LD,13.74276614,4,0,1
+2,PD,things that are orange,LD,12.66066003,4,0,1
+2,PD,farm animals,HD,27.32489705,3,0,1
+2,PD,objects found in the laundry room,HD,19.15176201,4,0,1
+2,PD,tools,HD,21.33439207,4,0,1
+2,PD,things that are very large,LD,24.93366504,3,0,1
+2,PD,things that fly,HD,22.15576291,4,0,1
+2,PD,things that are green,LD,15.78333402,4,0,1
+2,PD,vegetables,HD,16.75829506,4,0,1
+2,PD,things that are soft,LD,31.65149307,3,2,1
+2,PD,animals that live in water,HD,17.15624595,4,0,1
+2,PD,things made of wood,LD,27.04264307,3,0,1
+2,PD,birds,HD,20.26024604,4,0,1
+2,PD,things that are blue,LD,15.96482682,4,0,1
+2,PD,things that are round,LD,20.10624099,4,0,1
+2,PD,musical instruments,HD,19.78410196,4,0,1
+2,PD,dangerous animals,HD,26.82999492,4,0,1
+2,PD,things that are white,LD,17.17045903,4,0,1
+2,PD,things with handles,LD,21.64723706,4,0,1
+2,PD,home appliances,HD,19.47695708,4,0,1
+2,PD,objects that hold water,HD,21.22408915,4,0,1
+2,PD,fruit,HD,18.671628,4,0,2
+2,PD,vegetables,HD,18.66419697,4,0,2
+2,PD,things that are brown,LD,14.52571297,4,0,2
+2,PD,things that are green,LD,11.99423885,4,0,2
+2,PD,things that are yellow,LD,12.25222397,4,0,2
+2,PD,farm animals,HD,31.4225471,2,0,2
+2,PD,objects used for transportation,HD,20.05297995,4,0,2
+2,PD,things that are soft,LD,19.68450117,3,1,2
+2,PD,things that are very large,LD,19.51867819,3,0,2
+2,PD,insects,HD,14.69452596,4,0,2
+2,PD,dangerous animals,HD,16.68147683,4,0,2
+2,PD,small objects,LD,21.66831803,4,0,2
+2,PD,home appliances,HD,12.629462,4,0,2
+2,PD,things with doors,LD,15.35641313,4,0,2
+2,PD,things that are red,LD,8.99592495,4,0,2
+2,PD,things that are orange,LD,17.90735412,4,0,2
+2,PD,animals with stripes,LD,15.37774992,4,0,2
+2,PD,things that fly,HD,22.08787799,4,0,2
+2,PD,animals that live in water,HD,16.95498514,4,0,2
+2,PD,things that are blue,LD,8.756991863,4,0,2
+2,PD,objects that hold water,HD,17.79167295,4,0,2
+2,PD,things made of wood,LD,31.84405398,2,0,2
+2,PD,things that are round,LD,27.15270996,4,0,2
+2,PD,things that are white,LD,12.55913496,4,0,2
+2,PD,clothes,HD,17.94185185,4,0,2
+2,PD,tools,HD,30.02357221,4,0,2
+2,PD,birds,HD,19.36649799,4,0,2
+2,PD,objects found in the laundry room,HD,24.11154699,3,0,2
+2,PD,musical instruments,HD,15.20829105,4,0,2
+2,PD,long thin objects,LD,38.08447313,4,0,2
+2,PD,things with handles,LD,34.71619296,4,0,2
+2,PD,non food things found in the kitchen,HD,31.05946398,3,0,2
+3,PD,things that are yellow,LD,16.06435108,4,0,1
+3,PD,clothes,HD,12.50752211,4,0,1
+3,PD,things that are white,LD,8.258755207,4,0,1
+3,PD,objects used for transportation,HD,15.86775899,4,0,1
+3,PD,things made of wood,LD,13.54360986,3,0,1
+3,PD,things that are round,LD,10.90729117,4,0,1
+3,PD,birds,HD,26.69742298,4,0,1
+3,PD,things that are very large,LD,19.31217098,4,0,1
+3,PD,farm animals,HD,20.11979699,4,0,1
+3,PD,dangerous animals,HD,20.14181399,4,1,1
+3,PD,things that are red,LD,11.1008749,4,0,1
+3,PD,things that are orange,LD,10.58372188,4,0,1
+3,PD,objects that hold water,HD,12.65973902,3,0,1
+3,PD,fruit,HD,14.93315983,4,0,1
+3,PD,things that are green,LD,8.89735198,4,0,1
+3,PD,things with handles,LD,17.10819793,3,0,1
+3,PD,tools,HD,12.55697298,4,0,1
+3,PD,small objects,LD,16.85929799,4,0,1
+3,PD,long thin objects,LD,22.46564102,4,0,1
+3,PD,objects found in the laundry room,HD,28.54461312,3,0,1
+3,PD,musical instruments,HD,15.27559996,4,0,1
+3,PD,things with doors,LD,11.92138004,4,0,1
+3,PD,animals with stripes,LD,14.75339508,4,0,1
+3,PD,things that are blue,LD,9.049000978,4,0,1
+3,PD,non food things found in the kitchen,HD,18.91272998,4,0,1
+3,PD,things that are soft,LD,20.30766892,3,0,1
+3,PD,things that fly,HD,15.764359,4,0,1
+3,PD,things that are brown,LD,13.58452296,4,0,1
+3,PD,animals that live in water,HD,13.37853694,4,0,1
+3,PD,home appliances,HD,13.17483902,4,0,1
+3,PD,vegetables,HD,12.31041598,4,0,1
+3,PD,insects,HD,13.91942883,4,0,1
+3,PD,animals with stripes,LD,12.81992984,4,0,2
+3,PD,things that are blue,LD,6.822707891,4,0,2
+3,PD,objects that hold water,HD,13.25191617,4,0,2
+3,PD,birds,HD,13.474262,4,0,2
+3,PD,things that are yellow,LD,8.601765871,4,1,2
+3,PD,long thin objects,LD,12.22852087,4,0,2
+3,PD,fruit,HD,9.645521879,3,0,2
+3,PD,things that are round,LD,9.603793144,4,0,2
+3,PD,things that are green,LD,7.852637053,4,0,2
+3,PD,musical instruments,HD,15.93654799,4,0,2
+3,PD,small objects,LD,10.61478496,4,0,2
+3,PD,home appliances,HD,13.79528308,4,0,2
+3,PD,vegetables,HD,8.719146967,4,0,2
+3,PD,animals that live in water,HD,13.07922196,4,0,2
+3,PD,objects used for transportation,HD,18.08979106,4,0,2
+3,PD,farm animals,HD,11.12031603,4,0,2
+3,PD,things with doors,LD,11.88680315,4,0,2
+3,PD,insects,HD,12.16850114,4,0,2
+3,PD,things that are red,LD,8.774243832,4,0,2
+3,PD,things that are very large,LD,12.39853096,4,0,2
+3,PD,dangerous animals,HD,16.3048749,4,0,2
+3,PD,things that are white,LD,9.077986956,4,0,2
+3,PD,things that are soft,LD,13.38414192,3,0,2
+3,PD,objects found in the laundry room,HD,15.91635799,3,0,2
+3,PD,things that are orange,LD,9.83110404,4,0,2
+3,PD,things made of wood,LD,16.37713289,3,1,2
+3,PD,things that fly,HD,11.98354411,4,0,2
+3,PD,things that are brown,LD,7.204164982,4,0,2
+3,PD,tools,HD,13.75159907,4,0,2
+3,PD,things with handles,LD,16.80204701,3,0,2
+3,PD,non food things found in the kitchen,HD,18.70207214,4,0,2
+3,PD,clothes,HD,13.36635685,4,0,2
+5,APH,dangerous animals,HD,68.47165418,1,3,1
+5,APH,objects that hold water,HD,67.95531511,3,0,1
+5,APH,objects found in the laundry room,HD,59.41158509,3,0,1
+5,APH,things that are green,LD,25.78473687,4,0,1
+5,APH,things that are white,LD,30.4687531,4,0,1
+5,APH,animals that live in water,HD,48.20181298,3,2,1
+5,APH,things that fly,HD,62.37176991,4,1,1
+5,APH,things made of wood,LD,60.42705607,1,5,1
+5,APH,tools,HD,43.00783896,3,1,1
+5,APH,small objects,LD,48.19977808,3,4,1
+5,APH,things that are yellow,LD,34.21558619,4,2,1
+5,APH,long thin objects,LD,1.450289965,0,0,1
+5,APH,home appliances,HD,57.36535692,4,0,1
+5,APH,things that are round,LD,58.82693195,2,4,1
+5,APH,birds,HD,59.23752999,4,0,1
+5,APH,things that are soft,LD,61.44846702,2,3,1
+5,APH,things that are blue,LD,25.88126802,4,0,1
+5,APH,animals with stripes,LD,46.27133918,0,7,1
+5,APH,non food things found in the kitchen,HD,117.6253519,4,1,1
+5,APH,vegetables,HD,68.99896002,4,4,1
+5,APH,fruit,HD,38.07865596,4,0,1
+5,APH,objects used for transportation,HD,47.16265702,3,0,1
+5,APH,clothes,HD,42.56619406,3,1,1
+5,APH,things that are orange,LD,29.08361697,4,0,1
+5,APH,things that are red,LD,34.68918109,4,0,1
+5,APH,things with handles,LD,69.65596795,2,1,1
+5,APH,things with doors,LD,52.71871686,3,1,1
+5,APH,farm animals,HD,44.90588593,4,1,1
+5,APH,musical instruments,HD,84.46481705,2,1,1
+5,APH,things that are brown,LD,93.58305717,4,1,1
+5,APH,insects,HD,86.78048897,4,0,1
+5,APH,things that are very large,LD,63.642277,4,1,1
+5,APH,things with handles,LD,67.29578996,3,0,2
+5,APH,things that are green,LD,27.95303082,4,0,2
+5,APH,dangerous animals,HD,36.77944708,3,1,2
+5,APH,things that are round,LD,68.60276604,2,2,2
+5,APH,animals with stripes,LD,84.42385912,3,1,2
+5,APH,things that are red,LD,17.118577,4,0,2
+5,APH,fruit,HD,20.82752585,4,0,2
+5,APH,things that are very large,LD,47.75663996,4,0,2
+5,APH,things with doors,LD,81.2607069,2,0,2
+5,APH,objects used for transportation,HD,54.10859895,4,0,2
+5,APH,things that are white,LD,20.48027205,4,0,2
+5,APH,vegetables,HD,23.23634315,4,0,2
+5,APH,clothes,HD,70.44911003,3,1,2
+5,APH,objects found in the laundry room,HD,53.34816098,3,1,2
+5,APH,farm animals,HD,25.93284607,4,0,2
+5,APH,birds,HD,42.46989918,3,1,2
+5,APH,things that are blue,LD,12.29389215,4,0,2
+5,APH,home appliances,HD,52.34484291,3,1,2
+5,APH,insects,HD,52.78661919,3,1,2
+5,APH,tools,HD,35.88783908,4,0,2
+5,APH,non food things found in the kitchen,HD,88.70568109,3,1,2
+5,APH,things that are yellow,LD,36.87720799,3,1,2
+5,APH,long thin objects,LD,60.56099701,3,1,2
+5,APH,things that are soft,LD,51.92816997,1,3,2
+5,APH,things that are orange,LD,15.19648218,4,0,2
+5,APH,things that are brown,LD,0.712721109,0,0,2
+5,APH,small objects,LD,61.32871294,4,0,2
+5,APH,objects that hold water,HD,74.66008902,2,2,2
+5,APH,animals that live in water,HD,78.14004111,1,3,2
+5,APH,musical instruments,HD,28.9792769,4,0,2
+5,APH,things that fly,HD,61.84305191,3,1,2
+5,APH,things made of wood,LD,29.604882,3,1,2
+6,PD,musical instruments,HD,61.2663908,4,1,1
+6,PD,dangerous animals,HD,61.14937806,3,0,1
+6,PD,animals that live in water,HD,40.32595706,4,0,1
+6,PD,things that are soft,LD,40.67456079,4,0,1
+6,PD,home appliances,HD,36.85809422,4,0,1
+6,PD,small objects,LD,37.43387985,4,0,1
+6,PD,non food things found in the kitchen,HD,82.09359694,4,1,1
+6,PD,farm animals,HD,57.69495106,4,0,1
+6,PD,clothes,HD,26.53063989,4,0,1
+6,PD,things that are round,LD,30.51145315,4,0,1
+6,PD,birds,HD,18.92346787,4,0,1
+6,PD,things that are green,LD,12.68633103,4,0,1
+6,PD,things that are brown,LD,21.36451697,4,0,1
+6,PD,things that are red,LD,16.30069208,4,0,1
+6,PD,things that are very large,LD,33.28839302,4,0,1
+6,PD,things with handles,LD,34.07557797,1,0,1
+6,PD,insects,HD,27.69098282,4,0,1
+6,PD,long thin objects,LD,16.74520397,4,0,1
+6,PD,things that are blue,LD,9.123972178,4,0,1
+6,PD,fruit,HD,19.7759769,4,0,1
+6,PD,tools,HD,26.02239299,4,0,1
+6,PD,objects that hold water,HD,48.01300192,3,0,1
+6,PD,objects used for transportation,HD,35.00315404,4,0,1
+6,PD,things made of wood,LD,32.63668919,4,0,1
+6,PD,things that are white,LD,14.4087491,4,0,1
+6,PD,animals with stripes,LD,21.26472402,4,0,1
+6,PD,vegetables,HD,31.22634101,4,0,1
+6,PD,objects found in the laundry room,HD,38.55623698,3,0,1
+6,PD,things that are yellow,LD,11.9268229,4,0,1
+6,PD,things that are orange,LD,10.97539878,4,0,1
+6,PD,things that fly,HD,41.44112802,4,0,1
+6,PD,things with doors,LD,42.60672808,3,0,1
+6,PD,things that are very large,LD,20.0063839,4,0,2
+6,PD,small objects,LD,26.26427913,4,0,2
+6,PD,objects that hold water,HD,26.2145822,4,0,2
+6,PD,things that are orange,LD,10.31963992,4,0,2
+6,PD,vegetables,HD,18.33426094,4,0,2
+6,PD,clothes,HD,22.38287687,4,1,2
+6,PD,home appliances,HD,27.14261413,4,0,2
+6,PD,farm animals,HD,21.72997093,4,0,2
+6,PD,non food things found in the kitchen,HD,32.58208013,3,1,2
+6,PD,things that fly,HD,27.63607788,4,0,2
+6,PD,things that are round,LD,18.90951395,4,0,2
+6,PD,objects used for transportation,HD,24.23303413,4,0,2
+6,PD,birds,HD,22.054739,4,0,2
+6,PD,things that are blue,LD,9.52304101,4,0,2
+6,PD,things that are soft,LD,20.47425318,4,0,2
+6,PD,things that are white,LD,20.66195607,4,0,2
+6,PD,fruit,HD,20.83715892,4,0,2
+6,PD,things that are brown,LD,11.49852109,4,0,2
+6,PD,things that are green,LD,8.221168041,4,0,2
+6,PD,things that are red,LD,17.77077103,4,0,2
+6,PD,things with handles,LD,31.01399207,4,0,2
+6,PD,animals that live in water,HD,28.34499621,4,0,2
+6,PD,insects,HD,21.60784793,3,0,2
+6,PD,animals with stripes,LD,32.09742379,4,0,2
+6,PD,dangerous animals,HD,40.88117695,2,0,2
+6,PD,things with doors,LD,35.28838205,4,0,2
+6,PD,things that are yellow,LD,9.152153969,4,0,2
+6,PD,long thin objects,LD,21.44088793,4,0,2
+6,PD,tools,HD,31.97132993,4,0,2
+6,PD,things made of wood,LD,36.98494196,3,0,2
+6,PD,musical instruments,HD,17.96387506,4,0,2
+6,PD,objects found in the laundry room,HD,52.78797984,4,1,2
+7,NT,objects used for transportation,HD,47.33636308,4,0,1
+7,NT,birds,HD,18.11030602,4,0,1
+7,NT,things that are yellow,LD,10.98046088,4,0,1
+7,NT,insects,HD,18.86793303,4,0,1
+7,NT,things with doors,LD,38.56613517,4,0,1
+7,NT,farm animals,HD,19.09017682,4,0,1
+7,NT,things that are white,LD,16.52352405,4,0,1
+7,NT,things that are green,LD,8.706123829,4,0,1
+7,NT,things that are red,LD,12.13478303,4,0,1
+7,NT,things that are very large,LD,47.66061592,4,0,1
+7,NT,dangerous animals,HD,27.54008079,4,0,1
+7,NT,musical instruments,HD,63.17849112,3,1,1
+7,NT,things that are orange,LD,13.54662704,4,0,1
+7,NT,animals with stripes,LD,32.95921016,3,1,1
+7,NT,fruit,HD,16.80681896,4,0,1
+7,NT,vegetables,HD,14.56853294,4,0,1
+7,NT,things that are blue,LD,7.536665201,4,0,1
+7,NT,things that fly,HD,15.96454692,4,0,1
+7,NT,objects found in the laundry room,HD,35.633847,3,1,1
+7,NT,things that are brown,LD,36.1061728,3,1,1
+7,NT,long thin objects,LD,10.90982699,3,1,1
+7,NT,animals that live in water,HD,13.16127181,3,1,1
+7,NT,tools,HD,17.23614311,4,0,1
+7,NT,clothes,HD,10.38896489,4,0,1
+7,NT,things with handles,LD,25.99467897,4,0,1
+7,NT,small objects,LD,24.59452605,4,0,1
+7,NT,non food things found in the kitchen,HD,17.35917401,4,0,1
+7,NT,things that are soft,LD,20.35658979,4,0,1
+7,NT,things made of wood,LD,15.3295989,4,0,1
+7,NT,things that are round,LD,12.39934707,4,0,1
+7,NT,home appliances,HD,17.80497909,4,0,1
+7,NT,objects that hold water,HD,30.49289298,4,0,1
+7,NT,animals that live in water,HD,16.40023303,4,0,2
+7,NT,things that are very large,LD,23.96255612,4,0,2
+7,NT,home appliances,HD,11.39139509,4,0,2
+7,NT,things with handles,LD,28.45381308,3,1,2
+7,NT,non food things found in the kitchen,HD,15.42045093,4,0,2
+7,NT,dangerous animals,HD,35.83380604,2,2,2
+7,NT,vegetables,HD,15.91714096,4,0,2
+7,NT,long thin objects,LD,13.95932412,4,0,2
+7,NT,birds,HD,17.3038919,4,0,2
+7,NT,objects found in the laundry room,HD,16.20552707,4,0,2
+7,NT,things that are brown,LD,0.901578903,0,0,2
+7,NT,fruit,HD,13.38624907,4,0,2
+7,NT,animals with stripes,LD,17.67793798,4,0,2
+7,NT,things that are blue,LD,8.482858181,4,0,2
+7,NT,farm animals,HD,10.34598708,4,0,2
+7,NT,insects,HD,11.17075801,4,0,2
+7,NT,objects used for transportation,HD,20.5306139,4,0,2
+7,NT,things that are red,LD,9.195686102,4,0,2
+7,NT,things that are soft,LD,36.68959379,3,1,2
+7,NT,things with doors,LD,18.0501349,4,0,2
+7,NT,things that fly,HD,11.76983595,4,0,2
+7,NT,tools,HD,29.13666987,4,0,2
+7,NT,small objects,LD,22.51003194,4,0,2
+7,NT,things made of wood,LD,35.93680382,3,1,2
+7,NT,things that are orange,LD,17.64934516,4,0,2
+7,NT,things that are round,LD,7.027750969,4,0,2
+7,NT,things that are yellow,LD,7.554630995,4,0,2
+7,NT,clothes,HD,12.31148505,4,0,2
+7,NT,objects that hold water,HD,11.29867911,4,0,2
+7,NT,musical instruments,HD,15.06869483,4,0,2
+7,NT,things that are green,LD,15.12584591,4,0,2
+7,NT,things that are white,LD,10.43263888,4,0,2
+8,NT,vegetables,HD,21.84558702,4,0,1
+8,NT,musical instruments,HD,19.3266511,4,0,1
+8,NT,farm animals,HD,23.48797584,4,0,1
+8,NT,things with doors,LD,27.53972387,4,0,1
+8,NT,home appliances,HD,18.63812494,4,2,1
+8,NT,things that are soft,LD,36.69147992,3,3,1
+8,NT,fruit,HD,19.91192007,4,0,1
+8,NT,birds,HD,14.83102798,4,0,1
+8,NT,small objects,LD,32.30952501,4,2,1
+8,NT,objects used for transportation,HD,25.98969698,4,0,1
+8,NT,things that are white,LD,14.93582511,4,0,1
+8,NT,non food things found in the kitchen,HD,37.72020507,4,0,1
+8,NT,dangerous animals,HD,32.76446795,1,0,1
+8,NT,things with handles,LD,21.77873302,4,0,1
+8,NT,long thin objects,LD,32.5382781,4,0,1
+8,NT,objects found in the laundry room,HD,32.79567504,4,0,1
+8,NT,things made of wood,LD,21.1237731,3,0,1
+8,NT,animals that live in water,HD,33.65981817,2,0,1
+8,NT,things that are red,LD,13.55237889,4,0,1
+8,NT,objects that hold water,HD,16.05285192,4,0,1
+8,NT,things that are blue,LD,15.87307382,4,0,1
+8,NT,things that are very large,LD,25.9271841,3,0,1
+8,NT,animals with stripes,LD,23.90623212,1,0,1
+8,NT,insects,HD,22.20491385,4,0,1
+8,NT,things that are brown,LD,27.43761802,4,0,1
+8,NT,things that are green,LD,16.75177383,4,0,1
+8,NT,tools,HD,29.94759488,4,0,1
+8,NT,things that fly,HD,20.29465008,4,0,1
+8,NT,things that are yellow,LD,17.14376593,4,0,1
+8,NT,clothes,HD,16.83865404,4,0,1
+8,NT,things that are orange,LD,11.24499798,3,0,1
+8,NT,things that are round,LD,14.65604806,4,0,1
+8,NT,birds,HD,14.37952399,4,0,2
+8,NT,things that are orange,LD,8.453523874,3,0,2
+8,NT,things that are round,LD,16.12453604,4,0,2
+8,NT,dangerous animals,HD,13.50617909,2,0,2
+8,NT,home appliances,HD,21.41458702,4,0,2
+8,NT,animals that live in water,HD,13.88677382,1,0,2
+8,NT,things that are red,LD,12.46340394,4,0,2
+8,NT,tools,HD,12.54675817,4,0,2
+8,NT,small objects,LD,15.57764816,4,0,2
+8,NT,things that are soft,LD,23.68587804,3,1,2
+8,NT,animals with stripes,LD,14.8493762,3,0,2
+8,NT,musical instruments,HD,13.37425494,4,0,2
+8,NT,things that are brown,LD,14.59870005,4,0,2
+8,NT,long thin objects,LD,25.91413689,4,1,2
+8,NT,things that are very large,LD,17.54620409,3,0,2
+8,NT,things that are green,LD,11.3428309,4,0,2
+8,NT,insects,HD,18.38073301,4,0,2
+8,NT,fruit,HD,11.74143195,4,0,2
+8,NT,objects used for transportation,HD,15.87060213,4,0,2
+8,NT,objects found in the laundry room,HD,16.77038908,4,0,2
+8,NT,things that fly,HD,18.70686316,4,0,2
+8,NT,things that are yellow,LD,10.85547614,4,0,2
+8,NT,things that are white,LD,9.650098801,4,0,2
+8,NT,things with doors,LD,16.46277094,4,0,2
+8,NT,things that are blue,LD,9.560594082,4,0,2
+8,NT,vegetables,HD,12.49444389,4,0,2
+8,NT,farm animals,HD,12.39460111,4,0,2
+8,NT,clothes,HD,11.33108521,4,0,2
+8,NT,things with handles,LD,12.88414621,2,0,2
+8,NT,non food things found in the kitchen,HD,23.61803293,4,0,2
+8,NT,things made of wood,LD,15.731148,4,0,2
+8,NT,objects that hold water,HD,15.32539201,4,0,2
+9,NT,animals with stripes,LD,18.22099113,4,0,1
+9,NT,things that are round,LD,12.30201101,4,0,1
+9,NT,home appliances,HD,13.40400696,4,0,1
+9,NT,fruit,HD,10.8436079,4,0,1
+9,NT,objects found in the laundry room,HD,14.81220484,4,0,1
+9,NT,objects used for transportation,HD,12.85628891,4,0,1
+9,NT,farm animals,HD,10.84370303,4,0,1
+9,NT,things that are red,LD,6.895167112,4,0,1
+9,NT,things with handles,LD,12.92036891,4,0,1
+9,NT,musical instruments,HD,12.02961683,4,0,1
+9,NT,things that are orange,LD,8.792871952,4,0,1
+9,NT,things made of wood,LD,10.00722408,3,0,1
+9,NT,things that are very large,LD,14.046875,4,0,1
+9,NT,things that are blue,LD,8.182068825,4,0,1
+9,NT,non food things found in the kitchen,HD,18.12454486,4,0,1
+9,NT,insects,HD,14.69937992,4,0,1
+9,NT,dangerous animals,HD,14.67747116,3,0,1
+9,NT,tools,HD,12.27439189,4,0,1
+9,NT,vegetables,HD,10.94427204,4,0,1
+9,NT,things that fly,HD,12.25378609,4,0,1
+9,NT,things with doors,LD,17.29492998,4,0,1
+9,NT,clothes,HD,10.22369099,4,0,1
+9,NT,things that are green,LD,7.846056938,4,0,1
+9,NT,objects that hold water,HD,15.45500612,4,0,1
+9,NT,things that are brown,LD,9.831990004,4,0,1
+9,NT,animals that live in water,HD,12.39068103,4,0,1
+9,NT,things that are soft,LD,19.040802,4,4,1
+9,NT,long thin objects,LD,11.60574102,4,1,1
+9,NT,small objects,LD,14.10596895,4,0,1
+9,NT,things that are yellow,LD,6.928493977,4,0,1
+9,NT,birds,HD,11.38214922,4,0,1
+9,NT,things that are white,LD,9.580031872,4,0,1
+9,NT,long thin objects,LD,9.904572964,4,0,2
+9,NT,tools,HD,10.95879793,4,0,2
+9,NT,things made of wood,LD,14.19091105,4,0,2
+9,NT,small objects,LD,11.20799708,4,0,2
+9,NT,things that are red,LD,7.446294069,4,0,2
+9,NT,insects,HD,8.928531885,4,0,2
+9,NT,objects found in the laundry room,HD,10.57084394,3,0,2
+9,NT,things that are brown,LD,8.548990011,4,0,2
+9,NT,things that are yellow,LD,8.538580894,4,0,2
+9,NT,fruit,HD,7.887124062,4,0,2
+9,NT,objects that hold water,HD,10.17612219,3,0,2
+9,NT,dangerous animals,HD,11.87125802,4,0,2
+9,NT,clothes,HD,8.394828081,4,0,2
+9,NT,things that are very large,LD,10.50805998,4,0,2
+9,NT,objects used for transportation,HD,9.784390926,4,0,2
+9,NT,things with doors,LD,9.502453089,3,0,2
+9,NT,non food things found in the kitchen,HD,17.86876917,4,0,2
+9,NT,things with handles,LD,11.0681529,3,0,2
+9,NT,home appliances,HD,10.68304896,4,0,2
+9,NT,things that are blue,LD,6.558768034,4,0,2
+9,NT,things that fly,HD,12.10202384,4,0,2
+9,NT,things that are green,LD,5.736369133,4,0,2
+9,NT,birds,HD,11.9873991,4,0,2
+9,NT,things that are round,LD,9.809471846,4,0,2
+9,NT,things that are soft,LD,11.222049,3,4,2
+9,NT,animals with stripes,LD,10.14161301,4,0,2
+9,NT,vegetables,HD,8.639262199,4,0,2
+9,NT,animals that live in water,HD,9.738301039,4,0,2
+9,NT,things that are orange,LD,8.099895954,4,0,2
+9,NT,things that are white,LD,7.186701059,4,0,2
+9,NT,farm animals,HD,11.28125596,4,0,2
+9,NT,musical instruments,HD,13.98729897,4,0,2
+11,PD,things that are blue,LD,26.54628921,4,0,1
+11,PD,animals with stripes,LD,11.09856701,3,0,1
+11,PD,farm animals,HD,17.08270597,3,0,1
+11,PD,small objects,LD,19.27821589,3,0,1
+11,PD,things with handles,LD,20.90086699,4,0,1
+11,PD,objects found in the laundry room,HD,26.12984014,3,0,1
+11,PD,things that fly,HD,20.94156003,4,0,1
+11,PD,things that are red,LD,10.51729298,4,0,1
+11,PD,animals that live in water,HD,21.1710999,4,0,1
+11,PD,vegetables,HD,12.08089995,4,0,1
+11,PD,home appliances,HD,15.59965491,4,0,1
+11,PD,objects used for transportation,HD,26.18173385,4,0,1
+11,PD,things that are soft,LD,45.53220987,3,2,1
+11,PD,objects that hold water,HD,30.51413608,4,0,1
+11,PD,long thin objects,LD,25.35602903,4,1,1
+11,PD,things that are round,LD,14.44971991,4,0,1
+11,PD,things made of wood,LD,32.75582099,3,0,1
+11,PD,things that are white,LD,9.211641073,4,0,1
+11,PD,dangerous animals,HD,38.79823995,3,1,1
+11,PD,fruit,HD,12.54943514,4,0,1
+11,PD,tools,HD,24.36206603,4,0,1
+11,PD,insects,HD,16.62789106,3,0,1
+11,PD,birds,HD,18.25513697,4,0,1
+11,PD,things that are orange,LD,14.20874596,4,0,1
+11,PD,things that are green,LD,10.16796994,4,0,1
+11,PD,things with doors,LD,26.76821685,4,0,1
+11,PD,musical instruments,HD,13.33567882,4,0,1
+11,PD,things that are yellow,LD,9.717180014,4,0,1
+11,PD,things that are brown,LD,4.473711967,0,0,1
+11,PD,non food things found in the kitchen,HD,45.56952405,4,0,1
+11,PD,things that are very large,LD,24.19624901,3,0,1
+11,PD,clothes,HD,10.41956806,4,0,1
+11,PD,objects that hold water,HD,34.32773089,4,0,2
+11,PD,dangerous animals,HD,24.04379797,4,0,2
+11,PD,long thin objects,LD,16.20778012,4,1,2
+11,PD,animals with stripes,LD,16.16222501,3,0,2
+11,PD,things that are soft,LD,22.6990869,4,1,2
+11,PD,insects,HD,17.0956018,4,0,2
+11,PD,things that are white,LD,1.228696108,0,0,2
+11,PD,farm animals,HD,27.63118005,4,0,2
+11,PD,things that are very large,LD,32.48593402,4,0,2
+11,PD,things that are round,LD,15.64686298,4,0,2
+11,PD,things with doors,LD,34.02405,3,0,2
+11,PD,things that fly,HD,30.14018607,4,0,2
+11,PD,musical instruments,HD,25.05769396,4,0,2
+11,PD,things with handles,LD,24.02090192,4,0,2
+11,PD,things that are blue,LD,15.30064797,3,0,2
+11,PD,non food things found in the kitchen,HD,19.40081787,4,0,2
+11,PD,vegetables,HD,12.011657,4,0,2
+11,PD,small objects,LD,18.61591196,4,0,2
+11,PD,birds,HD,28.8863821,4,0,2
+11,PD,objects found in the laundry room,HD,22.41614985,4,0,2
+11,PD,things that are brown,LD,23.74229503,4,0,2
+11,PD,animals that live in water,HD,15.03877997,4,0,2
+11,PD,things that are green,LD,9.778442144,4,0,2
+11,PD,clothes,HD,11.78556705,4,0,2
+11,PD,home appliances,HD,14.39083004,4,0,2
+11,PD,things made of wood,LD,16.95716405,3,0,2
+11,PD,fruit,HD,13.78659296,4,0,2
+11,PD,things that are orange,LD,9.866024017,4,0,2
+11,PD,tools,HD,17.56252503,4,0,2
+11,PD,things that are red,LD,10.08244705,4,0,2
+11,PD,things that are yellow,LD,11.71753192,4,0,2
+11,PD,objects used for transportation,HD,24.24074197,4,0,2
+12,APH,animals with stripes,LD,35.39174604,3,0,1
+12,APH,things that are white,LD,27.98494983,4,0,1
+12,APH,birds,HD,32.14782596,4,0,1
+12,APH,non food things found in the kitchen,HD,38.56769395,3,0,1
+12,APH,things that are red,LD,33.96821189,4,0,1
+12,APH,farm animals,HD,50.69697499,4,0,1
+12,APH,objects used for transportation,HD,32.97192407,4,0,1
+12,APH,clothes,HD,23.89930105,4,0,1
+12,APH,things that are very large,LD,34.23141003,3,0,1
+12,APH,objects that hold water,HD,26.98239684,4,0,1
+12,APH,things that are brown,LD,37.51012015,4,0,1
+12,APH,things that are round,LD,35.49712896,4,0,1
+12,APH,tools,HD,57.25252509,3,0,1
+12,APH,things that are soft,LD,57.9009881,3,0,1
+12,APH,long thin objects,LD,32.64320111,3,0,1
+12,APH,things that are orange,LD,27.40351701,4,0,1
+12,APH,things with handles,LD,27.07423615,4,0,1
+12,APH,vegetables,HD,44.42426705,4,0,1
+12,APH,things that fly,HD,29.13552499,4,0,1
+12,APH,home appliances,HD,33.83473897,4,0,1
+12,APH,things made of wood,LD,35.08280897,3,0,1
+12,APH,insects,HD,65.13422894,4,0,1
+12,APH,things with doors,LD,45.12558508,3,0,1
+12,APH,things that are yellow,LD,26.97634101,4,1,1
+12,APH,dangerous animals,HD,49.8136282,4,1,1
+12,APH,animals that live in water,HD,25.84812498,4,0,1
+12,APH,musical instruments,HD,55.169945,3,0,1
+12,APH,things that are green,LD,23.95996499,4,0,1
+12,APH,small objects,LD,39.99961901,4,0,1
+12,APH,fruit,HD,30.98220992,4,0,1
+12,APH,objects found in the laundry room,HD,43.07693791,3,0,1
+12,APH,things that are blue,LD,24.49088907,4,0,1
+12,APH,things that are very large,LD,23.58158398,3,0,2
+12,APH,farm animals,HD,38.69642591,4,0,2
+12,APH,things that are brown,LD,26.18562603,4,0,2
+12,APH,things that are soft,LD,39.02208686,3,0,2
+12,APH,objects used for transportation,HD,33.35460997,4,0,2
+12,APH,things that are yellow,LD,28.40730214,4,1,2
+12,APH,animals that live in water,HD,50.54404807,4,0,2
+12,APH,long thin objects,LD,55.80874515,3,0,2
+12,APH,things that are white,LD,19.87126303,4,0,2
+12,APH,things that fly,HD,31.05834413,4,0,2
+12,APH,tools,HD,36.92527103,4,0,2
+12,APH,small objects,LD,30.06126785,4,0,2
+12,APH,dangerous animals,HD,38.82013583,4,0,2
+12,APH,objects found in the laundry room,HD,36.34529185,4,0,2
+12,APH,objects that hold water,HD,36.01394296,4,0,2
+12,APH,things made of wood,LD,42.950212,3,0,2
+12,APH,birds,HD,24.16388488,4,0,2
+12,APH,things that are green,LD,20.82980919,4,0,2
+12,APH,home appliances,HD,41.35547614,4,0,2
+12,APH,things with doors,LD,35.20289898,4,0,2
+12,APH,musical instruments,HD,48.64042902,4,0,2
+12,APH,fruit,HD,23.06498194,4,0,2
+12,APH,clothes,HD,21.99612999,4,0,2
+12,APH,non food things found in the kitchen,HD,55.30821109,3,0,2
+12,APH,things that are orange,LD,25.47850394,4,0,2
+12,APH,things that are blue,LD,20.91872287,4,0,2
+12,APH,things that are red,LD,24.0589819,4,0,2
+12,APH,vegetables,HD,29.35253692,4,0,2
+12,APH,things with handles,LD,55.69689107,3,0,2
+12,APH,insects,HD,25.49343205,4,0,2
+12,APH,things that are round,LD,27.38148999,4,0,2
+12,APH,animals with stripes,LD,51.16335297,4,0,2
+13,APH,dangerous animals,HD,23.80939102,3,0,1
+13,APH,things that are white,LD,14.96967006,3,0,1
+13,APH,birds,HD,22.59931588,4,0,1
+13,APH,home appliances,HD,30.04819202,4,0,1
+13,APH,tools,HD,19.18271494,4,0,1
+13,APH,things with doors,LD,23.06171203,4,0,1
+13,APH,objects found in the laundry room,HD,69.58824897,2,1,1
+13,APH,objects that hold water,HD,39.7607131,4,0,1
+13,APH,things made of wood,LD,26.63741112,2,0,1
+13,APH,things that are very large,LD,28.39758396,3,0,1
+13,APH,things with handles,LD,39.05943203,4,0,1
+13,APH,non food things found in the kitchen,HD,53.96494389,4,0,1
+13,APH,things that are brown,LD,21.78202891,1,0,1
+13,APH,clothes,HD,18.52778602,4,0,1
+13,APH,fruit,HD,21.0916481,4,0,1
+13,APH,insects,HD,29.83475089,4,0,1
+13,APH,animals that live in water,HD,24.87218905,4,0,1
+13,APH,things that are red,LD,16.14066315,4,0,1
+13,APH,vegetables,HD,18.59695005,4,0,1
+13,APH,animals with stripes,LD,44.90437484,3,0,1
+13,APH,objects used for transportation,HD,66.24866414,2,4,1
+13,APH,things that are orange,LD,22.89564204,3,0,1
+13,APH,musical instruments,HD,30.67469811,4,0,1
+13,APH,things that are round,LD,16.29141092,3,0,1
+13,APH,things that are blue,LD,16.28861809,4,0,1
+13,APH,small objects,LD,54.13088179,4,1,1
+13,APH,long thin objects,LD,33.02879906,3,0,1
+13,APH,things that are yellow,LD,8.480499983,4,0,1
+13,APH,things that are soft,LD,22.69894314,4,0,1
+13,APH,things that are green,LD,13.25889206,4,0,1
+13,APH,things that fly,HD,31.21048403,4,0,1
+13,APH,farm animals,HD,25.28644395,3,0,1
+13,APH,objects found in the laundry room,HD,36.07099199,4,0,2
+13,APH,clothes,HD,27.09277916,4,0,2
+13,APH,long thin objects,LD,39.00400901,3,0,2
+13,APH,things with handles,LD,33.16080499,3,0,2
+13,APH,things that are brown,LD,22.94506717,4,0,2
+13,APH,objects used for transportation,HD,55.8279171,4,1,2
+13,APH,home appliances,HD,25.78918099,4,0,2
+13,APH,animals with stripes,LD,16.55946898,2,0,2
+13,APH,things that are round,LD,11.99880981,4,0,2
+13,APH,things that are orange,LD,16.85781217,4,0,2
+13,APH,dangerous animals,HD,19.77828002,4,0,2
+13,APH,things that fly,HD,18.265342,4,0,2
+13,APH,things that are green,LD,11.55628705,4,1,2
+13,APH,small objects,LD,26.52696991,3,1,2
+13,APH,objects that hold water,HD,26.49318814,4,0,2
+13,APH,farm animals,HD,43.96436,3,0,2
+13,APH,birds,HD,24.35590601,4,0,2
+13,APH,vegetables,HD,27.55281305,4,0,2
+13,APH,non food things found in the kitchen,HD,50.58220816,4,0,2
+13,APH,things that are very large,LD,16.87426901,4,0,2
+13,APH,things made of wood,LD,25.93698907,3,0,2
+13,APH,animals that live in water,HD,26.228302,4,0,2
+13,APH,insects,HD,22.37516189,4,0,2
+13,APH,things that are red,LD,17.07026696,4,0,2
+13,APH,things that are white,LD,16.53330207,4,0,2
+13,APH,things with doors,LD,17.75844693,4,0,2
+13,APH,things that are soft,LD,28.55399394,4,1,2
+13,APH,tools,HD,25.41444516,4,0,2
+13,APH,musical instruments,HD,37.24531293,4,0,2
+13,APH,things that are yellow,LD,19.87813497,4,0,2
+13,APH,fruit,HD,19.41548491,4,0,2
+13,APH,things that are blue,LD,15.10484004,4,0,2
+14,APH,things that are orange,LD,43.95696783,4,0,1
+14,APH,tools,HD,33.24686909,4,0,1
+14,APH,things that are brown,LD,24.32123184,4,0,1
+14,APH,things that are blue,LD,15.30394602,4,0,1
+14,APH,things made of wood,LD,38.85264111,4,0,1
+14,APH,small objects,LD,26.97822905,4,0,1
+14,APH,non food things found in the kitchen,HD,50.12485194,4,0,1
+14,APH,things with doors,LD,18.44338107,4,0,1
+14,APH,vegetables,HD,27.87653089,4,0,1
+14,APH,birds,HD,18.82414699,4,0,1
+14,APH,things that are white,LD,18.20588088,4,0,1
+14,APH,things that are very large,LD,40.79582787,4,0,1
+14,APH,things that are round,LD,23.94513798,4,0,1
+14,APH,insects,HD,19.49081111,4,0,1
+14,APH,home appliances,HD,47.92484808,4,1,1
+14,APH,animals with stripes,LD,37.22654986,4,0,1
+14,APH,dangerous animals,HD,35.87850881,4,0,1
+14,APH,clothes,HD,18.50548983,4,0,1
+14,APH,objects that hold water,HD,35.28976607,4,0,1
+14,APH,things that are soft,LD,28.49932504,2,1,1
+14,APH,musical instruments,HD,27.16823101,4,0,1
+14,APH,things that fly,HD,38.08108616,4,0,1
+14,APH,long thin objects,LD,69.98506689,3,0,1
+14,APH,things with handles,LD,44.46268702,3,0,1
+14,APH,objects used for transportation,HD,21.47179294,4,0,1
+14,APH,things that are red,LD,17.46470404,4,0,1
+14,APH,things that are yellow,LD,33.04804587,4,1,1
+14,APH,fruit,HD,40.70097208,4,0,1
+14,APH,objects found in the laundry room,HD,24.15057611,4,0,1
+14,APH,things that are green,LD,17.35232401,4,0,1
+14,APH,farm animals,HD,25.65602517,4,0,1
+14,APH,animals that live in water,HD,30.05125403,4,0,1
+14,APH,things with handles,LD,42.70496416,1,0,2
+14,APH,animals with stripes,LD,26.86465716,2,0,2
+14,APH,musical instruments,HD,21.97086811,4,0,2
+14,APH,non food things found in the kitchen,HD,24.5907979,4,0,2
+14,APH,things that are round,LD,20.29075694,4,0,2
+14,APH,things that are white,LD,16.76308489,4,0,2
+14,APH,things that are brown,LD,14.24559379,4,0,2
+14,APH,things that fly,HD,26.213027,4,0,2
+14,APH,vegetables,HD,33.74255896,4,0,2
+14,APH,things that are orange,LD,23.00757909,4,0,2
+14,APH,insects,HD,19.21310115,4,0,2
+14,APH,fruit,HD,16.47494507,4,0,2
+14,APH,things made of wood,LD,1.928628922,0,0,2
+14,APH,small objects,LD,25.00921106,4,0,2
+14,APH,animals that live in water,HD,39.73620605,2,0,2
+14,APH,tools,HD,17.25693393,4,0,2
+14,APH,dangerous animals,HD,19.50104213,4,0,2
+14,APH,clothes,HD,16.00637078,4,0,2
+14,APH,things that are red,LD,15.82280397,4,0,2
+14,APH,things with doors,LD,26.02940392,4,0,2
+14,APH,objects used for transportation,HD,19.37835479,4,0,2
+14,APH,home appliances,HD,19.82125306,4,0,2
+14,APH,things that are blue,LD,31.14582682,4,0,2
+14,APH,things that are green,LD,15.11317611,4,0,2
+14,APH,things that are soft,LD,33.19365597,4,1,2
+14,APH,long thin objects,LD,28.61904812,3,0,2
+14,APH,objects that hold water,HD,19.18679118,4,0,2
+14,APH,things that are yellow,LD,15.67701006,4,0,2
+14,APH,objects found in the laundry room,HD,23.73978114,4,0,2
+14,APH,farm animals,HD,22.96235299,4,0,2
+14,APH,birds,HD,16.00048184,4,0,2
+14,APH,things that are very large,LD,19.86085486,3,0,2
+15,PD,objects found in the laundry room,HD,23.998734,4,0,1
+15,PD,things that are white,LD,11.16935706,4,0,1
+15,PD,things that are blue,LD,11.10812783,4,0,1
+15,PD,things that are brown,LD,13.67460394,4,0,1
+15,PD,animals that live in water,HD,15.59862518,4,0,1
+15,PD,non food things found in the kitchen,HD,21.63793707,4,0,1
+15,PD,things that are green,LD,10.34767199,4,0,1
+15,PD,long thin objects,LD,18.62209916,4,0,1
+15,PD,things that are round,LD,15.95048904,4,0,1
+15,PD,fruit,HD,14.25507998,4,0,1
+15,PD,things with handles,LD,33.53726602,4,0,1
+15,PD,things that fly,HD,18.85801792,3,0,1
+15,PD,home appliances,HD,22.86174297,4,0,1
+15,PD,vegetables,HD,12.87289,4,0,1
+15,PD,objects that hold water,HD,18.5122292,4,0,1
+15,PD,insects,HD,15.31300688,4,1,1
+15,PD,farm animals,HD,19.63272786,4,0,1
+15,PD,things that are orange,LD,19.69534397,4,0,1
+15,PD,birds,HD,17.76217699,4,0,1
+15,PD,things that are soft,LD,24.46646094,4,1,1
+15,PD,things that are red,LD,9.73575902,4,0,1
+15,PD,things that are yellow,LD,10.72667193,4,1,1
+15,PD,dangerous animals,HD,29.45592809,4,1,1
+15,PD,things with doors,LD,18.19460297,4,0,1
+15,PD,animals with stripes,LD,21.79692388,3,0,1
+15,PD,things made of wood,LD,31.81847,3,1,1
+15,PD,tools,HD,17.84530902,4,0,1
+15,PD,musical instruments,HD,15.85447001,4,0,1
+15,PD,objects used for transportation,HD,17.05878401,3,0,1
+15,PD,small objects,LD,16.62056804,4,0,1
+15,PD,clothes,HD,16.90395188,4,0,1
+15,PD,things that are very large,LD,18.7414701,4,0,1
+15,PD,things that are brown,LD,12.58032012,4,0,2
+15,PD,things with handles,LD,13.03077221,3,0,2
+15,PD,things with doors,LD,17.89658308,1,4,2
+15,PD,things that are yellow,LD,11.12393618,4,0,2
+15,PD,vegetables,HD,12.64429712,4,0,2
+15,PD,objects used for transportation,HD,16.706388,4,0,2
+15,PD,birds,HD,13.91182017,4,0,2
+15,PD,fruit,HD,12.74405909,4,0,2
+15,PD,musical instruments,HD,14.35480189,4,0,2
+15,PD,objects found in the laundry room,HD,16.42888713,4,0,2
+15,PD,tools,HD,15.97743201,4,0,2
+15,PD,clothes,HD,11.58211088,4,0,2
+15,PD,small objects,LD,20.6989789,4,0,2
+15,PD,non food things found in the kitchen,HD,18.17399406,4,0,2
+15,PD,objects that hold water,HD,23.01268101,4,0,2
+15,PD,farm animals,HD,14.71384811,4,0,2
+15,PD,animals that live in water,HD,14.64350414,4,0,2
+15,PD,things that are red,LD,11.48653793,4,0,2
+15,PD,things made of wood,LD,18.22591686,3,0,2
+15,PD,things that are green,LD,10.92228603,4,0,2
+15,PD,things that fly,HD,18.31676793,4,0,2
+15,PD,things that are round,LD,15.56172395,4,0,2
+15,PD,animals with stripes,LD,18.38158107,4,0,2
+15,PD,things that are white,LD,10.72324491,4,0,2
+15,PD,things that are soft,LD,15.97918606,4,1,2
+15,PD,home appliances,HD,14.95157599,4,0,2
+15,PD,things that are very large,LD,26.1482749,3,0,2
+15,PD,things that are orange,LD,10.29022503,3,0,2
+15,PD,things that are blue,LD,11.79893684,4,0,2
+15,PD,insects,HD,14.23745298,4,0,2
+15,PD,dangerous animals,HD,22.12427878,4,1,2
+15,PD,long thin objects,LD,14.011868,4,0,2
+16,PD,things that fly,HD,36.32150197,4,0,1
+16,PD,things that are brown,LD,34.20812607,4,0,1
+16,PD,things that are blue,LD,19.31260395,3,0,1
+16,PD,objects found in the laundry room,HD,22.08225989,3,0,1
+16,PD,things that are orange,LD,22.28306413,3,0,1
+16,PD,musical instruments,HD,32.78155017,3,0,1
+16,PD,objects that hold water,HD,21.08002496,3,0,1
+16,PD,things that are very large,LD,30.48820305,3,0,1
+16,PD,clothes,HD,15.94267607,4,0,1
+16,PD,farm animals,HD,30.39113212,2,0,1
+16,PD,things that are yellow,LD,21.14709187,4,1,1
+16,PD,things that are white,LD,12.31745195,4,0,1
+16,PD,non food things found in the kitchen,HD,42.22569609,4,1,1
+16,PD,animals that live in water,HD,31.71798992,4,0,1
+16,PD,home appliances,HD,17.00466204,4,0,1
+16,PD,long thin objects,LD,22.15132999,4,0,1
+16,PD,things that are green,LD,12.11456394,4,0,1
+16,PD,birds,HD,22.33303404,4,0,1
+16,PD,tools,HD,23.90287495,3,1,1
+16,PD,things that are red,LD,9.288252831,4,0,1
+16,PD,vegetables,HD,20.3259449,4,0,1
+16,PD,things made of wood,LD,21.88295388,3,0,1
+16,PD,things with doors,LD,14.46995187,4,0,1
+16,PD,insects,HD,18.45158601,4,0,1
+16,PD,dangerous animals,HD,23.49804688,3,0,1
+16,PD,objects used for transportation,HD,30.64742804,4,0,1
+16,PD,animals with stripes,LD,3.278214216,0,0,1
+16,PD,small objects,LD,27.50982285,3,0,1
+16,PD,things that are round,LD,31.5988071,4,0,1
+16,PD,things that are soft,LD,25.20057511,3,0,1
+16,PD,fruit,HD,15.893152,4,0,1
+16,PD,things with handles,LD,27.9465239,4,0,1
+16,PD,objects that hold water,HD,31.85509396,4,0,2
+16,PD,things made of wood,LD,31.85563588,1,0,2
+16,PD,things with handles,LD,20.06484509,3,0,2
+16,PD,long thin objects,LD,16.56872201,4,0,2
+16,PD,things that are orange,LD,21.38669896,3,0,2
+16,PD,home appliances,HD,18.21187806,4,0,2
+16,PD,non food things found in the kitchen,HD,45.80296493,4,0,2
+16,PD,clothes,HD,16.62456203,4,0,2
+16,PD,farm animals,HD,18.11401486,4,0,2
+16,PD,animals with stripes,LD,20.45200014,3,0,2
+16,PD,vegetables,HD,16.85578108,4,0,2
+16,PD,insects,HD,15.82473803,4,0,2
+16,PD,objects found in the laundry room,HD,29.60080409,4,0,2
+16,PD,things that are yellow,LD,14.74049711,4,0,2
+16,PD,things that are red,LD,16.30248213,4,0,2
+16,PD,tools,HD,33.67481518,4,1,2
+16,PD,fruit,HD,13.48659086,4,0,2
+16,PD,animals that live in water,HD,21.09340191,3,0,2
+16,PD,dangerous animals,HD,36.23027301,2,1,2
+16,PD,small objects,LD,18.42437696,3,0,2
+16,PD,things that are round,LD,23.83070993,2,1,2
+16,PD,objects used for transportation,HD,1.915984869,0,0,2
+16,PD,things that are brown,LD,33.50333905,4,0,2
+16,PD,things that are very large,LD,18.48254514,4,0,2
+16,PD,things that are soft,LD,14.94836497,3,0,2
+16,PD,musical instruments,HD,20.67302203,4,0,2
+16,PD,things that fly,HD,21.46364903,4,0,2
+16,PD,things with doors,LD,11.17935109,4,0,2
+16,PD,things that are green,LD,10.93333101,4,0,2
+16,PD,things that are white,LD,12.5344429,4,0,2
+16,PD,birds,HD,14.58307505,4,0,2
+16,PD,things that are blue,LD,14.32762289,3,0,2
+17,APH,animals that live in water,HD,32.9542079,2,0,1
+17,APH,things that are soft,LD,65.41669297,4,2,1
+17,APH,things that are very large,LD,45.79681396,4,0,1
+17,APH,animals with stripes,LD,21.78115082,2,0,1
+17,APH,non food things found in the kitchen,HD,47.18404102,4,0,1
+17,APH,things that fly,HD,73.12920499,4,1,1
+17,APH,objects used for transportation,HD,48.94669986,4,0,1
+17,APH,things that are white,LD,25.23088884,4,0,1
+17,APH,long thin objects,LD,46.98991108,4,0,1
+17,APH,birds,HD,32.62116814,4,0,1
+17,APH,things that are round,LD,32.1659801,4,0,1
+17,APH,things with doors,LD,3.564812899,0,0,1
+17,APH,things that are blue,LD,28.15867305,4,0,1
+17,APH,fruit,HD,33.88026214,4,0,1
+17,APH,things that are green,LD,30.02047515,4,0,1
+17,APH,things that are brown,LD,36.252352,3,0,1
+17,APH,musical instruments,HD,45.25794005,2,0,1
+17,APH,small objects,LD,76.23974204,4,1,1
+17,APH,objects found in the laundry room,HD,50.14165401,4,0,1
+17,APH,farm animals,HD,53.15498114,4,0,1
+17,APH,things that are orange,LD,29.15501189,4,0,1
+17,APH,things that are red,LD,20.72032285,4,0,1
+17,APH,home appliances,HD,95.53658605,3,3,1
+17,APH,clothes,HD,44.82673812,3,1,1
+17,APH,tools,HD,76.21228218,4,1,1
+17,APH,things that are yellow,LD,24.49620891,3,0,1
+17,APH,dangerous animals,HD,56.24276614,2,0,1
+17,APH,objects that hold water,HD,43.71141291,4,0,1
+17,APH,things with handles,LD,57.92062902,4,0,1
+17,APH,things made of wood,LD,36.26640296,4,0,1
+17,APH,insects,HD,2.465395927,0,0,1
+17,APH,vegetables,HD,63.04156709,3,1,1
+17,APH,musical instruments,HD,31.68111014,1,0,2
+17,APH,things that are very large,LD,31.732548,4,0,2
+17,APH,long thin objects,LD,30.33901787,3,0,2
+17,APH,fruit,HD,23.22430992,4,0,2
+17,APH,farm animals,HD,22.92343712,3,0,2
+17,APH,things that are red,LD,22.67797613,4,1,2
+17,APH,things that are white,LD,2.660362005,0,0,2
+17,APH,things that are soft,LD,32.89547706,3,0,2
+17,APH,animals that live in water,HD,29.72780919,3,0,2
+17,APH,things with doors,LD,34.47355294,4,0,2
+17,APH,things that are yellow,LD,26.57796001,3,1,2
+17,APH,objects used for transportation,HD,2.344716072,0,0,2
+17,APH,things that fly,HD,34.65679502,4,1,2
+17,APH,home appliances,HD,45.64310598,4,1,2
+17,APH,vegetables,HD,30.00660205,3,0,2
+17,APH,things with handles,LD,57.62332582,3,0,2
+17,APH,things that are blue,LD,1.619475842,0,0,2
+17,APH,objects found in the laundry room,HD,28.62772298,3,0,2
+17,APH,animals with stripes,LD,29.12146091,3,0,2
+17,APH,insects,HD,27.2825191,3,0,2
+17,APH,non food things found in the kitchen,HD,64.17382193,3,0,2
+17,APH,dangerous animals,HD,24.25831413,2,0,2
+17,APH,things that are brown,LD,23.29607391,0,0,2
+17,APH,birds,HD,3.632435083,0,0,2
+17,APH,things that are orange,LD,30.52424288,3,0,2
+17,APH,clothes,HD,40.65517497,4,0,2
+17,APH,things that are round,LD,28.79207397,4,0,2
+17,APH,tools,HD,47.01344991,4,0,2
+17,APH,things that are green,LD,18.98674679,3,0,2
+17,APH,things made of wood,LD,24.33458209,2,0,2
+17,APH,small objects,LD,36.06890202,3,1,2
+17,APH,objects that hold water,HD,57.57807207,4,1,2
+18,APH,small objects,LD,45.05141187,4,1,1
+18,APH,things that are brown,LD,0.819196939,0,0,1
+18,APH,clothes,HD,28.62698102,3,0,1
+18,APH,animals that live in water,HD,27.49069309,4,0,1
+18,APH,things made of wood,LD,40.76146007,4,0,1
+18,APH,long thin objects,LD,36.44992518,4,3,1
+18,APH,things that are red,LD,27.23826098,4,0,1
+18,APH,things with handles,LD,38.08626699,4,0,1
+18,APH,home appliances,HD,25.9240799,4,0,1
+18,APH,things with doors,LD,23.87463117,4,0,1
+18,APH,things that fly,HD,26.58201003,4,0,1
+18,APH,dangerous animals,HD,26.87541986,4,2,1
+18,APH,musical instruments,HD,23.40096307,3,0,1
+18,APH,things that are orange,LD,23.76691985,4,0,1
+18,APH,farm animals,HD,23.155972,4,0,1
+18,APH,things that are white,LD,15.83313608,4,0,1
+18,APH,things that are soft,LD,47.78465819,3,1,1
+18,APH,things that are green,LD,16.34897208,4,0,1
+18,APH,things that are round,LD,35.94816613,3,0,1
+18,APH,objects found in the laundry room,HD,39.30051017,3,0,1
+18,APH,animals with stripes,LD,26.88515496,4,0,1
+18,APH,things that are very large,LD,1.540835857,0,0,1
+18,APH,non food things found in the kitchen,HD,46.58728695,3,1,1
+18,APH,tools,HD,23.04963589,4,0,1
+18,APH,things that are yellow,LD,19.85322094,4,0,1
+18,APH,fruit,HD,28.06712008,4,0,1
+18,APH,birds,HD,26.40383792,4,0,1
+18,APH,vegetables,HD,23.591187,4,0,1
+18,APH,insects,HD,18.55188489,4,0,1
+18,APH,things that are blue,LD,14.07390404,4,0,1
+18,APH,objects used for transportation,HD,22.51117587,4,0,1
+18,APH,objects that hold water,HD,27.80382085,4,0,1
+18,APH,farm animals,HD,22.60629606,4,0,2
+18,APH,animals that live in water,HD,22.55314898,4,0,2
+18,APH,things that are yellow,LD,15.09283805,4,0,2
+18,APH,things that are round,LD,22.09496903,4,0,2
+18,APH,objects that hold water,HD,24.59166789,3,0,2
+18,APH,musical instruments,HD,20.94838595,4,0,2
+18,APH,dangerous animals,HD,20.94864511,4,1,2
+18,APH,things that are green,LD,10.14466,4,0,2
+18,APH,things that are blue,LD,13.59334302,4,0,2
+18,APH,things that are soft,LD,28.09338093,3,2,2
+18,APH,insects,HD,17.19889498,4,0,2
+18,APH,objects found in the laundry room,HD,36.71158791,4,0,2
+18,APH,fruit,HD,21.80907989,4,0,2
+18,APH,things that are orange,LD,25.29397297,4,0,2
+18,APH,things that are very large,LD,30.21329403,4,0,2
+18,APH,clothes,HD,17.044765,4,0,2
+18,APH,vegetables,HD,18.96276188,4,0,2
+18,APH,things that are brown,LD,32.79553699,4,0,2
+18,APH,things with doors,LD,22.94921803,4,0,2
+18,APH,things with handles,LD,29.06297898,3,0,2
+18,APH,non food things found in the kitchen,HD,25.58628511,4,0,2
+18,APH,tools,HD,18.04582,4,0,2
+18,APH,home appliances,HD,22.19258809,4,0,2
+18,APH,animals with stripes,LD,19.46085095,4,0,2
+18,APH,long thin objects,LD,24.81205297,4,1,2
+18,APH,objects used for transportation,HD,33.445755,4,0,2
+18,APH,things that fly,HD,30.2544651,4,0,2
+18,APH,birds,HD,20.17846084,4,0,2
+18,APH,things made of wood,LD,17.73022795,4,2,2
+18,APH,things that are red,LD,13.79755282,4,0,2
+18,APH,things that are white,LD,12.40888,4,0,2
+18,APH,small objects,LD,22.83420897,4,0,2
+19,PD,things that are round,LD,70.47809196,4,1,1
+19,PD,clothes,HD,86.02538419,4,0,1
+19,PD,objects used for transportation,HD,105.1240249,4,2,1
+19,PD,things that are white,LD,38.10807395,4,0,1
+19,PD,things that are blue,LD,30.19109583,4,0,1
+19,PD,musical instruments,HD,74.95859885,2,0,1
+19,PD,animals that live in water,HD,59.3394742,4,0,1
+19,PD,fruit,HD,51.54370093,3,0,1
+19,PD,things with doors,LD,56.14623404,3,0,1
+19,PD,things that are soft,LD,86.97515106,3,3,1
+19,PD,things that are very large,LD,88.09517503,3,0,1
+19,PD,things that are orange,LD,27.46238208,4,0,1
+19,PD,things made of wood,LD,57.09506989,2,0,1
+19,PD,things that fly,HD,59.70945501,4,0,1
+19,PD,non food things found in the kitchen,HD,167.99455,4,2,1
+19,PD,things that are red,LD,35.44603109,4,0,1
+19,PD,objects found in the laundry room,HD,74.83279681,2,0,1
+19,PD,farm animals,HD,58.69401312,4,0,1
+19,PD,home appliances,HD,52.11201787,2,0,1
+19,PD,long thin objects,LD,58.39800882,3,1,1
+19,PD,insects,HD,58.45898891,4,0,1
+19,PD,things with handles,LD,60.97274494,3,0,1
+19,PD,birds,HD,51.41541409,4,0,1
+19,PD,animals with stripes,LD,68.29950309,3,0,1
+19,PD,small objects,LD,53.64203715,2,0,1
+19,PD,tools,HD,46.56960106,4,0,1
+19,PD,things that are yellow,LD,16.08403897,3,0,1
+19,PD,objects that hold water,HD,49.34097409,4,0,1
+19,PD,dangerous animals,HD,82.21352005,2,0,1
+19,PD,vegetables,HD,51.12684798,3,0,1
+19,PD,things that are green,LD,19.88127518,4,0,1
+19,PD,things that are brown,LD,42.35661387,4,0,1
+19,PD,things that are green,LD,19.08073807,4,0,2
+19,PD,objects found in the laundry room,HD,33.94076109,3,0,2
+19,PD,fruit,HD,38.77712393,4,0,2
+19,PD,small objects,LD,44.53123403,3,0,2
+19,PD,things that are orange,LD,23.09751892,4,0,2
+19,PD,things with doors,LD,43.85548997,3,0,2
+19,PD,objects used for transportation,HD,60.92896318,3,1,2
+19,PD,animals that live in water,HD,45.66903901,4,1,2
+19,PD,things that are soft,LD,37.26757503,2,3,2
+19,PD,things with handles,LD,77.07864189,3,1,2
+19,PD,musical instruments,HD,52.89249802,2,0,2
+19,PD,clothes,HD,59.14521718,4,0,2
+19,PD,long thin objects,LD,51.83688498,4,1,2
+19,PD,things that are white,LD,19.72279716,4,0,2
+19,PD,birds,HD,59.69863701,3,0,2
+19,PD,things that are brown,LD,0.656852961,0,0,2
+19,PD,tools,HD,45.20156002,4,0,2
+19,PD,things that are red,LD,34.03034902,4,0,2
+19,PD,things made of wood,LD,67.31755209,1,1,2
+19,PD,things that are round,LD,43.72450686,4,0,2
+19,PD,things that are yellow,LD,27.96672392,3,0,2
+19,PD,things that fly,HD,49.36203504,4,0,2
+19,PD,non food things found in the kitchen,HD,80.77836895,3,0,2
+19,PD,insects,HD,51.144521,4,0,2
+19,PD,farm animals,HD,63.44166803,4,0,2
+19,PD,animals with stripes,LD,47.16380119,3,0,2
+19,PD,things that are blue,LD,14.92640615,4,0,2
+19,PD,home appliances,HD,54.93857288,4,1,2
+19,PD,dangerous animals,HD,52.69807291,2,0,2
+19,PD,objects that hold water,HD,54.63935399,3,0,2
+19,PD,vegetables,HD,49.27596998,4,0,2
+19,PD,things that are very large,LD,48.37801695,2,0,2
+20,PD,animals that live in water,HD,26.88035297,4,0,1
+20,PD,clothes,HD,25.920439,4,0,1
+20,PD,home appliances,HD,28.86806798,4,0,1
+20,PD,things that fly,HD,25.18760204,4,0,1
+20,PD,things that are red,LD,25.34660316,4,0,1
+20,PD,objects found in the laundry room,HD,20.71542716,4,0,1
+20,PD,birds,HD,20.74144006,4,0,1
+20,PD,long thin objects,LD,33.82484078,3,2,1
+20,PD,things that are very large,LD,36.93963885,4,0,1
+20,PD,dangerous animals,HD,31.51844502,4,1,1
+20,PD,things that are blue,LD,44.49870491,4,0,1
+20,PD,things that are brown,LD,13.67226791,4,0,1
+20,PD,insects,HD,19.72940993,4,0,1
+20,PD,things with doors,LD,18.14343405,4,0,1
+20,PD,things made of wood,LD,42.88349199,3,0,1
+20,PD,small objects,LD,39.45586014,4,0,1
+20,PD,things that are yellow,LD,33.47473788,4,1,1
+20,PD,things that are round,LD,31.99110985,4,0,1
+20,PD,musical instruments,HD,25.08313608,4,1,1
+20,PD,tools,HD,21.24168682,4,0,1
+20,PD,things that are green,LD,28.13927102,4,3,1
+20,PD,farm animals,HD,21.14600396,4,0,1
+20,PD,fruit,HD,39.76871896,3,0,1
+20,PD,non food things found in the kitchen,HD,37.71055102,4,4,1
+20,PD,animals with stripes,LD,17.37842202,4,0,1
+20,PD,things that are white,LD,13.71311498,4,0,1
+20,PD,things that are soft,LD,21.49417114,3,1,1
+20,PD,things with handles,LD,18.02284694,3,0,1
+20,PD,vegetables,HD,22.78087497,4,0,1
+20,PD,objects that hold water,HD,18.01401687,3,0,1
+20,PD,things that are orange,LD,17.85045505,4,0,1
+20,PD,objects used for transportation,HD,33.34654212,4,0,1
+20,PD,things that are round,LD,27.44742203,3,0,2
+20,PD,tools,HD,14.35599899,4,0,2
+20,PD,birds,HD,17.01995492,4,0,2
+20,PD,long thin objects,LD,29.89115596,4,1,2
+20,PD,things that are orange,LD,25.88428807,3,0,2
+20,PD,animals that live in water,HD,13.45339394,4,0,2
+20,PD,objects that hold water,HD,37.59567499,4,2,2
+20,PD,things that are soft,LD,23.57932687,3,0,2
+20,PD,things with handles,LD,31.06197596,3,1,2
+20,PD,home appliances,HD,15.30710006,4,0,2
+20,PD,dangerous animals,HD,25.53816295,4,0,2
+20,PD,things that are red,LD,18.1920011,4,0,2
+20,PD,things that are green,LD,11.73818684,4,0,2
+20,PD,farm animals,HD,15.42579508,4,0,2
+20,PD,small objects,LD,31.19068408,4,0,2
+20,PD,fruit,HD,15.68326306,3,0,2
+20,PD,things with doors,LD,18.84716892,4,1,2
+20,PD,objects found in the laundry room,HD,19.05502486,3,1,2
+20,PD,musical instruments,HD,17.13443708,3,0,2
+20,PD,things that are white,LD,14.20032096,4,0,2
+20,PD,things that are blue,LD,11.4228828,4,0,2
+20,PD,things made of wood,LD,22.156425,4,0,2
+20,PD,clothes,HD,12.97869802,4,0,2
+20,PD,things that are brown,LD,12.97977018,4,0,2
+20,PD,animals with stripes,LD,14.60383701,2,0,2
+20,PD,things that are very large,LD,16.19385886,4,0,2
+20,PD,vegetables,HD,12.91781616,4,0,2
+20,PD,objects used for transportation,HD,17.95644617,4,0,2
+20,PD,insects,HD,14.54145694,4,1,2
+20,PD,things that are yellow,LD,10.42406988,3,0,2
+20,PD,non food things found in the kitchen,HD,18.4011271,4,0,2
+20,PD,things that fly,HD,13.45492387,4,0,2
+21,PD,animals with stripes,LD,22.03386593,4,0,1
+21,PD,non food things found in the kitchen,HD,24.40475106,4,0,1
+21,PD,things made of wood,LD,21.2696898,2,0,1
+21,PD,objects that hold water,HD,14.40694499,4,0,1
+21,PD,things that are soft,LD,33.57207108,4,3,1
+21,PD,birds,HD,15.14220214,4,0,1
+21,PD,dangerous animals,HD,22.54304194,4,1,1
+21,PD,things that are very large,LD,25.31043291,3,0,1
+21,PD,things that are yellow,LD,12.35972309,4,1,1
+21,PD,objects used for transportation,HD,22.74349713,4,0,1
+21,PD,objects found in the laundry room,HD,37.11805916,4,0,1
+21,PD,things that are white,LD,8.884460926,4,0,1
+21,PD,small objects,LD,26.93564105,3,2,1
+21,PD,home appliances,HD,17.56935096,4,1,1
+21,PD,things that are green,LD,8.672823191,4,0,1
+21,PD,fruit,HD,9.792343855,4,0,1
+21,PD,things with handles,LD,21.33561611,4,0,1
+21,PD,insects,HD,13.65223002,4,0,1
+21,PD,things that are red,LD,8.714902878,4,0,1
+21,PD,things that are round,LD,18.79483485,3,0,1
+21,PD,farm animals,HD,14.72285795,4,0,1
+21,PD,clothes,HD,9.656370878,4,0,1
+21,PD,animals that live in water,HD,18.81533504,4,0,1
+21,PD,things with doors,LD,12.80766582,4,0,1
+21,PD,things that are orange,LD,11.44538903,3,0,1
+21,PD,long thin objects,LD,10.99581885,3,1,1
+21,PD,things that fly,HD,23.30738878,4,0,1
+21,PD,things that are blue,LD,8.833983898,4,1,1
+21,PD,things that are brown,LD,8.782214165,4,0,1
+21,PD,vegetables,HD,9.620215178,4,0,1
+21,PD,tools,HD,18.53667808,4,0,1
+21,PD,musical instruments,HD,12.15530801,4,0,1
+21,PD,things that are green,LD,9.97685194,4,0,2
+21,PD,insects,HD,11.44711399,4,0,2
+21,PD,things that are soft,LD,14.92164087,4,3,2
+21,PD,objects found in the laundry room,HD,14.37046099,4,0,2
+21,PD,animals with stripes,LD,13.19062591,4,0,2
+21,PD,birds,HD,9.07297802,4,0,2
+21,PD,fruit,HD,7.802768946,4,0,2
+21,PD,things that are brown,LD,7.406169176,3,0,2
+21,PD,vegetables,HD,6.974053144,4,0,2
+21,PD,things that are white,LD,7.06139493,4,0,2
+21,PD,objects used for transportation,HD,11.17997313,4,0,2
+21,PD,things with doors,LD,8.828713894,4,0,2
+21,PD,things that are red,LD,6.018203974,4,0,2
+21,PD,things that are round,LD,9.23577714,4,0,2
+21,PD,small objects,LD,16.2956109,4,0,2
+21,PD,farm animals,HD,7.609562159,4,0,2
+21,PD,musical instruments,HD,13.32118011,4,0,2
+21,PD,home appliances,HD,12.84783292,4,0,2
+21,PD,long thin objects,LD,12.79490209,4,0,2
+21,PD,things that are blue,LD,7.655267,4,1,2
+21,PD,dangerous animals,HD,13.11502504,4,1,2
+21,PD,things made of wood,LD,10.78725505,3,0,2
+21,PD,tools,HD,9.109988928,4,0,2
+21,PD,things that are yellow,LD,8.906746864,4,0,2
+21,PD,things that are very large,LD,18.20215702,3,0,2
+21,PD,objects that hold water,HD,22.09474802,4,0,2
+21,PD,clothes,HD,8.213356018,4,0,2
+21,PD,things that fly,HD,13.36665988,4,0,2
+21,PD,non food things found in the kitchen,HD,13.34637213,4,0,2
+21,PD,animals that live in water,HD,11.61038494,4,0,2
+21,PD,things that are orange,LD,9.257748127,4,0,2
+21,PD,things with handles,LD,18.64403582,3,0,2
+22,PD,vegetables,HD,22.56612086,4,0,1
+22,PD,objects found in the laundry room,HD,0.823910952,0,0,1
+22,PD,things that are green,LD,12.23881412,4,0,1
+22,PD,things that are orange,LD,22.25402784,4,0,1
+22,PD,insects,HD,55.97281194,4,0,1
+22,PD,tools,HD,24.66591716,4,0,1
+22,PD,fruit,HD,24.928936,4,0,1
+22,PD,animals with stripes,LD,25.86554599,3,0,1
+22,PD,things that are white,LD,19.56245494,4,0,1
+22,PD,things that are round,LD,31.95137692,3,0,1
+22,PD,animals that live in water,HD,58.00252509,4,0,1
+22,PD,clothes,HD,16.86188102,4,0,1
+22,PD,objects used for transportation,HD,27.29739499,4,0,1
+22,PD,long thin objects,LD,34.61675,4,1,1
+22,PD,musical instruments,HD,44.97811317,4,0,1
+22,PD,things that are yellow,LD,20.03649688,4,0,1
+22,PD,home appliances,HD,23.59272122,4,0,1
+22,PD,things with handles,LD,36.7312541,3,0,1
+22,PD,things that are soft,LD,72.63948298,4,1,1
+22,PD,non food things found in the kitchen,HD,41.88632894,4,0,1
+22,PD,dangerous animals,HD,64.47655797,4,0,1
+22,PD,objects that hold water,HD,32.34429789,4,0,1
+22,PD,things made of wood,LD,26.19915605,4,0,1
+22,PD,things that are brown,LD,14.82885909,4,0,1
+22,PD,farm animals,HD,28.16637802,4,0,1
+22,PD,things that fly,HD,4.07216382,0,0,1
+22,PD,things that are very large,LD,39.20112705,4,0,1
+22,PD,things with doors,LD,28.78947496,4,0,1
+22,PD,things that are blue,LD,17.10667491,4,1,1
+22,PD,small objects,LD,27.88726902,4,0,1
+22,PD,birds,HD,21.31743598,4,0,1
+22,PD,things that are red,LD,19.81075096,4,0,1
+22,PD,dangerous animals,HD,41.15372086,4,2,2
+22,PD,non food things found in the kitchen,HD,70.51806688,4,0,2
+22,PD,things with handles,LD,20.96381712,4,0,2
+22,PD,objects found in the laundry room,HD,33.31933498,4,0,2
+22,PD,farm animals,HD,16.68931484,4,0,2
+22,PD,things made of wood,LD,32.94080496,3,0,2
+22,PD,things that are blue,LD,11.71656013,4,1,2
+22,PD,things that fly,HD,27.68135691,4,0,2
+22,PD,animals that live in water,HD,18.08537889,4,0,2
+22,PD,long thin objects,LD,17.62326694,4,0,2
+22,PD,things that are red,LD,14.09444785,4,0,2
+22,PD,things that are round,LD,22.7470479,3,0,2
+22,PD,things that are soft,LD,26.06670094,4,1,2
+22,PD,fruit,HD,12.57938695,3,0,2
+22,PD,musical instruments,HD,20.64216805,4,0,2
+22,PD,things that are yellow,LD,12.80355191,4,0,2
+22,PD,animals with stripes,LD,58.50711918,4,0,2
+22,PD,things that are very large,LD,17.64522815,4,0,2
+22,PD,objects used for transportation,HD,21.99743509,4,0,2
+22,PD,things with doors,LD,24.66528702,4,0,2
+22,PD,small objects,LD,21.18645406,4,0,2
+22,PD,birds,HD,25.51747108,4,0,2
+22,PD,clothes,HD,16.09116697,4,0,2
+22,PD,objects that hold water,HD,15.266397,4,0,2
+22,PD,things that are white,LD,16.17582607,4,0,2
+22,PD,insects,HD,42.2916739,4,0,2
+22,PD,things that are green,LD,17.587147,4,0,2
+22,PD,tools,HD,20.11019611,3,0,2
+22,PD,things that are brown,LD,20.97685504,4,0,2
+22,PD,home appliances,HD,21.93683887,4,0,2
+22,PD,vegetables,HD,15.88018703,4,0,2
+22,PD,things that are orange,LD,14.35603118,4,0,2
+23,PD,things that fly,HD,20.66127491,4,0,1
+23,PD,things that are yellow,LD,12.37434816,4,0,1
+23,PD,things that are green,LD,11.26834798,4,0,1
+23,PD,things with doors,LD,17.40114021,4,0,1
+23,PD,objects used for transportation,HD,34.82765913,3,0,1
+23,PD,things that are soft,LD,20.32133007,4,0,1
+23,PD,dangerous animals,HD,17.5678308,3,1,1
+23,PD,things that are orange,LD,32.58736801,3,0,1
+23,PD,farm animals,HD,19.64309597,4,0,1
+23,PD,non food things found in the kitchen,HD,20.10824895,4,0,1
+23,PD,fruit,HD,23.01023388,3,0,1
+23,PD,things that are blue,LD,12.23198915,4,0,1
+23,PD,long thin objects,LD,22.43177915,4,0,1
+23,PD,things that are round,LD,16.58756804,4,0,1
+23,PD,tools,HD,15.79217911,4,0,1
+23,PD,things that are red,LD,11.33620405,4,0,1
+23,PD,things made of wood,LD,18.27954698,3,0,1
+23,PD,home appliances,HD,21.53053594,4,1,1
+23,PD,animals that live in water,HD,14.75531411,4,0,1
+23,PD,insects,HD,17.5645411,4,0,1
+23,PD,things with handles,LD,16.85505486,3,0,1
+23,PD,small objects,LD,15.67156005,4,0,1
+23,PD,things that are brown,LD,14.62923217,4,0,1
+23,PD,birds,HD,15.08793116,4,0,1
+23,PD,vegetables,HD,13.62528396,4,0,1
+23,PD,objects that hold water,HD,21.65997005,2,1,1
+23,PD,things that are very large,LD,14.23312807,4,0,1
+23,PD,clothes,HD,12.926615,3,1,1
+23,PD,animals with stripes,LD,18.54011512,4,0,1
+23,PD,musical instruments,HD,17.35288,4,0,1
+23,PD,objects found in the laundry room,HD,24.97139597,4,0,1
+23,PD,things that are white,LD,11.91841698,4,0,1
+23,PD,home appliances,HD,14.84460402,4,1,2
+23,PD,things that are green,LD,10.30626178,4,0,2
+23,PD,dangerous animals,HD,21.02339005,3,0,2
+23,PD,things that are red,LD,9.367306948,4,0,2
+23,PD,tools,HD,14.84874201,4,0,2
+23,PD,things that fly,HD,21.96196699,4,0,2
+23,PD,things with doors,LD,28.24847984,4,0,2
+23,PD,insects,HD,13.88270807,4,0,2
+23,PD,objects used for transportation,HD,1.277533054,0,0,2
+23,PD,long thin objects,LD,16.49233389,4,1,2
+23,PD,musical instruments,HD,12.96899796,4,0,2
+23,PD,vegetables,HD,13.91730404,4,0,2
+23,PD,fruit,HD,17.68713784,3,0,2
+23,PD,animals that live in water,HD,15.45267105,4,0,2
+23,PD,clothes,HD,15.277246,4,0,2
+23,PD,things made of wood,LD,15.09338498,4,0,2
+23,PD,things with handles,LD,27.65177584,4,0,2
+23,PD,birds,HD,20.02596617,4,0,2
+23,PD,things that are soft,LD,20.4532721,4,0,2
+23,PD,things that are yellow,LD,14.08962107,4,0,2
+23,PD,things that are orange,LD,12.19317389,3,0,2
+23,PD,small objects,LD,17.89226484,4,0,2
+23,PD,objects found in the laundry room,HD,30.92177701,4,0,2
+23,PD,animals with stripes,LD,14.29090714,4,0,2
+23,PD,non food things found in the kitchen,HD,18.54044104,4,0,2
+23,PD,farm animals,HD,17.60353088,4,0,2
+23,PD,things that are round,LD,15.35018706,4,0,2
+23,PD,objects that hold water,HD,36.93420696,3,0,2
+23,PD,things that are blue,LD,11.23265886,4,0,2
+23,PD,things that are brown,LD,1.602123976,0,0,2
+23,PD,things that are very large,LD,27.36131191,4,0,2
+23,PD,things that are white,LD,15.94948387,4,0,2
+24,PD,birds,HD,36.73503304,4,0,1
+24,PD,things that are white,LD,16.64754105,3,0,1
+24,PD,non food things found in the kitchen,HD,31.27505207,3,0,1
+24,PD,things that are blue,LD,10.81164002,4,0,1
+24,PD,things that are red,LD,12.03773093,4,0,1
+24,PD,things made of wood,LD,21.97183585,4,0,1
+24,PD,things that are very large,LD,36.05913901,4,0,1
+24,PD,objects that hold water,HD,22.31566691,3,0,1
+24,PD,things that are green,LD,11.954983,4,0,1
+24,PD,long thin objects,LD,17.64417696,4,0,1
+24,PD,insects,HD,19.37618613,4,0,1
+24,PD,musical instruments,HD,36.06616497,2,1,1
+24,PD,animals that live in water,HD,19.99214888,3,0,1
+24,PD,clothes,HD,31.24971604,3,0,1
+24,PD,things that are orange,LD,19.74664998,3,0,1
+24,PD,things that are round,LD,16.23283505,4,0,1
+24,PD,things with doors,LD,18.77533507,4,0,1
+24,PD,vegetables,HD,13.70842195,3,0,1
+24,PD,home appliances,HD,28.51242995,3,1,1
+24,PD,things that fly,HD,20.98559403,4,0,1
+24,PD,farm animals,HD,18.58135819,3,0,1
+24,PD,things that are soft,LD,22.77391005,3,2,1
+24,PD,things that are brown,LD,15.04941702,4,0,1
+24,PD,fruit,HD,14.45585299,4,0,1
+24,PD,things that are yellow,LD,11.24475718,4,0,1
+24,PD,things with handles,LD,28.25788593,4,0,1
+24,PD,dangerous animals,HD,30.75566483,4,0,1
+24,PD,objects used for transportation,HD,24.98504901,4,0,1
+24,PD,animals with stripes,LD,24.15541315,1,0,1
+24,PD,tools,HD,26.50732994,3,0,1
+24,PD,small objects,LD,28.3919301,4,0,1
+24,PD,objects found in the laundry room,HD,22.73322392,3,0,1
+24,PD,things that are brown,LD,19.48425603,4,0,2
+24,PD,objects found in the laundry room,HD,20.78909516,4,0,2
+24,PD,things that are red,LD,17.89537287,4,0,2
+24,PD,things that are orange,LD,11.90208793,4,0,2
+24,PD,objects that hold water,HD,25.07545114,4,0,2
+24,PD,musical instruments,HD,20.36978912,4,0,2
+24,PD,vegetables,HD,14.36797094,4,0,2
+24,PD,dangerous animals,HD,34.72012901,3,0,2
+24,PD,things that are yellow,LD,13.07575512,4,0,2
+24,PD,insects,HD,22.51783299,3,0,2
+24,PD,non food things found in the kitchen,HD,21.49526691,3,1,2
+24,PD,things that are soft,LD,24.48971605,2,1,2
+24,PD,animals with stripes,LD,17.14134407,4,0,2
+24,PD,things with doors,LD,27.26069593,4,0,2
+24,PD,things that are round,LD,22.26588297,4,0,2
+24,PD,things with handles,LD,35.56904006,4,0,2
+24,PD,things that are blue,LD,12.12431002,4,0,2
+24,PD,things that are very large,LD,26.68164301,4,0,2
+24,PD,things that are white,LD,13.42704177,4,0,2
+24,PD,tools,HD,27.56450009,3,0,2
+24,PD,objects used for transportation,HD,30.87323308,3,0,2
+24,PD,birds,HD,28.67610383,4,0,2
+24,PD,things that fly,HD,40.04369497,2,0,2
+24,PD,home appliances,HD,27.90818,4,2,2
+24,PD,long thin objects,LD,23.2955792,4,0,2
+24,PD,small objects,LD,26.78190613,3,0,2
+24,PD,farm animals,HD,22.11045599,4,0,2
+24,PD,clothes,HD,20.24596906,4,0,2
+24,PD,things made of wood,LD,29.79868889,3,0,2
+24,PD,things that are green,LD,18.93783998,4,0,2
+24,PD,fruit,HD,19.92263508,4,0,2
+24,PD,animals that live in water,HD,18.98449397,4,0,2
+25,NT,things that fly,HD,56.68488598,3,0,1
+25,NT,things that are soft,LD,48.29127383,3,4,1
+25,NT,objects used for transportation,HD,57.10658288,4,0,1
+25,NT,things that are green,LD,29.04957199,4,0,1
+25,NT,things with doors,LD,27.03977084,3,0,1
+25,NT,things that are very large,LD,49.16187382,4,1,1
+25,NT,objects found in the laundry room,HD,57.0083549,3,1,1
+25,NT,things made of wood,LD,64.11294794,3,3,1
+25,NT,small objects,LD,81.322891,4,3,1
+25,NT,clothes,HD,31.23458505,4,0,1
+25,NT,things that are red,LD,28.39966893,4,0,1
+25,NT,things that are white,LD,29.94779992,3,0,1
+25,NT,animals that live in water,HD,47.93273115,4,1,1
+25,NT,things with handles,LD,44.20823312,2,0,1
+25,NT,things that are yellow,LD,22.3137219,4,0,1
+25,NT,farm animals,HD,56.01330495,3,0,1
+25,NT,things that are brown,LD,18.91750002,2,0,1
+25,NT,animals with stripes,LD,43.76751184,3,0,1
+25,NT,long thin objects,LD,30.361691,4,1,1
+25,NT,fruit,HD,35.81305695,4,0,1
+25,NT,vegetables,HD,46.30571318,4,0,1
+25,NT,things that are blue,LD,20.15800095,4,0,1
+25,NT,birds,HD,50.82557607,4,0,1
+25,NT,things that are orange,LD,20.3502779,4,0,1
+25,NT,objects that hold water,HD,30.92128992,4,0,1
+25,NT,things that are round,LD,32.80343294,4,0,1
+25,NT,tools,HD,67.35250592,3,1,1
+25,NT,insects,HD,72.04493499,4,1,1
+25,NT,musical instruments,HD,65.52403092,2,1,1
+25,NT,non food things found in the kitchen,HD,102.5024772,4,2,1
+25,NT,home appliances,HD,98.04119611,3,2,1
+25,NT,dangerous animals,HD,96.488518,3,0,1
+25,NT,things that are yellow,LD,21.01971984,4,1,2
+25,NT,objects used for transportation,HD,60.08579993,4,0,2
+25,NT,farm animals,HD,31.21105886,3,0,2
+25,NT,musical instruments,HD,64.04194689,2,0,2
+25,NT,long thin objects,LD,24.03608298,4,1,2
+25,NT,things made of wood,LD,45.90763402,3,1,2
+25,NT,things with handles,LD,60.70540595,0,0,2
+25,NT,things that are blue,LD,21.83274603,4,0,2
+25,NT,things with doors,LD,26.98950696,3,0,2
+25,NT,objects found in the laundry room,HD,44.94981909,3,1,2
+25,NT,things that are very large,LD,32.46690822,3,0,2
+25,NT,dangerous animals,HD,58.12966204,2,0,2
+25,NT,animals with stripes,LD,25.64634705,0,0,2
+25,NT,things that fly,HD,44.58905411,2,1,2
+25,NT,clothes,HD,43.35149002,4,0,2
+25,NT,things that are green,LD,20.52152705,4,0,2
+25,NT,small objects,LD,40.77573395,4,1,2
+25,NT,birds,HD,54.923738,3,0,2
+25,NT,animals that live in water,HD,40.10830188,3,0,2
+25,NT,vegetables,HD,32.66885591,4,0,2
+25,NT,things that are orange,LD,15.70386696,3,0,2
+25,NT,tools,HD,35.29426098,4,0,2
+25,NT,objects that hold water,HD,33.28892612,4,0,2
+25,NT,things that are brown,LD,25.24888802,1,0,2
+25,NT,non food things found in the kitchen,HD,138.538336,3,1,2
+25,NT,fruit,HD,46.810812,4,0,2
+25,NT,home appliances,HD,67.72069812,3,2,2
+25,NT,things that are red,LD,18.16455102,4,0,2
+25,NT,insects,HD,30.86173821,3,0,2
+25,NT,things that are round,LD,47.61273408,3,0,2
+25,NT,things that are white,LD,24.30179191,3,0,2
+25,NT,things that are soft,LD,69.79687595,4,3,2
+26,APH,things with handles,LD,38.12184191,3,1,1
+26,APH,things that are round,LD,48.897717,2,0,1
+26,APH,non food things found in the kitchen,HD,53.88755798,1,9,1
+26,APH,things that are red,LD,13.66402197,3,0,1
+26,APH,things with doors,LD,28.52414608,3,0,1
+26,APH,objects that hold water,HD,19.8338201,4,0,1
+26,APH,things that are soft,LD,24.16527796,3,1,1
+26,APH,things that are very large,LD,32.23539805,4,0,1
+26,APH,things that are white,LD,31.12393808,2,0,1
+26,APH,things that are blue,LD,13.54764199,4,0,1
+26,APH,animals with stripes,LD,31.76673698,4,0,1
+26,APH,insects,HD,23.95729589,3,0,1
+26,APH,things made of wood,LD,24.28996897,3,0,1
+26,APH,fruit,HD,0.714658976,0,0,1
+26,APH,vegetables,HD,29.07164693,4,0,1
+26,APH,musical instruments,HD,31.20993304,2,1,1
+26,APH,things that fly,HD,26.17186689,4,0,1
+26,APH,small objects,LD,39.56704092,3,0,1
+26,APH,things that are green,LD,0.67327404,0,0,1
+26,APH,home appliances,HD,29.67165303,4,1,1
+26,APH,dangerous animals,HD,31.56979108,3,0,1
+26,APH,clothes,HD,26.29179692,4,0,1
+26,APH,objects used for transportation,HD,28.85944891,4,0,1
+26,APH,things that are brown,LD,18.98239994,4,0,1
+26,APH,things that are orange,LD,14.04566002,4,0,1
+26,APH,animals that live in water,HD,24.96914315,4,1,1
+26,APH,farm animals,HD,30.11601686,3,0,1
+26,APH,tools,HD,1.726661921,0,0,1
+26,APH,objects found in the laundry room,HD,38.14936519,3,0,1
+26,APH,birds,HD,24.61936903,3,0,1
+26,APH,things that are yellow,LD,15.28031397,3,0,1
+26,APH,long thin objects,LD,28.50599408,3,1,1
+26,APH,objects that hold water,HD,28.31429887,4,1,2
+26,APH,farm animals,HD,21.00397301,3,0,2
+26,APH,vegetables,HD,15.65023804,4,0,2
+26,APH,objects found in the laundry room,HD,40.58881712,2,1,2
+26,APH,dangerous animals,HD,17.94352603,3,0,2
+26,APH,musical instruments,HD,23.49486709,2,1,2
+26,APH,fruit,HD,28.71575904,4,0,2
+26,APH,things that are blue,LD,11.11370087,4,0,2
+26,APH,things that are brown,LD,42.77736306,3,0,2
+26,APH,things that are soft,LD,32.33223104,2,0,2
+26,APH,tools,HD,28.85513806,4,0,2
+26,APH,objects used for transportation,HD,20.48400593,3,0,2
+26,APH,things that fly,HD,21.53936505,4,0,2
+26,APH,clothes,HD,18.81131506,4,0,2
+26,APH,insects,HD,31.27094197,4,0,2
+26,APH,things that are round,LD,17.08806419,4,0,2
+26,APH,things with handles,LD,30.9387691,2,0,2
+26,APH,things with doors,LD,16.53544688,4,0,2
+26,APH,home appliances,HD,28.76819611,2,1,2
+26,APH,things that are yellow,LD,17.39676094,4,0,2
+26,APH,long thin objects,LD,28.09266615,3,2,2
+26,APH,birds,HD,18.59930301,4,0,2
+26,APH,animals that live in water,HD,23.511554,4,0,2
+26,APH,small objects,LD,36.63693309,3,1,2
+26,APH,non food things found in the kitchen,HD,49.76256108,0,10,2
+26,APH,things that are white,LD,14.73629785,4,0,2
+26,APH,things made of wood,LD,28.04218197,4,0,2
+26,APH,things that are green,LD,14.9378469,4,0,2
+26,APH,things that are red,LD,18.43487906,4,0,2
+26,APH,animals with stripes,LD,33.31450891,3,3,2
+26,APH,things that are very large,LD,18.69496298,4,0,2
+26,APH,things that are orange,LD,29.23870087,3,0,2
+27,APH,objects that hold water,HD,86.326689,4,5,1
+27,APH,things with handles,LD,90.14075613,2,3,1
+27,APH,things that are soft,LD,48.16669703,3,5,1
+27,APH,clothes,HD,31.25185704,4,4,1
+27,APH,things that are red,LD,24.32799101,4,0,1
+27,APH,things that are blue,LD,25.28175092,4,1,1
+27,APH,objects found in the laundry room,HD,42.84633303,4,0,1
+27,APH,things that are orange,LD,25.00878406,4,1,1
+27,APH,non food things found in the kitchen,HD,50.092453,4,3,1
+27,APH,tools,HD,59.46006393,4,1,1
+27,APH,fruit,HD,25.07445908,4,1,1
+27,APH,home appliances,HD,69.48573709,4,0,1
+27,APH,insects,HD,37.10809493,4,5,1
+27,APH,vegetables,HD,19.34881401,4,1,1
+27,APH,musical instruments,HD,29.50512695,4,0,1
+27,APH,things that are brown,LD,34.21325302,4,0,1
+27,APH,things made of wood,LD,45.06527591,4,0,1
+27,APH,things that are green,LD,30.73487306,4,0,1
+27,APH,things with doors,LD,85.65684509,0,2,1
+27,APH,things that fly,HD,40.15694404,3,0,1
+27,APH,things that are very large,LD,57.93890786,2,0,1
+27,APH,dangerous animals,HD,31.63985991,4,6,1
+27,APH,things that are round,LD,54.02601981,0,3,1
+27,APH,things that are yellow,LD,22.62824011,4,1,1
+27,APH,long thin objects,LD,36.06090689,1,1,1
+27,APH,animals with stripes,LD,36.55018401,2,0,1
+27,APH,things that are white,LD,26.34832597,4,0,1
+27,APH,farm animals,HD,41.95576406,4,0,1
+27,APH,small objects,LD,30.10522103,2,0,1
+27,APH,animals that live in water,HD,43.77475309,4,0,1
+27,APH,birds,HD,32.29020309,3,0,1
+27,APH,objects used for transportation,HD,36.17079282,4,0,1
+27,APH,objects that hold water,HD,115.993149,0,8,2
+27,APH,things that are red,LD,26.53648996,4,0,2
+27,APH,objects used for transportation,HD,27.94535518,3,0,2
+27,APH,long thin objects,LD,30.85088897,0,4,2
+27,APH,things made of wood,LD,44.34687614,4,0,2
+27,APH,home appliances,HD,41.87885284,4,2,2
+27,APH,insects,HD,24.93758702,4,5,2
+27,APH,things with doors,LD,63.12443495,0,0,2
+27,APH,objects found in the laundry room,HD,40.74110508,4,0,2
+27,APH,small objects,LD,32.50780296,4,1,2
+27,APH,things that fly,HD,20.08961201,3,0,2
+27,APH,dangerous animals,HD,41.6232388,4,7,2
+27,APH,things that are blue,LD,17.79615903,4,0,2
+27,APH,non food things found in the kitchen,HD,33.28136492,4,5,2
+27,APH,farm animals,HD,22.24206305,4,0,2
+27,APH,things that are orange,LD,26.90747118,3,2,2
+27,APH,animals that live in water,HD,30.36259103,4,0,2
+27,APH,clothes,HD,19.99536586,4,1,2
+27,APH,things that are soft,LD,28.31539798,1,3,2
+27,APH,musical instruments,HD,19.25248504,2,1,2
+27,APH,things that are yellow,LD,13.0397501,4,0,2
+27,APH,things that are very large,LD,63.660357,4,0,2
+27,APH,things that are brown,LD,1.747850895,0,0,2
+27,APH,things with handles,LD,23.6344378,2,1,2
+27,APH,things that are white,LD,24.94300079,4,0,2
+27,APH,birds,HD,20.4091351,4,0,2
+27,APH,things that are round,LD,31.35309601,2,0,2
+27,APH,vegetables,HD,14.99878597,4,2,2
+27,APH,tools,HD,24.66170001,4,0,2
+27,APH,animals with stripes,LD,22.52053499,2,2,2
+27,APH,fruit,HD,17.43447709,4,1,2
+27,APH,things that are green,LD,12.24478412,4,0,2
+28,PD,things that are red,LD,27.02860212,4,1,1
+28,PD,things made of wood,LD,38.85066485,3,0,1
+28,PD,small objects,LD,32.3506,4,0,1
+28,PD,things that are green,LD,17.54194903,4,0,1
+28,PD,objects found in the laundry room,HD,42.81072497,2,0,1
+28,PD,home appliances,HD,24.9055891,4,1,1
+28,PD,things that are soft,LD,35.24363995,4,5,1
+28,PD,tools,HD,29.80300713,4,1,1
+28,PD,things that are round,LD,28.41575599,4,1,1
+28,PD,vegetables,HD,22.362113,4,0,1
+28,PD,things that are orange,LD,35.60392904,4,1,1
+28,PD,animals that live in water,HD,21.30707717,4,0,1
+28,PD,things that are brown,LD,26.14455986,4,0,1
+28,PD,birds,HD,25.46583509,4,0,1
+28,PD,insects,HD,28.90346503,4,0,1
+28,PD,things with handles,LD,34.53773808,4,0,1
+28,PD,things that are blue,LD,22.57580996,4,0,1
+28,PD,things that are yellow,LD,21.26484108,4,1,1
+28,PD,long thin objects,LD,48.39685607,4,2,1
+28,PD,objects used for transportation,HD,26.76776695,4,0,1
+28,PD,things that fly,HD,33.64212298,4,0,1
+28,PD,things that are white,LD,24.86295319,4,0,1
+28,PD,musical instruments,HD,34.37049699,3,0,1
+28,PD,dangerous animals,HD,28.92319798,4,0,1
+28,PD,clothes,HD,30.59758019,4,0,1
+28,PD,things with doors,LD,34.53328204,4,0,1
+28,PD,objects that hold water,HD,43.22727609,4,0,1
+28,PD,things that are very large,LD,29.23674893,4,0,1
+28,PD,non food things found in the kitchen,HD,49.55473995,4,0,1
+28,PD,fruit,HD,32.74344301,4,0,1
+28,PD,farm animals,HD,32.06641102,4,0,1
+28,PD,animals with stripes,LD,30.58802986,3,0,1
+28,PD,tools,HD,17.55317616,3,0,2
+28,PD,objects that hold water,HD,24.993819,4,0,2
+28,PD,vegetables,HD,19.50740004,4,0,2
+28,PD,birds,HD,20.84334993,4,0,2
+28,PD,things that are very large,LD,26.83394217,2,0,2
+28,PD,small objects,LD,19.55808401,4,0,2
+28,PD,things that are yellow,LD,16.98556685,4,0,2
+28,PD,non food things found in the kitchen,HD,35.02958608,4,0,2
+28,PD,things that are red,LD,23.57188201,4,1,2
+28,PD,things that are orange,LD,17.08464098,3,0,2
+28,PD,things that are brown,LD,20.84958506,4,0,2
+28,PD,things that are blue,LD,17.3788209,4,0,2
+28,PD,dangerous animals,HD,26.43982005,1,1,2
+28,PD,insects,HD,22.93751907,4,0,2
+28,PD,fruit,HD,20.4670651,4,0,2
+28,PD,things that fly,HD,28.98957896,4,0,2
+28,PD,things with handles,LD,33.1264751,4,0,2
+28,PD,things with doors,LD,21.99281287,4,0,2
+28,PD,things that are soft,LD,36.84737992,4,3,2
+28,PD,animals that live in water,HD,18.43318105,4,0,2
+28,PD,things made of wood,LD,25.15177798,4,0,2
+28,PD,things that are round,LD,22.80966282,4,0,2
+28,PD,clothes,HD,23.60015702,3,0,2
+28,PD,long thin objects,LD,23.09070683,3,1,2
+28,PD,musical instruments,HD,27.03484797,2,0,2
+28,PD,things that are white,LD,25.40371895,3,0,2
+28,PD,objects used for transportation,HD,45.48142004,4,1,2
+28,PD,home appliances,HD,34.11887622,4,0,2
+28,PD,animals with stripes,LD,25.24429798,3,0,2
+28,PD,things that are green,LD,17.01187515,4,0,2
+28,PD,farm animals,HD,23.33420587,4,0,2
+28,PD,objects found in the laundry room,HD,24.76226282,4,0,2
+29,NT,things that are yellow,LD,39.01144695,4,1,1
+29,NT,things that are blue,LD,17.09967899,4,0,1
+29,NT,things that are very large,LD,76.72419405,4,0,1
+29,NT,non food things found in the kitchen,HD,50.15226698,4,0,1
+29,NT,objects found in the laundry room,HD,33.64710283,4,0,1
+29,NT,things that are red,LD,16.94693685,4,0,1
+29,NT,fruit,HD,18.901474,4,0,1
+29,NT,things that are brown,LD,29.4922359,4,0,1
+29,NT,things that are white,LD,23.76135278,4,0,1
+29,NT,birds,HD,27.37575603,4,0,1
+29,NT,vegetables,HD,26.08467698,3,1,1
+29,NT,things that are green,LD,14.21617508,4,0,1
+29,NT,things that fly,HD,25.06469107,4,0,1
+29,NT,animals that live in water,HD,30.92560816,4,1,1
+29,NT,home appliances,HD,29.31372619,4,0,1
+29,NT,long thin objects,LD,68.478441,3,1,1
+29,NT,things with doors,LD,51.45217609,3,0,1
+29,NT,things with handles,LD,36.83388019,4,0,1
+29,NT,objects that hold water,HD,35.07147908,3,0,1
+29,NT,objects used for transportation,HD,58.77236414,4,0,1
+29,NT,small objects,LD,29.81593108,4,0,1
+29,NT,things that are soft,LD,147.5421939,3,0,1
+29,NT,farm animals,HD,26.1614089,4,0,1
+29,NT,dangerous animals,HD,20.57910299,4,0,1
+29,NT,musical instruments,HD,14.43687892,4,0,1
+29,NT,things made of wood,LD,34.49581504,3,0,1
+29,NT,animals with stripes,LD,25.468647,4,0,1
+29,NT,insects,HD,16.67416215,4,0,1
+29,NT,tools,HD,17.85331893,4,0,1
+29,NT,things that are orange,LD,18.586936,4,0,1
+29,NT,things that are round,LD,69.54887104,2,0,1
+29,NT,clothes,HD,20.342026,4,0,1
+29,NT,things that fly,HD,60.25723195,3,0,2
+29,NT,animals that live in water,HD,37.04604292,4,0,2
+29,NT,vegetables,HD,16.591537,4,0,2
+29,NT,dangerous animals,HD,28.56940389,4,0,2
+29,NT,insects,HD,28.02230215,4,0,2
+29,NT,non food things found in the kitchen,HD,28.65973091,4,0,2
+29,NT,things that are very large,LD,22.99826789,4,0,2
+29,NT,things that are orange,LD,23.2132678,4,0,2
+29,NT,objects used for transportation,HD,22.564466,4,0,2
+29,NT,things that are red,LD,16.24939609,4,0,2
+29,NT,objects found in the laundry room,HD,54.08308411,2,0,2
+29,NT,things with doors,LD,35.08402491,2,0,2
+29,NT,long thin objects,LD,24.45090914,4,0,2
+29,NT,things that are brown,LD,17.56471491,4,0,2
+29,NT,things that are soft,LD,32.21562386,3,2,2
+29,NT,birds,HD,34.38739395,4,0,2
+29,NT,things that are round,LD,49.39221787,3,0,2
+29,NT,things with handles,LD,60.24274492,3,0,2
+29,NT,animals with stripes,LD,17.15644312,4,0,2
+29,NT,things made of wood,LD,13.66378999,3,0,2
+29,NT,objects that hold water,HD,29.81359696,4,0,2
+29,NT,farm animals,HD,22.18455195,4,0,2
+29,NT,things that are yellow,LD,13.58021593,4,1,2
+29,NT,small objects,LD,12.02615881,3,0,2
+29,NT,things that are green,LD,10.91304302,4,0,2
+29,NT,things that are white,LD,12.31659794,4,0,2
+29,NT,things that are blue,LD,14.23129606,4,0,2
+29,NT,home appliances,HD,29.55900502,4,0,2
+29,NT,tools,HD,29.66486406,4,0,2
+29,NT,clothes,HD,36.14746499,4,0,2
+29,NT,fruit,HD,45.19173503,4,0,2
+29,NT,musical instruments,HD,36.21145892,4,0,2
+32,NT,animals with stripes,LD,33.01016712,1,0,1
+32,NT,things that are yellow,LD,27.35175085,4,1,1
+32,NT,musical instruments,HD,37.3999331,4,0,1
+32,NT,things that fly,HD,36.23088908,4,0,1
+32,NT,tools,HD,34.17854309,4,0,1
+32,NT,vegetables,HD,33.10204411,4,0,1
+32,NT,small objects,LD,53.78841996,4,0,1
+32,NT,things that are soft,LD,50.73605895,1,1,1
+32,NT,dangerous animals,HD,42.61975503,4,0,1
+32,NT,things with handles,LD,64.03541207,4,0,1
+32,NT,things that are very large,LD,29.43324304,4,0,1
+32,NT,objects that hold water,HD,41.19092608,4,0,1
+32,NT,long thin objects,LD,38.28131104,4,0,1
+32,NT,farm animals,HD,36.61534882,2,0,1
+32,NT,things that are orange,LD,25.31579804,4,0,1
+32,NT,insects,HD,21.64957905,4,0,1
+32,NT,objects used for transportation,HD,73.19008112,4,0,1
+32,NT,clothes,HD,46.12520599,4,0,1
+32,NT,things that are brown,LD,22.55789304,3,0,1
+32,NT,fruit,HD,14.96353316,4,0,1
+32,NT,things made of wood,LD,29.26992297,4,0,1
+32,NT,birds,HD,34.99640608,4,0,1
+32,NT,home appliances,HD,27.47939515,4,0,1
+32,NT,non food things found in the kitchen,HD,29.66996408,4,0,1
+32,NT,things with doors,LD,19.91540289,3,0,1
+32,NT,animals that live in water,HD,18.87780905,4,1,1
+32,NT,things that are round,LD,18.11405087,4,0,1
+32,NT,objects found in the laundry room,HD,37.99638009,4,0,1
+32,NT,things that are white,LD,17.77395201,4,0,1
+32,NT,things that are red,LD,16.81371784,4,0,1
+32,NT,things that are green,LD,13.61305499,4,0,1
+32,NT,things that are blue,LD,11.95487881,4,0,1
+32,NT,things that are orange,LD,13.84658694,3,0,2
+32,NT,tools,HD,21.47871995,4,0,2
+32,NT,objects used for transportation,HD,80.4953649,3,0,2
+32,NT,things made of wood,LD,29.46701097,4,0,2
+32,NT,things that are red,LD,12.19504309,4,0,2
+32,NT,dangerous animals,HD,21.12922001,1,0,2
+32,NT,small objects,LD,36.33172894,4,0,2
+32,NT,objects that hold water,HD,58.28532982,4,0,2
+32,NT,things that fly,HD,31.21007919,4,0,2
+32,NT,farm animals,HD,19.79693294,3,0,2
+32,NT,things that are very large,LD,27.59962296,4,0,2
+32,NT,animals with stripes,LD,20.39693809,2,0,2
+32,NT,long thin objects,LD,26.05594397,4,0,2
+32,NT,objects found in the laundry room,HD,33.4870801,4,0,2
+32,NT,things that are blue,LD,13.97326612,4,0,2
+32,NT,musical instruments,HD,20.58809209,4,0,2
+32,NT,things that are brown,LD,20.23528194,3,0,2
+32,NT,fruit,HD,16.97759104,4,0,2
+32,NT,animals that live in water,HD,32.61673212,4,1,2
+32,NT,non food things found in the kitchen,HD,29.86189008,4,0,2
+32,NT,things that are green,LD,24.37192512,4,0,2
+32,NT,vegetables,HD,26.21120596,4,0,2
+32,NT,things that are white,LD,14.08148789,4,0,2
+32,NT,things with handles,LD,34.5168879,4,0,2
+32,NT,clothes,HD,28.26691389,4,0,2
+32,NT,birds,HD,33.99634695,4,0,2
+32,NT,things that are round,LD,37.66878605,3,0,2
+32,NT,things that are yellow,LD,17.71747899,4,0,2
+32,NT,things with doors,LD,18.18605709,4,0,2
+32,NT,insects,HD,19.62107897,3,0,2
+32,NT,home appliances,HD,32.52452207,4,0,2
+32,NT,things that are soft,LD,25.34970403,2,2,2
+33,NT,things that are soft,LD,57.73274803,4,0,1
+33,NT,long thin objects,LD,72.3356688,4,5,1
+33,NT,insects,HD,47.20883107,4,1,1
+33,NT,small objects,LD,25.5541079,3,0,1
+33,NT,things that are blue,LD,26.69593978,4,0,1
+33,NT,things with doors,LD,40.40068603,4,0,1
+33,NT,dangerous animals,HD,65.68587804,4,4,1
+33,NT,things that are yellow,LD,23.155267,4,0,1
+33,NT,fruit,HD,30.67073894,4,0,1
+33,NT,things that are brown,LD,37.81455994,4,0,1
+33,NT,things that are green,LD,21.96117592,4,0,1
+33,NT,vegetables,HD,28.0588088,4,0,1
+33,NT,farm animals,HD,36.16599584,4,0,1
+33,NT,tools,HD,31.49612808,4,0,1
+33,NT,home appliances,HD,34.28037882,4,0,1
+33,NT,musical instruments,HD,39.98213792,3,0,1
+33,NT,things with handles,LD,32.43152499,3,0,1
+33,NT,things made of wood,LD,36.86993909,3,1,1
+33,NT,clothes,HD,24.14185905,4,0,1
+33,NT,things that are very large,LD,61.00432301,4,4,1
+33,NT,things that fly,HD,38.06823206,2,0,1
+33,NT,things that are white,LD,23.16417408,4,0,1
+33,NT,objects found in the laundry room,HD,36.65332317,4,0,1
+33,NT,animals with stripes,LD,23.27516294,2,0,1
+33,NT,things that are round,LD,31.57501101,3,0,1
+33,NT,objects that hold water,HD,32.41019201,3,0,1
+33,NT,things that are red,LD,1.952908039,0,0,1
+33,NT,animals that live in water,HD,39.9529469,4,1,1
+33,NT,objects used for transportation,HD,49.12526488,4,0,1
+33,NT,non food things found in the kitchen,HD,62.55826688,4,0,1
+33,NT,things that are orange,LD,21.16380405,4,0,1
+33,NT,birds,HD,39.38959789,3,1,1
+33,NT,dangerous animals,HD,45.85443497,4,1,2
+33,NT,farm animals,HD,33.87798905,4,0,2
+33,NT,things that are red,LD,17.28718996,3,0,2
+33,NT,objects that hold water,HD,31.95829296,4,0,2
+33,NT,things that are yellow,LD,18.98828292,4,0,2
+33,NT,things that are orange,LD,26.93461919,4,0,2
+33,NT,things made of wood,LD,26.43969703,4,0,2
+33,NT,tools,HD,28.66132021,4,0,2
+33,NT,things with doors,LD,29.82043004,3,0,2
+33,NT,things that are green,LD,17.63967609,4,0,2
+33,NT,things that are round,LD,31.61605406,4,0,2
+33,NT,birds,HD,30.49586892,4,0,2
+33,NT,objects used for transportation,HD,30.64702606,4,0,2
+33,NT,things that are soft,LD,33.87932396,4,0,2
+33,NT,non food things found in the kitchen,HD,42.44060111,4,1,2
+33,NT,animals that live in water,HD,37.67228293,4,0,2
+33,NT,things that are brown,LD,20.92455602,4,0,2
+33,NT,animals with stripes,LD,24.56605315,4,0,2
+33,NT,small objects,LD,21.08896303,2,0,2
+33,NT,objects found in the laundry room,HD,39.89961696,4,0,2
+33,NT,vegetables,HD,23.64117599,3,0,2
+33,NT,clothes,HD,26.47456193,4,0,2
+33,NT,long thin objects,LD,27.74949193,4,0,2
+33,NT,things that fly,HD,27.966784,2,0,2
+33,NT,things that are blue,LD,17.02504301,4,0,2
+33,NT,things that are white,LD,18.82560682,4,0,2
+33,NT,things with handles,LD,41.68193197,3,0,2
+33,NT,fruit,HD,24.08909082,4,0,2
+33,NT,musical instruments,HD,37.14602304,2,0,2
+33,NT,home appliances,HD,1.055896044,0,0,2
+33,NT,things that are very large,LD,53.81932592,3,1,2
+33,NT,insects,HD,29.70086408,4,0,2
+34,PD,farm animals,HD,34.08938789,4,1,1
+34,PD,things that are soft,LD,35.24017215,3,3,1
+34,PD,fruit,HD,14.69552898,4,0,1
+34,PD,things that are round,LD,31.44447207,0,0,1
+34,PD,things that are green,LD,15.93693805,4,0,1
+34,PD,animals that live in water,HD,21.6038959,4,0,1
+34,PD,things with doors,LD,31.90398312,4,0,1
+34,PD,things that are very large,LD,22.37864804,4,0,1
+34,PD,vegetables,HD,18.82756305,4,0,1
+34,PD,long thin objects,LD,26.35162592,4,0,1
+34,PD,birds,HD,21.14799619,4,0,1
+34,PD,small objects,LD,36.35864306,4,0,1
+34,PD,things that are orange,LD,23.50749207,4,1,1
+34,PD,things that fly,HD,22.7618928,4,0,1
+34,PD,home appliances,HD,25.572577,4,0,1
+34,PD,things that are brown,LD,16.85176492,4,0,1
+34,PD,musical instruments,HD,32.5636971,4,0,1
+34,PD,clothes,HD,16.15587997,4,0,1
+34,PD,objects found in the laundry room,HD,21.10476708,3,0,1
+34,PD,dangerous animals,HD,34.35466099,2,4,1
+34,PD,tools,HD,21.25026703,3,0,1
+34,PD,things that are blue,LD,18.35792685,4,0,1
+34,PD,objects that hold water,HD,38.74520206,3,4,1
+34,PD,insects,HD,21.9283421,4,1,1
+34,PD,things that are white,LD,19.834903,4,0,1
+34,PD,non food things found in the kitchen,HD,26.32533598,4,0,1
+34,PD,things that are yellow,LD,21.71878505,4,0,1
+34,PD,things that are red,LD,12.97817898,4,0,1
+34,PD,animals with stripes,LD,20.91775393,3,0,1
+34,PD,things made of wood,LD,37.14555097,4,1,1
+34,PD,objects used for transportation,HD,26.61158514,4,0,1
+34,PD,things with handles,LD,30.96948314,4,1,1
+34,PD,things that are brown,LD,14.33554482,4,0,2
+34,PD,things that are green,LD,7.909723043,4,0,2
+34,PD,things made of wood,LD,15.74049401,3,0,2
+34,PD,things that are blue,LD,14.64744711,4,0,2
+34,PD,things that are yellow,LD,20.50853014,4,0,2
+34,PD,long thin objects,LD,31.20768595,4,1,2
+34,PD,things that are orange,LD,14.30148506,4,0,2
+34,PD,objects found in the laundry room,HD,13.54095602,3,0,2
+34,PD,tools,HD,15.10416985,4,0,2
+34,PD,objects used for transportation,HD,17.55144691,3,0,2
+34,PD,fruit,HD,12.20759702,4,0,2
+34,PD,things that are red,LD,21.85650206,4,0,2
+34,PD,things that are white,LD,12.29758286,4,0,2
+34,PD,things with handles,LD,31.61531305,4,1,2
+34,PD,animals with stripes,LD,21.03389502,4,0,2
+34,PD,vegetables,HD,9.026087999,4,0,2
+34,PD,insects,HD,17.388587,4,0,2
+34,PD,dangerous animals,HD,39.33265305,4,4,2
+34,PD,home appliances,HD,25.16864109,4,0,2
+34,PD,things that are soft,LD,28.58719087,3,3,2
+34,PD,non food things found in the kitchen,HD,13.657897,4,1,2
+34,PD,small objects,LD,19.03749299,4,0,2
+34,PD,objects that hold water,HD,25.06633115,4,3,2
+34,PD,things with doors,LD,15.70944881,4,0,2
+34,PD,musical instruments,HD,1.194557905,0,0,2
+34,PD,animals that live in water,HD,18.79691291,4,1,2
+34,PD,farm animals,HD,17.13731098,4,0,2
+34,PD,birds,HD,15.44008207,4,0,2
+34,PD,things that are very large,LD,20.22930694,4,0,2
+34,PD,things that are round,LD,14.12158298,0,0,2
+34,PD,clothes,HD,17.68779492,4,0,2
+34,PD,things that fly,HD,18.55204296,4,0,2
+35,APH,objects found in the laundry room,HD,21.7342279,4,0,1
+35,APH,animals with stripes,LD,30.3392489,3,3,1
+35,APH,things that are red,LD,15.20529509,4,0,1
+35,APH,objects used for transportation,HD,20.12200809,4,0,1
+35,APH,insects,HD,27.70530701,4,0,1
+35,APH,vegetables,HD,24.2401948,4,0,1
+35,APH,things that are yellow,LD,15.992239,4,0,1
+35,APH,things made of wood,LD,22.5383141,4,0,1
+35,APH,things with doors,LD,32.65980792,4,0,1
+35,APH,home appliances,HD,27.55702305,4,0,1
+35,APH,things with handles,LD,28.04104805,4,0,1
+35,APH,fruit,HD,28.35402107,4,0,1
+35,APH,tools,HD,20.94697189,4,0,1
+35,APH,objects that hold water,HD,23.43298292,4,0,1
+35,APH,things that are blue,LD,19.50715184,4,0,1
+35,APH,animals that live in water,HD,26.7524271,4,0,1
+35,APH,things that are soft,LD,41.16885519,4,0,1
+35,APH,clothes,HD,19.91214514,4,0,1
+35,APH,long thin objects,LD,34.16834712,4,0,1
+35,APH,things that are white,LD,17.80719519,4,0,1
+35,APH,birds,HD,29.00760388,4,0,1
+35,APH,musical instruments,HD,24.10889387,4,0,1
+35,APH,small objects,LD,25.25124097,3,0,1
+35,APH,things that are green,LD,15.64038205,4,0,1
+35,APH,non food things found in the kitchen,HD,44.30643892,4,0,1
+35,APH,things that are round,LD,22.12991405,4,0,1
+35,APH,farm animals,HD,21.12883306,4,0,1
+35,APH,dangerous animals,HD,34.34366393,4,1,1
+35,APH,things that are orange,LD,17.97473788,4,0,1
+35,APH,things that fly,HD,41.53433013,4,0,1
+35,APH,things that are very large,LD,28.26227188,4,0,1
+35,APH,things that are brown,LD,26.13881612,3,0,1
+35,APH,things that are blue,LD,11.01685286,4,0,2
+35,APH,things made of wood,LD,41.32337499,4,1,2
+35,APH,small objects,LD,36.17717218,3,0,2
+35,APH,musical instruments,HD,16.91137099,4,0,2
+35,APH,birds,HD,24.1558919,4,0,2
+35,APH,animals with stripes,LD,22.449857,4,0,2
+35,APH,things that are green,LD,13.68098283,4,0,2
+35,APH,dangerous animals,HD,25.55218911,4,0,2
+35,APH,tools,HD,15.78983521,4,0,2
+35,APH,farm animals,HD,18.96807218,4,0,2
+35,APH,vegetables,HD,25.80287504,4,0,2
+35,APH,things that are brown,LD,16.79665089,4,0,2
+35,APH,things that are red,LD,13.88336897,4,0,2
+35,APH,things that are round,LD,20.45533013,4,0,2
+35,APH,things that are orange,LD,16.38185,3,0,2
+35,APH,fruit,HD,23.15244603,4,0,2
+35,APH,things with handles,LD,29.95563698,4,0,2
+35,APH,objects that hold water,HD,27.99786901,4,0,2
+35,APH,things that are yellow,LD,19.04062319,4,1,2
+35,APH,home appliances,HD,20.49199009,4,0,2
+35,APH,clothes,HD,23.94278002,4,0,2
+35,APH,things that are very large,LD,26.01277614,4,0,2
+35,APH,objects used for transportation,HD,19.09363914,4,0,2
+35,APH,things that fly,HD,24.45781612,4,0,2
+35,APH,non food things found in the kitchen,HD,43.43732405,4,0,2
+35,APH,animals that live in water,HD,22.61559796,4,1,2
+35,APH,things that are white,LD,13.06980586,4,0,2
+35,APH,insects,HD,20.08636498,3,0,2
+35,APH,things that are soft,LD,21.29150701,3,0,2
+35,APH,long thin objects,LD,17.8736341,4,0,2
+35,APH,things with doors,LD,23.00942183,4,0,2
+35,APH,objects found in the laundry room,HD,29.70986509,4,0,2
+36,APH,long thin objects,LD,52.90808606,4,0,1
+36,APH,things that are soft,LD,42.27817917,2,3,1
+36,APH,things that are blue,LD,16.60821104,4,0,1
+36,APH,things with handles,LD,35.00533986,2,0,1
+36,APH,farm animals,HD,45.05762196,4,2,1
+36,APH,things that are red,LD,2.217501163,0,0,1
+36,APH,dangerous animals,HD,34.86726785,4,0,1
+36,APH,clothes,HD,21.94546914,4,0,1
+36,APH,things that are yellow,LD,15.25398183,4,0,1
+36,APH,objects used for transportation,HD,32.50980306,4,0,1
+36,APH,vegetables,HD,26.53571796,4,0,1
+36,APH,things that are round,LD,29.516078,4,0,1
+36,APH,things that are very large,LD,35.91621614,4,0,1
+36,APH,fruit,HD,22.49509192,4,0,1
+36,APH,things that are orange,LD,16.87069201,4,0,1
+36,APH,birds,HD,22.23070693,4,0,1
+36,APH,home appliances,HD,59.05755091,4,0,1
+36,APH,objects that hold water,HD,51.44715095,4,4,1
+36,APH,insects,HD,33.684412,4,0,1
+36,APH,things that are white,LD,18.69880104,4,0,1
+36,APH,things that are green,LD,19.81069708,4,0,1
+36,APH,musical instruments,HD,23.78518701,3,0,1
+36,APH,animals that live in water,HD,37.44073296,4,0,1
+36,APH,things that are brown,LD,25.21006584,4,1,1
+36,APH,small objects,LD,2.414466143,0,0,1
+36,APH,objects found in the laundry room,HD,55.75561094,4,0,1
+36,APH,things with doors,LD,50.002774,1,5,1
+36,APH,non food things found in the kitchen,HD,79.05847502,0,0,1
+36,APH,tools,HD,40.99709988,4,0,1
+36,APH,things made of wood,LD,63.30026603,4,0,1
+36,APH,things that fly,HD,39.43338299,4,0,1
+36,APH,animals with stripes,LD,30.61866188,4,0,1
+36,APH,things that are brown,LD,22.30916405,4,1,2
+36,APH,clothes,HD,20.99701405,4,0,2
+36,APH,animals with stripes,LD,19.38803101,4,0,2
+36,APH,small objects,LD,48.80217981,4,0,2
+36,APH,things that fly,HD,1.990788221,0,0,2
+36,APH,things made of wood,LD,29.08245301,4,0,2
+36,APH,animals that live in water,HD,21.07080913,4,0,2
+36,APH,home appliances,HD,19.51834393,0,0,2
+36,APH,things that are yellow,LD,20.66348791,4,1,2
+36,APH,vegetables,HD,20.43338704,4,0,2
+36,APH,things that are red,LD,17.71356893,4,0,2
+36,APH,insects,HD,19.07396197,4,0,2
+36,APH,things that are soft,LD,27.10563803,2,1,2
+36,APH,things with doors,LD,24.65198588,3,0,2
+36,APH,dangerous animals,HD,25.19400907,4,0,2
+36,APH,farm animals,HD,25.82928419,3,2,2
+36,APH,musical instruments,HD,22.80241418,4,0,2
+36,APH,non food things found in the kitchen,HD,11.89311314,0,0,2
+36,APH,things that are blue,LD,22.54806995,4,0,2
+36,APH,long thin objects,LD,31.99788189,4,1,2
+36,APH,objects used for transportation,HD,27.59005094,4,0,2
+36,APH,fruit,HD,19.71727705,4,0,2
+36,APH,things that are round,LD,54.91224098,0,0,2
+36,APH,tools,HD,28.26737094,4,1,2
+36,APH,things that are orange,LD,29.32464004,4,0,2
+36,APH,things that are white,LD,17.25573587,4,0,2
+36,APH,objects that hold water,HD,32.15288401,4,0,2
+36,APH,objects found in the laundry room,HD,32.33371997,4,0,2
+36,APH,things with handles,LD,25.47955489,1,1,2
+36,APH,things that are very large,LD,28.91200614,4,0,2
+36,APH,things that are green,LD,13.34784484,4,0,2
+36,APH,birds,HD,20.15925097,4,0,2
+37,APH,things that are orange,LD,35.60156202,4,0,1
+37,APH,things that are blue,LD,24.99217892,4,0,1
+37,APH,tools,HD,41.03920197,3,0,1
+37,APH,objects used for transportation,HD,84.61083102,3,1,1
+37,APH,animals with stripes,LD,84.23425889,4,1,1
+37,APH,home appliances,HD,81.54156899,1,2,1
+37,APH,things that are round,LD,66.86175299,1,0,1
+37,APH,things made of wood,LD,67.53911901,3,1,1
+37,APH,musical instruments,HD,65.80580711,4,1,1
+37,APH,vegetables,HD,62.22352695,4,0,1
+37,APH,things that are white,LD,53.28614306,4,0,1
+37,APH,non food things found in the kitchen,HD,146.6858561,0,6,1
+37,APH,things with doors,LD,83.59447002,4,0,1
+37,APH,things that are brown,LD,60.25904703,4,1,1
+37,APH,things that are red,LD,31.52764177,4,0,1
+37,APH,animals that live in water,HD,76.91693616,4,0,1
+37,APH,things that are very large,LD,74.03622389,4,1,1
+37,APH,things that are soft,LD,111.306612,1,2,1
+37,APH,dangerous animals,HD,113.217351,3,3,1
+37,APH,insects,HD,62.58051586,4,0,1
+37,APH,small objects,LD,57.56216788,4,0,1
+37,APH,birds,HD,55.48176408,4,0,1
+37,APH,objects that hold water,HD,190.171098,3,0,1
+37,APH,things that fly,HD,101.5654719,4,1,1
+37,APH,objects found in the laundry room,HD,80.18727207,2,1,1
+37,APH,things that are yellow,LD,59.70998096,4,1,1
+37,APH,farm animals,HD,49.49844909,4,0,1
+37,APH,things that are green,LD,29.18755293,4,0,1
+37,APH,clothes,HD,37.63114786,4,0,1
+37,APH,fruit,HD,35.377105,4,0,1
+37,APH,things with handles,LD,100.4319739,0,4,1
+37,APH,long thin objects,LD,78.33269095,3,2,1
+37,APH,home appliances,HD,59.66127992,3,2,2
+37,APH,insects,HD,52.99748397,3,0,2
+37,APH,vegetables,HD,37.01333189,4,0,2
+37,APH,objects that hold water,HD,51.03977489,3,0,2
+37,APH,things that fly,HD,43.49574304,4,0,2
+37,APH,things that are orange,LD,44.23220491,3,2,2
+37,APH,musical instruments,HD,32.59515214,4,0,2
+37,APH,animals that live in water,HD,47.40745211,4,0,2
+37,APH,things that are soft,LD,42.80003095,3,1,2
+37,APH,things that are yellow,LD,27.44882894,3,0,2
+37,APH,things that are round,LD,45.57398677,3,0,2
+37,APH,fruit,HD,32.01308894,4,0,2
+37,APH,things that are very large,LD,44.03079414,4,0,2
+37,APH,clothes,HD,37.92784882,3,0,2
+37,APH,long thin objects,LD,39.22167492,4,0,2
+37,APH,small objects,LD,42.42728615,4,0,2
+37,APH,things with doors,LD,0.170251131,0,0,2
+37,APH,objects found in the laundry room,HD,53.53215408,4,0,2
+37,APH,things made of wood,LD,37.91727805,4,0,2
+37,APH,things with handles,LD,52.480968,1,0,2
+37,APH,animals with stripes,LD,51.375139,0,4,2
+37,APH,things that are brown,LD,25.07455993,4,1,2
+37,APH,things that are blue,LD,19.06503081,4,0,2
+37,APH,things that are red,LD,34.483531,3,1,2
+37,APH,birds,HD,29.8316381,4,0,2
+37,APH,non food things found in the kitchen,HD,91.91929293,0,1,2
+37,APH,farm animals,HD,45.24588704,3,2,2
+37,APH,objects used for transportation,HD,55.951087,2,3,2
+37,APH,things that are white,LD,14.64356804,4,0,2
+37,APH,things that are green,LD,17.6287992,4,0,2
+37,APH,dangerous animals,HD,43.16291904,4,0,2
+37,APH,tools,HD,43.747401,4,0,2
+38,NT,musical instruments,HD,12.46721292,4,0,1
+38,NT,things that are orange,LD,8.924863815,3,1,1
+38,NT,home appliances,HD,6.793475866,4,0,1
+38,NT,objects found in the laundry room,HD,9.895930052,4,0,1
+38,NT,tools,HD,9.637017965,4,0,1
+38,NT,long thin objects,LD,7.580434084,4,0,1
+38,NT,things that fly,HD,10.86303306,2,0,1
+38,NT,things that are soft,LD,19.03549409,3,2,1
+38,NT,objects used for transportation,HD,10.08497596,4,0,1
+38,NT,small objects,LD,10.17162609,4,0,1
+38,NT,non food things found in the kitchen,HD,17.76669502,4,0,1
+38,NT,things that are blue,LD,10.00823307,4,0,1
+38,NT,vegetables,HD,8.565047979,4,1,1
+38,NT,things that are round,LD,8.955407143,4,0,1
+38,NT,birds,HD,12.57839084,4,0,1
+38,NT,objects that hold water,HD,13.39930487,4,0,1
+38,NT,things that are white,LD,10.7254951,4,0,1
+38,NT,things that are yellow,LD,6.97388196,4,0,1
+38,NT,things with handles,LD,11.06951118,2,0,1
+38,NT,dangerous animals,HD,13.63575315,4,2,1
+38,NT,things that are brown,LD,14.4656682,4,0,1
+38,NT,things that are very large,LD,10.94857597,2,0,1
+38,NT,clothes,HD,9.213310957,3,0,1
+38,NT,animals that live in water,HD,12.39195991,4,0,1
+38,NT,things that are green,LD,12.41101599,4,0,1
+38,NT,animals with stripes,LD,15.07341409,4,1,1
+38,NT,things made of wood,LD,10.16399693,4,0,1
+38,NT,insects,HD,9.699202061,3,0,1
+38,NT,fruit,HD,19.39295506,4,0,1
+38,NT,things with doors,LD,14.13304615,4,0,1
+38,NT,things that are red,LD,9.369920969,4,0,1
+38,NT,farm animals,HD,10.9244709,4,0,1
+38,NT,things that are round,LD,8.293956995,3,0,2
+38,NT,non food things found in the kitchen,HD,14.00214791,4,0,2
+38,NT,things that are orange,LD,8.976186991,3,0,2
+38,NT,home appliances,HD,11.49129009,4,0,2
+38,NT,animals that live in water,HD,10.83660603,4,0,2
+38,NT,things with handles,LD,11.67124414,4,0,2
+38,NT,things with doors,LD,7.276562929,4,0,2
+38,NT,insects,HD,8.424629927,4,0,2
+38,NT,clothes,HD,6.719992876,4,0,2
+38,NT,things that are red,LD,8.012900114,4,0,2
+38,NT,things that are very large,LD,8.456868887,3,0,2
+38,NT,things that are soft,LD,9.084775925,3,1,2
+38,NT,vegetables,HD,7.535450935,4,0,2
+38,NT,objects found in the laundry room,HD,12.1198771,3,0,2
+38,NT,musical instruments,HD,10.01890397,4,0,2
+38,NT,farm animals,HD,9.240736008,4,0,2
+38,NT,things that are white,LD,6.211080074,3,0,2
+38,NT,fruit,HD,10.10138512,4,0,2
+38,NT,things made of wood,LD,11.25465512,3,0,2
+38,NT,objects used for transportation,HD,11.70237088,4,0,2
+38,NT,birds,HD,9.711951017,4,0,2
+38,NT,tools,HD,5.311753035,4,0,2
+38,NT,dangerous animals,HD,10.43673396,4,0,2
+38,NT,things that fly,HD,13.62397385,4,0,2
+38,NT,things that are brown,LD,8.869813919,4,0,2
+38,NT,things that are blue,LD,7.654658794,4,0,2
+38,NT,long thin objects,LD,8.611761808,4,0,2
+38,NT,small objects,LD,9.782697916,3,0,2
+38,NT,animals with stripes,LD,9.617974043,3,0,2
+38,NT,objects that hold water,HD,9.489395857,3,0,2
+38,NT,things that are green,LD,7.49603796,4,0,2
+38,NT,things that are yellow,LD,8.323750019,4,0,2

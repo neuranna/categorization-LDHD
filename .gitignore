@@ -1,3 +1,10 @@
+# script outputs
+plots/
+tables/
+
+# MacOS
+.DS_Store
+
 # History files
 .Rhistory
 .Rapp.history

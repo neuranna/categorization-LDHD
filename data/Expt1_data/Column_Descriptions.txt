@@ -1,0 +1,32 @@
+
+
+***study1_responses***
+
+participant_number
+run_name - unique run ID
+trial_no - each trial screen consists of a category label on top and 16 images below
+category - category name shown on top of each trial screen
+dimension - high (HD), low (LD)
+image_path - the file name of the image
+selected - was the item selected? TRUE, FALSE
+correct - Was this target correctly identified? TRUE, FALSE
+Group - Neurotypical (NT), Parkinson's (PD), Aphasia (APH)
+Age (in years)
+Sex - 1: male, 2: female
+Education - 1: up to 16 years, 2: up to 18 years, 3: college degree, 4: post-graduate degree
+BNT - Boston Naming Test
+TPO - time post onset (months)
+
+
+***study1_RT***
+
+participant
+Group - Neurotypical (NT), Parkinson's (PD), Aphasia (APH)
+category - category name shown on top of each trial screen
+category type - same as dimension; high (HD), low (LD)
+selectedItems - paths to images that were selected during a trial
+UnselectedItems - paths to images that were selected and then unselected during a trial
+TrialTime - time from trial start until the "Done" button was pressed
+corAns - how many targets were correctly selected?
+Miss - how many distractors were selected?
+session - session ID
