@@ -1,0 +1,318 @@
+---
+title: "Expt2_behavioral_analyses"
+author: "Anna Ivanova"
+date: "3/16/2021"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+rm(list = ls())    # clear workspace
+
+knitr::opts_chunk$set(echo = TRUE)
+library(lme4)
+library(lmerTest)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(patchwork)
+library(emmeans)
+```
+
+# Read and clean the data
+
+```{r read data, echo=FALSE}
+dat = read.csv('../data/Expt2_data/study2.csv')
+
+# Set up the contrasts and factor structure
+# group - dummy coding with neurotypical as the reference level
+# dimension - sum coding
+dat$Group = factor(dat$Group, levels=c('Aphasia', 'Neurotypical', 'Parkinsons')) 
+dat$Dimension = factor(dat$Dimension, levels=c('HD', 'LD'))
+contrasts(dat$Dimension) = c(-0.5, 0.5)
+colnames(attr(dat$Dimension, "contrasts")) = "LD>HD"
+dat$Participant = factor(dat$Participant) 
+
+# separate Hit Rate and False Alarm data
+dat.HR = dat %>% filter(CorrectAnswer==1)
+dat.FA = dat %>% filter(CorrectAnswer==0)
+```
+
+# Summary 
+
+```{r data means, echo=FALSE}
+# Dimension only
+dat.summ.HR.dim = dat.HR %>% group_by(Group, Dimension, Participant) %>% 
+  summarize(HitRate = mean(HitRate)) %>%
+  group_by(Dimension) %>%
+  summarize(meanHitRate = mean(HitRate),
+            sdHitRate = sd(HitRate))
+
+dat.summ.FA.dim = dat.FA %>% group_by(Group, Dimension, Participant) %>% 
+  summarize(FalseAlarm = mean(FalseAlarm)) %>%
+  group_by(Dimension) %>%
+  summarize(meanFalseAlarm = mean(FalseAlarm),
+            sdFalseAlarm = sd(FalseAlarm))
+
+dat.summ.RT.dim = dat %>% group_by(Group, Dimension, Participant) %>% 
+  summarize(Response.Time = mean(Response.Time)) %>%
+  group_by(Dimension) %>%
+  summarize(meanRT = mean(Response.Time),
+            sdRT = sd(Response.Time))
+
+# Group only
+dat.summ.HR.group = dat.HR %>% group_by(Group, Dimension, Participant) %>% 
+  summarize(HitRate = mean(HitRate)) %>%
+  group_by(Group) %>%
+  summarize(meanHitRate = mean(HitRate),
+            sdHitRate = sd(HitRate))
+
+dat.summ.FA.group = dat.FA %>% group_by(Group, Dimension, Participant) %>% 
+  summarize(FalseAlarm = mean(FalseAlarm)) %>%
+  group_by(Group) %>%
+  summarize(meanFalseAlarm = mean(FalseAlarm),
+            sdFalseAlarm = sd(FalseAlarm))
+
+dat.summ.RT.group = dat %>% group_by(Group, Dimension, Participant) %>% 
+  summarize(Response.Time = mean(Response.Time)) %>%
+  group_by(Group) %>%
+  summarize(meanRT = mean(Response.Time),
+            sdRT = sd(Response.Time))
+
+
+# by group and dimension 
+dat.summ.HR = dat.HR %>% group_by(Group, Dimension, Participant) %>% 
+  summarize(HitRate = mean(HitRate)) %>%
+  group_by(Group, Dimension) %>%
+  summarize(meanHitRate = mean(HitRate),
+            sdHitRate = sd(HitRate))
+
+dat.summ.FA = dat.FA %>% group_by(Group, Dimension, Participant) %>% 
+  summarize(FalseAlarm = mean(FalseAlarm)) %>%
+  group_by(Group, Dimension) %>%
+  summarize(meanFalseAlarm = mean(FalseAlarm),
+            sdFalseAlarm = sd(FalseAlarm))
+
+dat.summ.RT = dat %>% group_by(Group, Dimension, Participant) %>% 
+  summarize(Response.Time = mean(Response.Time)) %>%
+  group_by(Group, Dimension) %>%
+  summarize(meanRT = mean(Response.Time),
+            sdRT = sd(Response.Time))
+
+# Case study - Aphasia 4
+dat.summ.HR.A4= dat.HR %>% 
+  filter(Participant=='4_Aphasia') %>%
+  group_by(Dimension) %>%
+  summarize(meanHitRate = mean(HitRate),
+            sdHitRate = sd(HitRate))
+
+dat.summ.FA.A4 = dat.FA %>%
+  filter(Participant=='4_Aphasia') %>%
+  group_by(Dimension) %>%
+  summarize(meanFalseAlarm = mean(FalseAlarm),
+            sdFalseAlarm = sd(FalseAlarm))
+
+dat.summ.RT.A4 = dat %>% 
+  filter(Participant=='4_Aphasia') %>%
+  group_by(Dimension) %>%
+  summarize(meanRT = mean(Response.Time),
+            sdRT = sd(Response.Time))
+
+
+dat.summ = merge(dat.summ.HR, dat.summ.FA)
+write.csv(dat.summ, 'Tables/Supplementary/data_summary_Expt2_HR_FA.csv')
+```
+
+# Hit Rate
+## Stats
+### By group
+
+We are aiming to estimate the effect of dimensionality on the Hit Rate / False Alarm Rate / Response Time. We are treating category and participant as random effects. 
+
+```{r stats HR, echo=FALSE}
+m.HR = glmer(HitRate ~ Dimension*Group + (1|Category) + (1|Participant), 
+                      family = binomial(), 
+                      data = dat.HR)
+summary(m.HR)
+```
+
+Follow-up comparisons:
+```{r stats pairwise HR, echo=FALSE}
+d = emmeans(m.HR, ~ Dimension) %>% 
+    contrast("pairwise") 
+
+emmeans(m.HR, ~ Group * Dimension) %>% 
+    contrast("pairwise", by = "Group") %>% 
+    rbind(d) %>%
+    summary(by=NULL, adjust="tukey")
+```
+
+### By BNT
+
+```{r stats edu, echo=FALSE}
+m.HR.edu = glmer(HitRate ~ Dimension*Group + Education + (1|Category) + (1|Participant), 
+                      family = binomial(), 
+                      data = dat.HR, control = glmerControl(optimizer="bobyqa",optCtrl=list(maxfun=2e5)))
+
+m.HR.edu.BNT = glmer(HitRate ~ Education + cBNT*Dimension + (1|Category) + (1|Participant), 
+                      family = binomial(), data = dat.HR, 
+                     control = glmerControl(optimizer="bobyqa",optCtrl=list(maxfun=2e5)))
+summary(m.HR.edu.BNT)
+```
+
+### Model comparison
+```{r model comparison HR, echo=FALSE}
+modelcomp.HR = data.frame(
+  Model=c('Group x Dim', 'Group x Dim + Edu', 'BNT x Dim + Edu'),
+  AIC=c(AIC(m.HR), AIC(m.HR.edu), AIC(m.HR.edu.BNT)))
+write.csv(modelcomp.HR, 'Tables/Supplementary/E2_ModelComparison_HitRate.csv')
+```
+
+## Plots
+
+```{r plot HR, echo=FALSE}
+dat2plot.HR = dat.HR %>%
+  mutate(Group=factor(Group, levels=c('Neurotypical', 'Aphasia', 'Parkinsons'))) %>%
+  group_by(Group,Dimension,Participant,BNT) %>%
+  summarize(HitRate=mean(HitRate))
+
+e2_hr = ggplot(data=dat2plot.HR, mapping=aes(x=Group, y=HitRate, fill=Dimension))+
+  stat_summary(geom = 'col', fun.y = 'mean', width=0.5, 
+               position='dodge', show.legend=FALSE)+
+  geom_point(position=position_jitterdodge(dodge.width=0.5, jitter.height=0, jitter.width=0.1),
+             shape=21, size=1.5, alpha=0.5, show.legend = FALSE)+
+  stat_summary(geom = 'errorbar', fun.data = 'mean_se', width=0.15, size=0.75,
+               position=position_dodge(width=0.5))+
+  coord_cartesian(ylim=c(0.5,1))+
+  labs(y='Hit Rate', x=NULL)+
+  scale_x_discrete(labels=c("Neurotypical", "Aphasia", "PD"))+
+  scale_fill_manual(values=c('#0A730A', '#98CD92'))+
+  theme_classic()+
+  theme(axis.title.y=element_text(size=14),
+        axis.text.x=element_text(size=14),
+        axis.text.y=element_text(size=10))
+
+e2_hr 
+```
+
+```{r plot BNT, echo=FALSE}
+e2_hr_bnt = ggplot(data=dat2plot.HR)+
+  geom_point(mapping=aes(x=BNT, y=HitRate, fill=Dimension),
+            shape=21, size=1.5, color='darkgray', show.legend=FALSE)+
+  geom_smooth(method='lm', mapping=aes(x=BNT, y=HitRate, color=Dimension),
+              alpha=0.2, size=1.5, show.legend=FALSE)+
+  scale_color_manual(values=c('#0A730A', '#98CD92'))+
+  scale_fill_manual(values=c('#0A730A', '#98CD92'))+
+  coord_cartesian(ylim=c(0.72,1))+
+  labs(y='Hit Rate')+
+  theme_classic()+
+  theme(axis.title.x=element_text(size=14),
+        axis.title.y=element_text(size=14),
+        axis.text.x=element_text(size=11),
+        axis.text.y=element_text(size=11))
+e2_hr_bnt 
+```
+
+
+# False Alarms
+
+
+## Stats
+
+### By group
+```{r stats FA, echo=FALSE}
+m.FA = glmer(FalseAlarm ~ Dimension*Group + (1|Category) + (1|Participant), 
+                      family = binomial(), 
+                      data = dat.FA, control = glmerControl(optimizer="bobyqa",optCtrl=list(maxfun=2e5)))
+summary(m.FA)
+```
+
+####Follow-up comparisons
+```{r stats pairwise FA, echo=FALSE}
+d = emmeans(m.FA, ~ Dimension) %>% 
+    contrast("pairwise") 
+
+emmeans(m.FA, ~ Group * Dimension) %>% 
+    contrast("pairwise", by = "Group") %>% 
+    rbind(d) %>%
+    summary(by=NULL, adjust="tukey")
+```
+
+### By BNT
+
+```{r stats FA BNT, echo=FALSE}
+m.FA.edu = glmer(FalseAlarm ~ Education + Dimension*Group + (1|Category) + (1|Participant), 
+                      family = binomial(), 
+                      data = dat.FA, control = glmerControl(optimizer="bobyqa",optCtrl=list(maxfun=2e5)))
+m.FA.edu.BNT = glmer(FalseAlarm ~ Education + cBNT*Dimension + (1|Category) + (1|Participant), 
+                      family = binomial(), 
+                      data = dat.FA, control = glmerControl(optimizer="bobyqa",optCtrl=list(maxfun=2e5)))
+
+summary(m.FA.edu.BNT)
+```
+
+### Model comparison
+
+```{r model comparison HR, echo=FALSE}
+modelcomp.FA = data.frame(
+  Model=c('Group x Dim', 'Group x Dim + Edu', 'BNT x Dim + Edu'),
+  AIC=c(AIC(m.FA), AIC(m.FA.edu), AIC(m.FA.edu.BNT)))
+write.csv(modelcomp.FA, 'Tables/Supplementary/E2_ModelComparison_FalseAlarm.csv')
+```
+
+## Plots
+
+```{r plot FalseAlarm, echo=FALSE}
+dat2plot.FA = dat.FA %>%
+  mutate(Group=factor(Group, levels=c('Neurotypical', 'Aphasia', 'Parkinsons'))) %>%
+  group_by(Group,Dimension,Participant,BNT) %>%
+  summarize(FalseAlarm=mean(FalseAlarm))
+
+e2_fa = ggplot(data=dat2plot.FA, mapping=aes(x=Group, y=FalseAlarm, fill=Dimension))+
+  stat_summary(geom = 'col', fun.y = 'mean', width=0.5, 
+               position='dodge', show.legend=FALSE)+
+  geom_point(position=position_jitterdodge(dodge.width=0.5, jitter.height=0, jitter.width=0.1),
+             shape=21, size=1.5, alpha=0.5, show.legend = FALSE)+
+  stat_summary(geom = 'errorbar', fun.data = 'mean_se', width=0.1, size=0.75,
+               position=position_dodge(width=0.5))+
+  #coord_cartesian(ylim=c(0,0.11))+
+  labs(y='False Alarm Rate', x=NULL)+
+  scale_x_discrete(labels=c("Neurotypical", "Aphasia", "PD"))+
+  scale_fill_manual(values=c('#0A730A', '#98CD92'))+
+  theme_classic()+
+  theme(axis.title.y=element_text(size=14),
+        axis.text.x=element_text(size=14),
+        axis.text.y=element_text(size=10))
+e2_fa
+```
+
+```{r plot BNT, echo=FALSE}
+e2_fa_bnt = ggplot(data=dat2plot.FA)+
+  geom_point(mapping=aes(x=BNT, y=FalseAlarm, fill=Dimension),
+             shape=21, size=1.5, color='darkgray', show.legend=FALSE)+
+  geom_smooth(method='lm', mapping=aes(x=BNT, y=FalseAlarm, color=Dimension),
+              alpha=0.2, size=1.5, show.legend=FALSE)+
+  scale_color_manual(values=c('#0A730A', '#98CD92'))+
+  scale_fill_manual(values=c('#0A730A', '#98CD92'))+
+  theme_classic()+
+  labs(y='False Alarm Rate')+
+  theme(axis.title.x=element_text(size=14),
+        axis.title.y=element_text(size=14),
+        axis.text.x=element_text(size=10),
+        axis.text.y=element_text(size=10))
+e2_fa_bnt
+```
+
+
+# COMBINE
+
+```{r combine plots, echo=FALSE}
+(e2_hr |plot_spacer() |e2_fa |
+   plot_layout(widths=c(1,0.1,1))) / 
+  plot_spacer() / 
+  (e2_hr_bnt |plot_spacer() |e2_fa_bnt |
+     plot_layout(widths=c(1,0.1,1))) /
+  plot_layout(heights=c(1,0.1,1))
+ggsave('Plots/Supplementary/E2_results_HR_FA.png', width=25, height=20, units='cm')
+```
+

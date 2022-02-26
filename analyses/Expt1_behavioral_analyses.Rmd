@@ -1,7 +1,7 @@
 ---
 title: "Expt1_behavioral_analyses"
 author: "Anna Ivanova"
-date: "3/16/2021"
+date: "2/26/2022"
 output: html_document
 ---
 
@@ -34,80 +34,57 @@ dat$Dimension = factor(dat$Dimension, levels=c('HD', 'LD'))
 contrasts(dat$Dimension) = c(-0.5, 0.5)
 colnames(attr(dat$Dimension, "contrasts")) = "LD>HD"
 dat$Participant = factor(dat$Participant)
-
-# separate Hit Rate and False Alarm data
-dat.HR = dat %>% filter(CorrectAnswer=='TRUE') 
-dat.FA = dat %>% filter(CorrectAnswer=='FALSE')
 ```
 
 # Summary 
 
 ```{r data means, echo=FALSE}
 # Dimension only
-dat.summ.HR.dim = dat.HR %>% group_by(Group, Dimension, Participant) %>% 
-  summarize(HitRate = mean(HitRate)) %>%
+dat.summ.dim = dat %>% group_by(Group, Dimension, Participant) %>% 
+  summarize(Accuracy = mean(Accuracy)) %>%
   group_by(Dimension) %>%
-  summarize(meanHitRate = mean(HitRate),
-            sdHitRate = sd(HitRate))
-
-dat.summ.FA.dim = dat.FA %>% group_by(Group, Dimension, Participant) %>% 
-  summarize(FalseAlarm = mean(FalseAlarm)) %>%
-  group_by(Dimension) %>%
-  summarize(meanFalseAlarm = mean(FalseAlarm),
-            sdFalseAlarm = sd(FalseAlarm))
+  summarize(meanAccuracy = mean(Accuracy),
+            sdAccuracy = sd(Accuracy))
 
 # Group only
-dat.summ.HR.group = dat.HR %>% group_by(Group, Dimension, Participant) %>% 
-  summarize(HitRate = mean(HitRate)) %>%
+dat.summ.group = dat %>% group_by(Group, Dimension, Participant) %>% 
+  summarize(Accuracy = mean(Accuracy)) %>%
   group_by(Group) %>%
-  summarize(meanHitRate = mean(HitRate),
-            sdHitRate = sd(HitRate))
-
-dat.summ.FA.group = dat.FA %>% group_by(Group, Dimension, Participant) %>% 
-  summarize(FalseAlarm = mean(FalseAlarm)) %>%
-  group_by(Group) %>%
-  summarize(meanFalseAlarm = mean(FalseAlarm),
-            sdFalseAlarm = sd(FalseAlarm))
+  summarize(meanAccuracy = mean(Accuracy),
+            sdAccuracy = sd(Accuracy))
 
 # by group and dimension 
-dat.summ.HR = dat.HR %>% group_by(Group, Dimension, Participant) %>% 
-  summarize(HitRate = mean(HitRate)) %>%
+dat.summ = dat %>% group_by(Group, Dimension, Participant) %>% 
+  summarize(Accuracy = mean(Accuracy)) %>%
   group_by(Group, Dimension) %>%
-  summarize(meanHitRate = mean(HitRate),
-            sdHitRate = sd(HitRate))
+  summarize(meanAccuracy = mean(Accuracy),
+            sdAccuracy = sd(Accuracy))
 
-dat.summ.FA = dat.FA %>% group_by(Group, Dimension, Participant) %>% 
-  summarize(FalseAlarm = mean(FalseAlarm)) %>%
-  group_by(Group, Dimension) %>%
-  summarize(meanFalseAlarm = mean(FalseAlarm),
-            sdFalseAlarm = sd(FalseAlarm))
-
-dat.summ = merge(dat.summ.HR, dat.summ.FA)
-#write.csv(dat.summ, 'Tables/data_summary_Expt1.csv')
+write.csv(dat.summ, 'Tables/data_summary_Expt1.csv', row.names = FALSE)
 ```
 
-# Hit Rate
+# Accuracy
 
-We are aiming to estimate the effect of dimensionality on the Hit Rate / False Alarm Rate / Response Time. We are treating category and participant as random effects. 
+We are aiming to estimate the effect of dimensionality on Accuracy & Response Time. We are treating category and participant as random intercepts. 
 
 ## Stats
 
 ### By group
 
-```{r stats HR, echo=FALSE}
-m.HR = glmer(HitRate ~ Group*Dimension + (1|Category) + (1|Participant),
+```{r stats acc, echo=FALSE}
+m.acc = glmer(Accuracy ~ Group*Dimension + (1|Category) + (1|Participant),
                       family = binomial(),
-                      data = dat.HR)
+                      data = dat)
 
-summary(m.HR)
+summary(m.acc)
 ```
 
 Follow-up comparisons:
-```{r stats pairwise HR, echo=FALSE}
-d = emmeans(m.HR, ~ Dimension) %>% 
+```{r stats pairwise acc, echo=FALSE}
+d = emmeans(m.acc, ~ Dimension) %>% 
     contrast("pairwise") 
 
-emmeans(m.HR, ~ Group * Dimension) %>% 
+emmeans(m.acc, ~ Group * Dimension) %>% 
     contrast("pairwise", by = "Group") %>% 
     rbind(d) %>%
     summary(by=NULL, adjust="tukey")
@@ -115,46 +92,46 @@ emmeans(m.HR, ~ Group * Dimension) %>%
 
 
 #### With education as an additional covariate
-```{r stats HR edu, echo=FALSE}
-m.HR.edu = glmer(HitRate ~ Group*Dimension + Education + (1|Category) + (1|Participant),
+```{r stats acc edu, echo=FALSE}
+m.acc.edu = glmer(Accuracy ~ Group*Dimension + Education + (1|Category) + (1|Participant),
                       family = binomial(),
-                      data = dat.HR)
+                      data = dat)
 
-summary(m.HR.edu)
+summary(m.acc.edu)
 ```
 
-```{r stats HR comparer, echo=FALSE}
-anova(m.HR.edu, m.HR)
+```{r stats acc compare, echo=FALSE}
+anova(m.acc.edu, m.acc)
 ```
 
 
 ### By BNT
 
-```{r stats HR, echo=FALSE}
-m.HR.edu.BNT = glmer(HitRate ~ cBNT*Dimension + Education + (1|Category) + (1|Participant), family = binomial(), data = dat.HR)
+```{r stats acc, echo=FALSE}
+m.acc.edu.BNT = glmer(Accuracy ~ cBNT*Dimension + Education + (1|Category) + (1|Participant), family = binomial(), data = dat)
 
-summary(m.HR.edu.BNT)
+summary(m.acc.edu.BNT)
 ```
 
 ### Model comparison
 
-```{r model comparison HR, echo=FALSE}
-modelcomp.HR = data.frame(
+```{r model comparison acc, echo=FALSE}
+modelcomp.acc = data.frame(
   Model=c('Group x Dim', 'Group x Dim + Edu', 'BNT x Dim + Edu'),
-  AIC=c(AIC(m.HR), AIC(m.HR.edu), AIC(m.HR.edu.BNT)))
-write.csv(modelcomp.HR, 'Tables/E1_ModelComparison_HitRate.csv')
+  AIC=c(AIC(m.acc), AIC(m.acc.edu), AIC(m.acc.edu.BNT)))
+write.csv(modelcomp.acc, 'Tables/E1_ModelComparison_Accuracy.csv')
 ```
 
 ## Plots
 
-```{r plot HR, echo=FALSE}
-dat2plot.HR = dat.HR %>%
+```{r plot acc, echo=FALSE}
+dat2plot.acc = dat %>%
   mutate(Group=factor(Group, levels=c('Neurotypical', 'Parkinsons', 'Aphasia'))) %>%
   group_by(Group,Dimension,Participant,BNT) %>%
-  summarize(HitRate=mean(HitRate))
+  summarize(Accuracy=mean(Accuracy))
 
-e1_hr = dat2plot.HR %>%
-  ggplot(mapping=aes(x=Group, y=HitRate, fill=Dimension))+
+e1_acc = dat2plot.acc %>%
+  ggplot(mapping=aes(x=Group, y=Accuracy, fill=Dimension))+
   stat_summary(geom = 'col', fun.y = 'mean', width=0.5, 
                position='dodge', show.legend=FALSE)+
   geom_point(position=position_jitterdodge(dodge.width=0.5, jitter.height=0, jitter.width=0.1),
@@ -162,145 +139,40 @@ e1_hr = dat2plot.HR %>%
   stat_summary(geom = 'errorbar', fun.data = 'mean_se', width=0.15, size=0.75,
                position=position_dodge(width=0.5))+
   coord_cartesian(ylim=c(0.5,1))+
-  labs(y='Hit Rate', x=NULL)+
+  labs(y='Accuracy', x=NULL)+
   scale_x_discrete(labels=c("Neurotypical", "PD", "Aphasia"))+
   scale_fill_manual(values=c('#0A730A', '#98CD92'))+
   theme_classic()+
   theme(axis.title.y=element_text(size=14),
         axis.text.x=element_text(size=14),
         axis.text.y=element_text(size=10))
-e1_hr
+e1_acc
 ```
 
 ```{r plot BNT, echo=FALSE}
-e1_hr_bnt = ggplot(data=dat2plot.HR)+
-  geom_point(mapping=aes(x=BNT, y=HitRate, fill=Dimension),
+e1_acc_bnt = ggplot(data=dat2plot.acc)+
+  geom_point(mapping=aes(x=BNT, y=Accuracy, fill=Dimension),
             shape=21, size=1.5, color='darkgray', show.legend=FALSE)+
-  geom_smooth(method='lm', mapping=aes(x=BNT, y=HitRate, color=Dimension),
+  geom_smooth(method='lm', mapping=aes(x=BNT, y=Accuracy, color=Dimension),
               alpha=0.2, size=1.5, show.legend=FALSE)+
   scale_color_manual(values=c('#0A730A', '#98CD92'))+
   scale_fill_manual(values=c('#0A730A', '#98CD92'))+
-  coord_cartesian(ylim=c(0.72,1))+
-  labs(y='Hit Rate')+
+  coord_cartesian(ylim=c(0.5,1))+
+  labs(y='Accuracy')+
   theme_classic()+
   theme(axis.title.x=element_text(size=14),
         axis.title.y=element_text(size=14),
         axis.text.x=element_text(size=11),
         axis.text.y=element_text(size=11))
 
-e1_hr_bnt
+e1_acc_bnt
 ```
-
-# False Alarms
-
-## Stats
-
-### By Group
-```{r stats FA, echo=FALSE}
-m.FA = glmer(FalseAlarm ~ Dimension*Group + (1|Category) + (1|Participant), 
-                      family = binomial(), data = dat.FA, 
-             control = glmerControl(optimizer="bobyqa",optCtrl=list(maxfun=2e5)))
-summary(m.FA)
-```
-
-####Follow-up comparisons
-```{r stats pairwise FA, echo=FALSE}
-d = emmeans(m.FA, ~ Dimension) %>% 
-    contrast("pairwise") 
-
-emmeans(m.FA, ~ Group * Dimension) %>% 
-    contrast("pairwise", by = "Group") %>% 
-    rbind(d) %>%
-    summary(by=NULL, adjust="tukey")
-```
-
-#### With education as an additional covariate
-```{r stats FA edu, echo=FALSE}
-m.FA.edu = glmer(FalseAlarm ~ Group*Dimension + Education + (1|Category) + (1|Participant),
-                      family = binomial(),
-                      data = dat.FA)
-
-summary(m.FA.edu)
-```
-
-```{r stats HR comparer, echo=FALSE}
-anova(m.FA.edu, m.FA)
-```
-
-### By BNT
-
-```{r stats FA BNT, echo=FALSE}
-m.FA.edu = glmer(FalseAlarm ~ Education + Dimension*Group + (1|Category) + (1|Participant), 
-                      family = binomial(), 
-                      data = dat.FA,
-                 glmerControl(optimizer = "bobyqa", optCtrl = list(maxfun = 100000)))
-m.FA.edu.BNT = glmer(FalseAlarm ~ Education + cBNT*Dimension + (1|Category) + (1|Participant), 
-                      family = binomial(), 
-                      data = dat.FA)
-
-summary(m.FA.edu.BNT)
-```
-
-### Model comparison
-```{r model comparison HR, echo=FALSE}
-modelcomp.FA = data.frame(
-  Model=c('Group x Dim', 'Group x Dim + Edu', 'BNT x Dim + Edu'),
-  AIC=c(AIC(m.FA), AIC(m.FA.edu), AIC(m.FA.edu.BNT)))
-write.csv(modelcomp.FA, 'Tables/E1_ModelComparison_FalseAlarm.csv')
-```
-
-## Plots
-```{r plot FalseAlarm, echo=FALSE}
-dat2plot.FA = dat.FA %>%
-  mutate(Group=factor(Group, levels=c('Neurotypical', 'Parkinsons', 'Aphasia'))) %>%
-  group_by(Group,Dimension,Participant,BNT) %>%
-  summarize(FalseAlarm=mean(FalseAlarm))
-
-e1_fa = ggplot(data=dat2plot.FA, mapping=aes(x=Group, y=FalseAlarm, fill=Dimension))+
-  stat_summary(geom = 'col', fun.y = 'mean', width=0.5, 
-               position='dodge', show.legend=FALSE)+
-  geom_point(position=position_jitterdodge(dodge.width=0.5, jitter.height=0, jitter.width=0.1),
-             shape=21, size=1.5, alpha=0.5, show.legend = FALSE)+
-  stat_summary(geom = 'errorbar', fun.data = 'mean_se', width=0.15, size=0.75,
-               position=position_dodge(width=0.5))+
-  coord_cartesian(ylim=c(0,0.11))+
-  labs(y='False Alarm Rate', x=NULL)+
-  scale_x_discrete(labels=c("Neurotypical", "PD", "Aphasia"))+
-  scale_fill_manual(values=c('#0A730A', '#98CD92'))+
-  scale_y_continuous(breaks=c(0, 0.03, 0.06, 0.09))+
-  theme_classic()+
-  theme(axis.title.y=element_text(size=14),
-        axis.text.x=element_text(size=14),
-        axis.text.y=element_text(size=10))
-e1_fa
-```
-
-```{r plot BNT, echo=FALSE}
-e1_fa_bnt = ggplot(data=dat2plot.FA)+
-  geom_point(mapping=aes(x=BNT, y=FalseAlarm, fill=Dimension),
-             shape=21, size=1.5, color='darkgray', show.legend=FALSE)+
-  geom_smooth(method='lm', mapping=aes(x=BNT, y=FalseAlarm, color=Dimension),
-              alpha=0.2, size=1.5, show.legend=FALSE)+
-  scale_color_manual(values=c('#0A730A', '#98CD92'))+
-  scale_fill_manual(values=c('#0A730A', '#98CD92'))+
-  theme_classic()+
-  labs(y='False Alarm Rate')+
-  theme(axis.title.x=element_text(size=14),
-        axis.title.y=element_text(size=14),
-        axis.text.x=element_text(size=10),
-        axis.text.y=element_text(size=10))
-
-e1_fa_bnt
-```
-
-
-
 
 
 # RT
 
 ```{r read data RT, echo=FALSE}
-dat.RT = read.csv('Expt1_data/study1_RT.csv')
+dat.RT = read.csv('../data/Expt1_data/study1_RT.csv')
 dat.RT = rename(dat.RT, Dimension=category_type, Participant=participant,
                 Category=category)
 dat.RT = dat.RT %>%
@@ -371,7 +243,7 @@ emmeans(m.RT, ~ Group * Dimension) %>%
 
 ### by BNT
 
-```{r stats HR, echo=FALSE}
+```{r stats acc, echo=FALSE}
 m.RT.edu = lmer(TrialTime ~ Dimension*Group + Education + (1|Category) + (1|Participant), data = dat.RT, REML=FALSE)
 
 m.RT.edu.BNT = lmer(TrialTime ~ cBNT*Dimension + Education + (1|Category) + (1|Participant), data = dat.RT, REML=FALSE)
@@ -381,7 +253,7 @@ summary(m.RT.edu.BNT)
 
 ### Model comparison
 
-```{r model comparison HR, echo=FALSE}
+```{r model comparison acc, echo=FALSE}
 modelcomp.RT = data.frame(
   Model=c('Group x Dim', 'Group x Dim + Edu', 'BNT x Dim + Edu'),
   AIC=c(AIC(m.RT), AIC(m.RT.edu), AIC(m.RT.edu.BNT)))
@@ -425,7 +297,7 @@ e1_rt_bnt = ggplot(data=dat2plot.RT)+
   scale_color_manual(values=c('#0A730A', '#98CD92'))+
   scale_fill_manual(values=c('#0A730A', '#98CD92'))+
   labs(y='Response Time (s)')+
-  #coord_cartesian(ylim=c(0,65))+
+  coord_cartesian(ylim=c(0,65))+
   theme_classic()+
   theme(axis.title.x=element_text(size=14),
         axis.title.y=element_text(size=14),
@@ -440,11 +312,11 @@ e1_rt_bnt
 # COMBINE
 
 ```{r combine plots, echo=FALSE}
-(e1_hr |plot_spacer() |e1_fa |plot_spacer() |e1_rt |
-   plot_layout(widths=c(1,0.1,1,0.1,1))) / 
+(e1_acc |plot_spacer() |e1_rt |
+   plot_layout(widths=c(1,0.1,1))) / 
   plot_spacer() / 
-  (e1_hr_bnt |plot_spacer() |e1_fa_bnt |plot_spacer() |e1_rt_bnt |
-     plot_layout(widths=c(1,0.1,1,0.1,1))) /
+  (e1_acc_bnt |plot_spacer() |e1_rt_bnt |
+     plot_layout(widths=c(1,0.1,1))) /
   plot_layout(heights=c(1,0.1,1))
-ggsave('Plots/E1_results_wRT.png', width=36, height=18, units='cm')
+ggsave('Plots/E1_results_acc_RT.png', width=25, height=20, units='cm')
 ```
