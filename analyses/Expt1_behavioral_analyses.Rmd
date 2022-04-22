@@ -60,7 +60,14 @@ dat.summ = dat %>% group_by(Group, Dimension, Participant) %>%
   summarize(meanAccuracy = mean(Accuracy),
             sdAccuracy = sd(Accuracy))
 
-write.csv(dat.summ, 'Tables/data_summary_Expt1.csv', row.names = FALSE)
+# Trial inclusion
+dat.num_trials = dat %>% 
+  group_by(Participant, run_name) %>% 
+  summarize(trials_included=length(trial_no)/20, 
+            trials_excluded=32-trials_included)
+
+write.csv(dat.summ, 'Tables/E1_data_summary.csv', row.names = FALSE)
+write.csv(dat.num_trials, 'Tables/Supplementary/E1_num_trials.csv', row.names = FALSE)
 ```
 
 # Accuracy

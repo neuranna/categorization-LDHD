@@ -89,7 +89,7 @@ dat.summ.RT.A4 = dat %>%
   summarize(meanRT = mean(Response.Time),
             sdRT = sd(Response.Time))
 
-write.csv(dat.summ.acc, 'Tables/data_summary_Expt2.csv')
+write.csv(dat.summ.acc, 'Tables/E2_data_summary.csv')
 ```
 
 # Accuracy
@@ -283,6 +283,6 @@ e2_rt_bnt
   (e2_acc_bnt |plot_spacer() |e2_rt_bnt |
      plot_layout(widths=c(1,0.1,1))) /
   plot_layout(heights=c(1,0.1,1))
-ggsave('Plots/E2_results_wRT.png', width=25, height=20, units='cm')
+ggsave('Plots/E2_results_acc_RT.png', width=25, height=20, units='cm')
 ```
 
