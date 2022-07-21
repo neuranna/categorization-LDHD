@@ -1,0 +1,374 @@
+---
+title: "Expt3_main_analyses SEM_PERC"
+author: "Anna Ivanova"
+date: "7/11/2022"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+
+# Setup
+
+```{r setup, include=FALSE}
+rm(list = ls())    # clear workspace
+
+knitr::opts_chunk$set(echo = TRUE)
+library(lmerTest)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(patchwork)
+library(hypr)
+```
+
+## Plotting settings
+
+```{r plot settings, include=FALSE}
+plot_height_1row = 8
+plot_height_2rows = 12
+
+plot_width = 24
+
+legend_size = 11
+axis_title_size = 11
+axis_text_size = 10
+facet_label_size = 11
+```
+
+## Read data
+```{r load and prepare data, echo=FALSE}
+# load data
+data_dir = '../data/Expt3_neuro_data/'
+dat.langloc.lang <- read.csv(paste(data_dir, 'LHRHlang_langlocSN_langlocSN.csv', sep=''))
+dat.langloc.cat <- read.csv(paste(data_dir, 'LHRHlang_langlocSN_Categorization_semperc.csv', sep=''))
+dat.MDloc.MD <- read.csv(paste(data_dir, 'MD_spatialWM_spatialWM_new.csv', sep=''))
+dat.MDloc.cat <- read.csv(paste(data_dir, 'MD_spatialWM_Categorization_semperc.csv', sep=''))
+dat.MDloc.lang <- read.csv(paste(data_dir, 'MD_spatialWM_langlocSN_new.csv', sep=''))
+
+# combine
+dat.langloc <- rbind(dat.langloc.lang, dat.langloc.cat)
+dat.MDloc <- rbind(dat.MDloc.MD, dat.MDloc.cat, dat.MDloc.lang)
+
+# change participant names
+dat.langloc$Subject = substr(dat.langloc$Subject,1,3)
+dat.MDloc$Subject = substr(dat.MDloc$Subject,1,3)
+
+# name & order ROIs
+dat.MDloc = dat.MDloc %>% separate(ROI, c("Hemisphere", NA), sep='_', extra="drop", remove=FALSE)
+dat.MDloc$ROI = str_sub(dat.MDloc$ROI, 4)
+dat.MDloc = dat.MDloc %>%
+  mutate(ROI = recode(ROI, 'Precentral_A_precG'='precentral_A', 
+                      'Precentral_B_IFGop'='precentral_B'))
+dat.MDloc$ROI = factor(dat.MDloc$ROI)
+
+dat.langloc = dat.langloc %>%
+  mutate(Hemisphere = ifelse(ROI<7, 'LH', 'RH')) %>%
+  mutate(ROI = recode(dat.langloc$ROI,
+        '1'='IFG_orb', '2'='IFG', '3'='MFG',
+        '4'='AntTemp', '5'='PostTemp', '6'='AngG',
+        '7'='IFG_orb', '8'='IFG', '9'='MFG',
+        '10'='AntTemp', '11'='PostTemp', '12'='AngG'))
+dat.langloc$ROI = factor(dat.langloc$ROI, levels=c('IFG_orb', 'IFG', 'MFG', 'AntTemp', 'PostTemp', 'AngG'))
+
+# Set up the contrasts and factor structure for hemisphere (sum coding)
+dat.MDloc$Hemisphere = factor(dat.MDloc$Hemisphere, levels=c('LH', 'RH'))
+contrasts(dat.MDloc$Hemisphere) = c(-0.5, 0.5)
+colnames(attr(dat.MDloc$Hemisphere, "contrasts")) = "R>L"
+
+dat.langloc$Hemisphere = factor(dat.langloc$Hemisphere, levels=c('LH', 'RH'))
+contrasts(dat.langloc$Hemisphere) = c(-0.5, 0.5)
+colnames(attr(dat.langloc$Hemisphere, "contrasts")) = "R>L"
+
+# filter irrelevant effects
+dat.langloc <- dat.langloc %>% filter(Effect %in% c('S', 'N', 'PERC', 'SEM'))
+dat.langloc$Effect <- factor(dat.langloc$Effect, levels = c('S', 'N', 'PERC', 'SEM'))
+dat.MDloc <- dat.MDloc %>% filter(dat.MDloc$Effect %in% c('H', 'E', 'SEM', 'PERC', 'S', 'N'))
+dat.MDloc$Effect <- factor(dat.MDloc$Effect, levels = c('H', 'E', 'PERC', 'SEM', 'S', 'N'))
+```
+
+# MD
+
+## MD stats
+
+### General
+
+```{r MD code-sent stats}
+# specify the hypotheses and corresponding contrasts
+h = hypr(~0.5*(SEM+PERC), PERC~SEM, H~E, 0.5*(H+E)~0.5*(SEM+PERC), N~0.5*(SEM+PERC), S~0.5*(SEM+PERC), levels=c('H', 'E', 'PERC', 'SEM', 'S', 'N'))
+
+contrasts(dat.MDloc$Effect) = contr.hypothesis(h)
+colnames(attr(dat.MDloc$Effect, 'contrasts')) = c('PERC-SEM', 'H-E', 'HE-SEMPERC', 'N-SEMPERC', 'S-SEMPERC')
+contrasts(dat.MDloc$Effect)
+
+# run the model
+m1 = lmer(EffectSize ~ Effect*Hemisphere + (1 | ROI) + (1 | Subject), data=dat.MDloc, REML=FALSE)
+summary(m1)
+```
+
+### By ROI
+
+```{r MD ROI stats Python, echo=FALSE}
+# Contrast effects in each ROI, FDR-corrected
+
+model.dfs <- list()
+index = 1
+
+dat.MDloc.stats <- dat.MDloc 
+
+for (h in c('LH', 'RH')) {
+  for (roi in unique(dat.MDloc.stats$ROI)) {
+    data.roi = dat.MDloc.stats %>% filter(ROI==roi) %>% filter(Hemisphere==h)
+    model = lmer(EffectSize ~ Effect + (1|Subject), data=data.roi, REML=FALSE)
+    model.df = data.frame(c('Intercept', 'PERC-SEM', 'H-E', 'HE-SEMPERC', 'N-SEMPERC', 'S-SEMPERC'),
+                          summary(model)$coefficients[,'Estimate'],
+                          summary(model)$coefficients[,'Pr(>|t|)']) %>% 
+      mutate(ROI=roi, Hemisphere=h)
+    names(model.df) = c('Regression Term', 'Beta', 'p.value', 'ROI', 'Hemisphere')
+    model.df = model.df[,c(5,4,1,2,3)] %>%
+      mutate(Beta = round(Beta, 2)) 
+    model.dfs[[index]] <- model.df
+    index = index+1
+  }
+}
+
+stats_df = do.call("rbind", model.dfs)
+# FDR correction
+stats_df = stats_df %>%
+  group_by(`Regression Term`) %>%
+  mutate(p.value = p.adjust(p.value, method="fdr")) %>%
+  mutate(p.value.FDR = ifelse(p.value>=0.001, as.character(round(p.value, 3)), '<.001')) %>%
+  mutate(pLabel = ifelse(p.value<0.001, "***", 
+                       ifelse(p.value<0.01, "**",
+                              ifelse(p.value<0.05, "*", ""))))
+stats_df$p.value = NULL
+
+write.table(stats_df, file = "MD ROI stats.csv", sep = ",", quote = FALSE, row.names = F)
+```
+
+## MD plots
+
+### MD by hemi
+
+```{r MD hemi plot, echo=FALSE}
+y.mean = dat.MDloc %>% 
+  filter(Effect %in% c('H', 'E', 'SEM', 'PERC')) %>%
+  group_by(Effect, Subject, Hemisphere) %>% 
+  summarize(EffectSize = mean(EffectSize))
+y.mean$Effect <- factor(y.mean$Effect, levels =c('H', 'E', 'SEM', 'PERC'))
+
+plot_md = ggplot(y.mean)+
+  stat_summary(mapping = aes(x = "MD System", y = EffectSize, fill=Effect), 
+               geom = 'col', fun.y = 'mean', color = 'black', alpha=0.85,
+               position='dodge')+
+  geom_point(mapping = aes(x = "MD System", y = EffectSize, fill=Effect),
+             shape=21, size=0.75, alpha=0.5, 
+             position=position_jitterdodge(jitter.width=0.1, jitter.height=0,
+                                           dodge.width = 0.9),
+             show.legend = FALSE)+
+  stat_summary(mapping = aes(x = "MD System", y = EffectSize, group=Effect), 
+               geom = 'errorbar', fun.data = 'mean_se', 
+               color = 'black', size = 1.5, width=0,
+               position = position_dodge(width=0.9))+
+  geom_hline(yintercept=0, size=0.5, color='gray40')+
+  facet_grid(Hemisphere~.)+
+  scale_fill_manual(values=c('#0830D0', '#99A5D8', '#0A730A', '#98CD92'),
+                    labels=c('HardWM', 'EasyWM', 'SEM Categories', 'PERC Categories'))+
+  scale_color_manual(values=c('#0830D0', '#99A5D8', '#0A730A', '#98CD92'))+
+  labs(x = NULL, y = "Effect size", fill=NULL)+ 
+  coord_cartesian(ylim=c(-0.5,5.5))+
+  theme_classic()+ 
+  theme(axis.title.y = element_text(size=axis_title_size, face='bold'), 
+        axis.text.y = element_text(size=axis_text_size), 
+        axis.text.x = element_text(size=axis_text_size), 
+        strip.text.y = element_blank(),
+        legend.position='none') 
+
+plot_md
+```
+
+
+
+### MD by ROI
+
+```{r spatialWM plot, echo=FALSE}
+
+dat.MDloc.plot <- dat.MDloc
+dat.MDloc.plot$Effect = factor(dat.MDloc.plot$Effect, levels=c('H', 'E', 'SEM', 'PERC'))
+
+plot_md.ROI = ggplot(dat.MDloc.plot %>% 
+                          filter(Effect %in% c('H', 'E', 'SEM', 'PERC')))+
+  stat_summary(mapping = aes(x = ROI, y = EffectSize, fill = Effect), 
+               geom = 'col', fun = 'mean', color = 'black', 
+               width=0.75, position='dodge', alpha=0.85)+
+  geom_point(mapping = aes(x = ROI, y = EffectSize, fill = Effect),
+             shape=21, size=0.5, alpha=0.4, 
+             position=position_jitterdodge(jitter.width=0.15, jitter.height=0, dodge.width=.75),
+             show.legend = FALSE)+
+  stat_summary(mapping = aes(x = ROI, y = EffectSize, group=Effect), 
+               geom = 'errorbar', fun.data = 'mean_se',  position=position_dodge(.75), 
+               color = 'black',size = 1, width=0)+
+  geom_hline(yintercept=0, size=0.5, color='gray40')+
+  facet_grid(Hemisphere~.)+
+  labs(x=NULL, y=NULL)+
+  coord_cartesian(ylim=c(-1,9))+
+  scale_fill_manual(values=c('#0830D0', '#99A5D8', '#0A730A', '#98CD92'),
+                    labels=c('Hard WM', 'Easy WM', 'Semantic Cat.', 'Perceptual Cat.'))+
+  scale_color_manual(values=c('#0830D0', '#99A5D8', '#0A730A', '#98CD92'))+
+  theme_classic()+
+  theme(axis.text.y = element_text(size=axis_text_size), 
+        axis.text.x = element_text(size=axis_text_size, angle=45, hjust=1),
+        strip.text = element_text(size=facet_label_size),
+        legend.title = element_text(size=legend_size, face='bold'),
+        legend.text = element_text(size=legend_size)) 
+
+plot_md.ROI
+```
+
+# Language
+
+## Language stats
+
+### General
+
+```{r language stats}
+# specify hypotheses and corresponding contrasts
+#h = hypr(~0.5*(SEM+PERC), PERC~SEM, S~0.5*(PERC+SEM), N~0.5*(PERC+SEM), levels=c('S', 'N', 'PERC', 'SEM'))
+h = hypr(~SEM, PERC~SEM, S~SEM, N~SEM, levels=c('S', 'N', 'PERC', 'SEM'))
+contrasts(dat.langloc$Effect) = contr.hypothesis(h)
+colnames(attr(dat.langloc$Effect, 'contrasts')) = c('PERC-SEM', 'S-SEM', 'N-SEM')
+
+contrasts(dat.langloc$Effect)
+
+m1 = lmer(EffectSize ~ Effect + (1 | ROI) + (1 | Subject), data=dat.langloc, REML=FALSE)
+summary(m1)
+```
+
+### By ROI
+
+```{r lang ROI stats, echo=FALSE}
+# Contrast effects in each ROI, FDR-corrected
+library(scales)
+
+model.dfs <- list()
+index = 1
+
+# run a regression model for each ROI & save the results as a df
+for (h in c('LH', 'RH')) {
+  for (roi in unique(dat.langloc$ROI)) {
+    data.roi = dat.langloc %>% filter(ROI==roi) %>% filter(Hemisphere==h)
+    model = lmer(EffectSize ~ Effect + (1|Subject), data=data.roi, REML=FALSE)
+    model.df = data.frame(c('Intercept', 'PERC-SEM', 'S-SEM', 'N-SEM'),
+                          summary(model)$coefficients[,'Estimate'],
+                          summary(model)$coefficients[,'Pr(>|t|)']) %>% 
+      mutate(ROI=roi, Hemisphere=h)
+    names(model.df) = c('Regression Term', 'Beta', 'p.value', 'ROI', 'Hemisphere')
+    model.df = model.df[,c(4,5,1,2,3)] %>%
+      mutate(Beta = round(Beta, 2))
+    model.dfs[[index]] <- model.df
+    index = index+1
+  }
+}
+
+stats_df = do.call("rbind", model.dfs)
+# FDR correction
+stats_df = stats_df %>%
+  group_by(`Regression Term`) %>%
+  mutate(p.value = p.adjust(p.value, method="fdr")) %>%
+  mutate(p.value.FDR = ifelse(p.value>=0.001, as.character(round(p.value, 3)), '<.001')) %>%
+  mutate(pLabel = ifelse(p.value<0.001, "***", 
+                       ifelse(p.value<0.01, "**",
+                              ifelse(p.value<0.05, "*", ""))))
+stats_df$p.value = NULL
+
+write.table(stats_df, file = "lang ROI stats.csv", sep = ",", quote = FALSE, row.names = F)
+```
+
+## Language plots
+
+### Lang by hemisphere
+
+```{r language en-sent, echo=FALSE}
+y.mean <- dat.langloc %>% 
+  filter(Effect %in% c('S', 'N', 'SEM', 'PERC')) %>%
+  group_by(Effect, Subject, Hemisphere) %>% 
+  summarize(EffectSize = mean(EffectSize))
+y.mean$Effect <- factor(y.mean$Effect, levels =c('S', 'N', 'SEM', 'PERC'))
+
+plot_lang = ggplot(y.mean)+
+  stat_summary(mapping = aes(x = 'Language System', y = EffectSize, fill=Effect), 
+               geom = 'col', fun = 'mean', color = 'black', alpha=.85,
+               position='dodge')+
+  geom_point(mapping = aes(x = 'Language System', y = EffectSize, fill=Effect),
+             shape=21, size=1, alpha=0.75, 
+             position=position_jitterdodge(jitter.width=0.1, jitter.height=0,
+                                           dodge.width = 0.9),
+             show.legend = FALSE)+
+  stat_summary(mapping = aes(x = 'Language System', y = EffectSize, group=Effect), 
+               geom = 'errorbar', fun.data = 'mean_se', 
+               color = 'black', size = 1.5, width=0,
+               position = position_dodge(width=0.9))+
+  geom_hline(yintercept=0, size=0.5, color='gray40')+
+  facet_grid(Hemisphere~.)+
+  scale_fill_manual(values=c('#990000', '#CA6D6D', '#0A730A', '#98CD92'))+
+  scale_color_manual(values=c('#0830D0', '#99A5D8', '#0A730A', '#98CD92'))+
+  labs(x = NULL, y = "Effect size", fill=NULL)+ 
+  theme_classic()+ 
+  theme(axis.title.y = element_text(size=axis_title_size, face='bold'), 
+        axis.text.y = element_text(size=axis_text_size), 
+        axis.text.x = element_text(size=axis_text_size), 
+        strip.text.y = element_blank(),
+        legend.position='none') 
+  
+plot_lang
+```
+
+### Lang by ROI
+
+```{r plot lang by ROI}
+
+dat.langloc.plot <- dat.langloc
+dat.langloc.plot$Effect = factor(dat.langloc.plot$Effect, levels=c('S', 'N', 'SEM', 'PERC'))
+
+plot_lang.ROI = ggplot(dat.langloc.plot)+
+  stat_summary(mapping = aes(x = ROI, y = EffectSize, fill = Effect), 
+               geom = 'col', fun = 'mean', color = 'black', 
+               width=0.75, position='dodge', alpha=0.85)+
+  geom_point(mapping = aes(x = ROI, y = EffectSize, fill = Effect),
+             shape=21, size=0.5, alpha=0.4, 
+             position=position_jitterdodge(jitter.width=0.1, jitter.height=0, dodge.width=.75),
+             show.legend = FALSE)+
+  stat_summary(mapping = aes(x = ROI, y = EffectSize, group=Effect), 
+               geom = 'errorbar', fun.data = 'mean_se',  position=position_dodge(.75), 
+               color = 'black',size = 1, width=0)+
+  geom_hline(yintercept=0, size=0.5, color='gray40')+
+  facet_grid(Hemisphere~.)+
+  labs(x=NULL, y=NULL)+
+  coord_cartesian(ylim=c(-1,5))+
+  scale_fill_manual(values=c('#990000', '#CA6D6D', '#0A730A', '#98CD92'),
+                    labels=c('Sentences', 'Nonwords', 'Semantic Cat.', 'Perceptual Cat.'))+
+  scale_color_manual(values=c('#0830D0', '#99A5D8', '#0A730A', '#98CD92'))+
+  theme_classic()+
+  theme(axis.text.y = element_text(size=axis_text_size), 
+        axis.text.x = element_text(size=axis_text_size),
+        strip.text = element_text(size=facet_label_size),
+        legend.title = element_text(size=legend_size, face='bold'),
+        legend.text = element_text(size=legend_size)) 
+
+plot_lang.ROI
+```
+
+# COMBINE ALL
+
+```{r big figure, echo=FALSE}
+
+(plot_lang | plot_lang.ROI | plot_layout(widths = c(1,4)))
+ggsave("Plots/lang_plot_semperc.png", height=plot_height_2rows, width=plot_width, units="cm")
+```
+
+```{r big figure 2, echo=FALSE}
+
+(plot_md | plot_md.ROI | plot_layout(widths = c(1,4)))
+ggsave("Plots/MD_plot_semperc.png", height=plot_height_2rows, width=plot_width, units="cm")
+```
+
