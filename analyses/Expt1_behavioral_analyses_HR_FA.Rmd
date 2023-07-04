@@ -149,7 +149,7 @@ write.csv(modelcomp.HR, 'Tables/Supplementary/E1_ModelComparison_HitRate.csv')
 
 ```{r plot HR, echo=FALSE}
 dat2plot.HR = dat.HR %>%
-  mutate(Group=factor(Group, levels=c('Neurotypical', 'Parkinsons', 'Aphasia'))) %>%
+  mutate(Group=factor(Group, levels=c('Neurotypical','Aphasia', 'Parkinsons'))) %>%
   group_by(Group,Dimension,Participant,BNT) %>%
   summarize(HitRate=mean(HitRate))
 
@@ -163,7 +163,7 @@ e1_hr = dat2plot.HR %>%
                position=position_dodge(width=0.5))+
   coord_cartesian(ylim=c(0.5,1))+
   labs(y='Hit Rate', x=NULL)+
-  scale_x_discrete(labels=c("Neurotypical", "PD", "Aphasia"))+
+  scale_x_discrete(labels=c("Neurotypical","Aphasia", "PD"))+
   scale_fill_manual(values=c('#0A730A', '#98CD92'))+
   theme_classic()+
   theme(axis.title.y=element_text(size=14),
@@ -252,7 +252,7 @@ write.csv(modelcomp.FA, 'Tables/Supplementary/E1_ModelComparison_FalseAlarm.csv'
 ## Plots
 ```{r plot FalseAlarm, echo=FALSE}
 dat2plot.FA = dat.FA %>%
-  mutate(Group=factor(Group, levels=c('Neurotypical', 'Parkinsons', 'Aphasia'))) %>%
+  mutate(Group=factor(Group, levels=c('Neurotypical','Aphasia', 'Parkinsons'))) %>%
   group_by(Group,Dimension,Participant,BNT) %>%
   summarize(FalseAlarm=mean(FalseAlarm))
 
@@ -265,7 +265,7 @@ e1_fa = ggplot(data=dat2plot.FA, mapping=aes(x=Group, y=FalseAlarm, fill=Dimensi
                position=position_dodge(width=0.5))+
   coord_cartesian(ylim=c(0,0.11))+
   labs(y='False Alarm Rate', x=NULL)+
-  scale_x_discrete(labels=c("Neurotypical", "PD", "Aphasia"))+
+  scale_x_discrete(labels=c("Neurotypical","Aphasia", "PD"))+
   scale_fill_manual(values=c('#0A730A', '#98CD92'))+
   scale_y_continuous(breaks=c(0, 0.03, 0.06, 0.09))+
   theme_classic()+

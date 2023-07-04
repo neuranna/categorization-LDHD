@@ -34,45 +34,53 @@ colnames(attr(dat$Dimension, "contrasts")) = "LD>HD"
 dat$Participant = factor(dat$Participant) 
 ```
 
+## Add alternative category type labels
+```{r}
+category_info = read.csv('../categories_recoded.csv')
+dat = merge(dat, category_info)
+contrasts(dat$sem_vs_perc) = c(-0.5, 0.5)
+colnames(attr(dat$sem_vs_perc, "contrasts")) = "SEM>PERC"
+```
+
 # Summary 
 
 ```{r data means, echo=FALSE}
-# Dimension only
-dat.summ.acc.dim = dat %>% group_by(Group, Dimension, Participant) %>% 
+# sem_vs_perc only
+dat.summ.acc.dim = dat %>% group_by(Group, sem_vs_perc, Participant) %>% 
   summarize(Accuracy = mean(Accuracy)) %>%
-  group_by(Dimension) %>%
+  group_by(sem_vs_perc) %>%
   summarize(meanAccuracy = mean(Accuracy),
             sdAccuracy = sd(Accuracy))
 
-dat.summ.RT.dim = dat %>% group_by(Group, Dimension, Participant) %>% 
+dat.summ.RT.dim = dat %>% group_by(Group, sem_vs_perc, Participant) %>% 
   summarize(Response.Time = mean(Response.Time)) %>%
-  group_by(Dimension) %>%
+  group_by(sem_vs_perc) %>%
   summarize(meanRT = mean(Response.Time),
             sdRT = sd(Response.Time))
 
 # Group only
-dat.summ.acc.group = dat %>% group_by(Group, Dimension, Participant) %>% 
+dat.summ.acc.group = dat %>% group_by(Group, sem_vs_perc, Participant) %>% 
   summarize(Accuracy = mean(Accuracy)) %>%
   group_by(Group) %>%
   summarize(meanAccuracy = mean(Accuracy),
             sdAccuracy = sd(Accuracy))
 
-dat.summ.RT.group = dat %>% group_by(Group, Dimension, Participant) %>% 
+dat.summ.RT.group = dat %>% group_by(Group, sem_vs_perc, Participant) %>% 
   summarize(Response.Time = mean(Response.Time)) %>%
   group_by(Group) %>%
   summarize(meanRT = mean(Response.Time),
             sdRT = sd(Response.Time))
 
-# by group and dimension 
-dat.summ.acc = dat %>% group_by(Group, Dimension, Participant) %>% 
+# by group and sem_vs_perc 
+dat.summ.acc = dat %>% group_by(Group, sem_vs_perc, Participant) %>% 
   summarize(Accuracy = mean(Accuracy)) %>%
-  group_by(Group, Dimension) %>%
+  group_by(Group, sem_vs_perc) %>%
   summarize(meanAccuracy = mean(Accuracy),
             sdAccuracy = sd(Accuracy))
 
-dat.summ.RT = dat %>% group_by(Group, Dimension, Participant) %>% 
+dat.summ.RT = dat %>% group_by(Group, sem_vs_perc, Participant) %>% 
   summarize(Response.Time = mean(Response.Time)) %>%
-  group_by(Group, Dimension) %>%
+  group_by(Group, sem_vs_perc) %>%
   summarize(meanRT = mean(Response.Time),
             sdRT = sd(Response.Time))
 
@@ -80,29 +88,29 @@ dat.summ.RT = dat %>% group_by(Group, Dimension, Participant) %>%
 
 dat.summ.acc.participant= dat %>% 
   filter(Group=="Aphasia") %>%
-  group_by(Participant, Dimension, BNT) %>%
+  group_by(Participant, sem_vs_perc, BNT) %>%
   summarize(meanAccuracyParticipant = mean(Accuracy)) %>%
   inner_join(dat.summ.acc %>% filter(Group=="Neurotypical")) %>%
   mutate(SDdistance= (meanAccuracyParticipant - meanAccuracy) / sdAccuracy)
 
 dat.summ.RT.participant= dat %>% 
   filter(Group=="Aphasia") %>%
-  group_by(Participant, Dimension, BNT) %>%
+  group_by(Participant, sem_vs_perc, BNT) %>%
   summarize(meanRTParticipant = mean(Response.Time)) %>%
   inner_join(dat.summ.RT %>% filter(Group=="Neurotypical")) %>%
   mutate(SDdistance= (meanRTParticipant - meanRT) / sdRT)
 
-write.csv(dat.summ.acc, 'Tables/E2_data_summary.csv')
+write.csv(dat.summ.acc, 'Tables/Supplementary/semperc/E2_data_summary.csv')
 ```
 
 # Accuracy
 ## Stats
 ### By group
 
-We are aiming to estimate the effect of dimensionality on the Accuracy / False Alarm Rate / Response Time. We are treating category and participant as random effects. 
+We are aiming to estimate the effect of category type on the Accuracy / False Alarm Rate / Response Time. We are treating category and participant as random effects. 
 
 ```{r stats acc, echo=FALSE}
-m.acc = glmer(Accuracy ~ Dimension*Group + (1|Category) + (1|Participant), 
+m.acc = glmer(Accuracy ~ sem_vs_perc*Group + (1|Category) + (1|Participant), 
                       family = binomial(), 
                       data = dat)
 summary(m.acc)
@@ -110,10 +118,10 @@ summary(m.acc)
 
 Follow-up comparisons:
 ```{r stats pairwise acc, echo=FALSE}
-d = emmeans(m.acc, ~ Dimension) %>% 
+d = emmeans(m.acc, ~ sem_vs_perc) %>% 
     contrast("pairwise") 
 
-emmeans(m.acc, ~ Group * Dimension) %>% 
+emmeans(m.acc, ~ Group * sem_vs_perc) %>% 
     contrast("pairwise", by = "Group") %>% 
     rbind(d) %>%
     summary(by=NULL, adjust="tukey")
@@ -122,11 +130,11 @@ emmeans(m.acc, ~ Group * Dimension) %>%
 ### By BNT
 
 ```{r stats edu, echo=FALSE}
-m.acc.edu = glmer(Accuracy ~ Dimension*Group + Education + (1|Category) + (1|Participant), 
+m.acc.edu = glmer(Accuracy ~ sem_vs_perc*Group + Education + (1|Category) + (1|Participant), 
                       family = binomial(), 
                       data = dat, control = glmerControl(optimizer="bobyqa",optCtrl=list(maxfun=2e5)))
 
-m.acc.edu.BNT = glmer(Accuracy ~ Education + cBNT*Dimension + (1|Category) + (1|Participant), 
+m.acc.edu.BNT = glmer(Accuracy ~ Education + cBNT*sem_vs_perc + (1|Category) + (1|Participant), 
                       family = binomial(), data = dat, 
                      control = glmerControl(optimizer="bobyqa",optCtrl=list(maxfun=2e5)))
 summary(m.acc.edu.BNT)
@@ -137,7 +145,7 @@ summary(m.acc.edu.BNT)
 modelcomp.acc = data.frame(
   Model=c('Group x Dim', 'Group x Dim + Edu', 'BNT x Dim + Edu'),
   AIC=c(AIC(m.acc), AIC(m.acc.edu), AIC(m.acc.edu.BNT)))
-write.csv(modelcomp.acc, 'Tables/E2_ModelComparison_Accuracy.csv')
+write.csv(modelcomp.acc, 'Tables/Supplementary/semperc/E2_ModelComparison_Accuracy.csv')
 ```
 
 ## Plots
@@ -145,10 +153,10 @@ write.csv(modelcomp.acc, 'Tables/E2_ModelComparison_Accuracy.csv')
 ```{r plot acc, echo=FALSE}
 dat2plot.acc = dat %>%
   mutate(Group=factor(Group, levels=c('Neurotypical', 'Aphasia', 'Parkinsons'))) %>%
-  group_by(Group,Dimension,Participant,BNT) %>%
+  group_by(Group,sem_vs_perc,Participant,BNT) %>%
   summarize(Accuracy=mean(Accuracy))
 
-e2_acc = ggplot(data=dat2plot.acc, mapping=aes(x=Group, y=Accuracy, fill=Dimension))+
+e2_acc = ggplot(data=dat2plot.acc, mapping=aes(x=Group, y=Accuracy, fill=sem_vs_perc))+
   stat_summary(geom = 'col', fun.y = 'mean', width=0.5, 
                position='dodge', show.legend=FALSE)+
   geom_point(position=position_jitterdodge(dodge.width=0.5, jitter.height=0, jitter.width=0.1),
@@ -169,9 +177,9 @@ e2_acc
 
 ```{r plot BNT, echo=FALSE}
 e2_acc_bnt = ggplot(data=dat2plot.acc)+
-  geom_point(mapping=aes(x=BNT, y=Accuracy, fill=Dimension),
+  geom_point(mapping=aes(x=BNT, y=Accuracy, fill=sem_vs_perc),
             shape=21, size=1.5, color='darkgray', show.legend=FALSE)+
-  geom_smooth(method='lm', mapping=aes(x=BNT, y=Accuracy, color=Dimension),
+  geom_smooth(method='lm', mapping=aes(x=BNT, y=Accuracy, color=sem_vs_perc),
               alpha=0.2, size=1.5, show.legend=FALSE)+
   scale_color_manual(values=c('#0A730A', '#98CD92'))+
   scale_fill_manual(values=c('#0A730A', '#98CD92'))+
@@ -192,17 +200,17 @@ e2_acc_bnt
 
 ### By Group
 ```{r stats RT, echo=FALSE}
-m.RT = lmer(Response.Time ~ Dimension*Group + (1|Category) + (1|Participant), 
+m.RT = lmer(Response.Time ~ sem_vs_perc*Group + (1|Category) + (1|Participant), 
             data = dat, REML = FALSE)
 summary(m.RT)
 ```
 
 ####Follow-up comparisons
 ```{r stats pairwise FA, echo=FALSE}
-d = emmeans(m.RT, ~ Dimension) %>% 
+d = emmeans(m.RT, ~ sem_vs_perc) %>% 
     contrast("pairwise") 
 
-emmeans(m.RT, ~ Group * Dimension) %>% 
+emmeans(m.RT, ~ Group * sem_vs_perc) %>% 
     contrast("pairwise", by = "Group") %>% 
     rbind(d) %>%
     summary(by=NULL, adjust="tukey")
@@ -211,9 +219,9 @@ emmeans(m.RT, ~ Group * Dimension) %>%
 ### By BNT
 
 ```{r stats FA BNT, echo=FALSE}
-m.RT.edu = lmer(Response.Time ~ Dimension*Group + Education + (1|Category) + (1|Participant), 
+m.RT.edu = lmer(Response.Time ~ sem_vs_perc*Group + Education + (1|Category) + (1|Participant), 
             data = dat, REML = FALSE)
-m.RT.edu.BNT = lmer(Response.Time ~ Education + cBNT*Dimension + (1|Category) + (1|Participant), 
+m.RT.edu.BNT = lmer(Response.Time ~ Education + cBNT*sem_vs_perc + (1|Category) + (1|Participant), 
             data = dat, REML = FALSE)
 
 summary(m.RT.edu.BNT)
@@ -225,7 +233,7 @@ summary(m.RT.edu.BNT)
 modelcomp.RT = data.frame(
   Model=c('Group x Dim', 'Group x Dim + Edu', 'BNT x Dim + Edu'),
   AIC=c(AIC(m.RT), AIC(m.RT.edu), AIC(m.RT.edu.BNT)))
-write.csv(modelcomp.RT, 'Tables/E2_ModelComparison_ResponseTime.csv')
+write.csv(modelcomp.RT, 'Tables/Supplementary/semperc/E2_ModelComparison_ResponseTime.csv')
 ```
 
 ## Plots
@@ -233,10 +241,10 @@ write.csv(modelcomp.RT, 'Tables/E2_ModelComparison_ResponseTime.csv')
 ```{r plot FalseAlarm, echo=FALSE}
 dat2plot.RT = dat %>%
   mutate(Group=factor(Group, levels=c('Neurotypical', 'Aphasia', 'Parkinsons'))) %>%
-  group_by(Group,Dimension,Participant,BNT) %>%
+  group_by(Group,sem_vs_perc,Participant,BNT) %>%
   summarize(Response.Time=mean(Response.Time))
 
-e2_rt = ggplot(data=dat2plot.RT, mapping=aes(x=Group, y=Response.Time, fill=Dimension))+
+e2_rt = ggplot(data=dat2plot.RT, mapping=aes(x=Group, y=Response.Time, fill=sem_vs_perc))+
   stat_summary(geom = 'col', fun.y = 'mean', width=0.5, 
                position='dodge')+
   geom_point(position=position_jitterdodge(dodge.width=0.5, jitter.height=0, jitter.width=0.1),
@@ -244,7 +252,7 @@ e2_rt = ggplot(data=dat2plot.RT, mapping=aes(x=Group, y=Response.Time, fill=Dime
   stat_summary(geom = 'errorbar', fun.data = 'mean_se', width=0.15, size=0.75,
                position=position_dodge(width=0.5))+
   #coord_cartesian(ylim=c(0,0.1))+
-  labs(y='Response Time (s)', x=NULL)+
+  labs(y='Response Time (s)', x=NULL, fill='Category type')+
   scale_x_discrete(labels=c("Neurotypical", "Aphasia", "PD"))+
   scale_fill_manual(values=c('#0A730A', '#98CD92'))+
   theme_classic()+
@@ -257,13 +265,13 @@ e2_rt
 
 ```{r plot BNT, echo=FALSE}
 e2_rt_bnt = ggplot(data=dat2plot.RT)+
-  geom_point(mapping=aes(x=BNT, y=Response.Time, fill=Dimension),
+  geom_point(mapping=aes(x=BNT, y=Response.Time, fill=sem_vs_perc),
             shape=21, size=1.5, color='darkgray', show.legend=FALSE)+
-  geom_smooth(method='lm', mapping=aes(x=BNT, y=Response.Time, color=Dimension),
+  geom_smooth(method='lm', mapping=aes(x=BNT, y=Response.Time, color=sem_vs_perc),
               alpha=0.2, size=1.5)+
   scale_color_manual(values=c('#0A730A', '#98CD92'))+
   scale_fill_manual(values=c('#0A730A', '#98CD92'))+
-  labs(y='Response Time (s)')+
+  labs(y='Response Time (s)', color='Category type')+
   #coord_cartesian(ylim=c(0,65))+
   theme_classic()+
   theme(axis.title.x=element_text(size=14),
@@ -286,6 +294,6 @@ e2_rt_bnt
   (e2_acc_bnt |plot_spacer() |e2_rt_bnt |
      plot_layout(widths=c(1,0.1,1))) /
   plot_layout(heights=c(1,0.1,1))
-ggsave('Plots/E2_results_acc_RT.png', width=25, height=20, units='cm')
+ggsave('Plots/Supplementary/semperc/E2_results_acc_RT.png', width=25, height=20, units='cm')
 ```
 
