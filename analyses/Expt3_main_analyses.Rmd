@@ -23,14 +23,14 @@ library(hypr)
 # Setup
 ```{r load and prepare data, echo=FALSE}
 # load data
-dat.langloc.lang <- read.csv('Expt3_neuro_data/LHlang_langlocSN_langlocSN.csv')
-dat.langloc.cat <- read.csv('Expt3_neuro_data/LHlang_langlocSN_Categorization.csv')
-dat.MDloc.MD <- read.csv('Expt3_neuro_data/MD_spatialWM_spatialWM.csv')
-dat.MDloc.cat <- read.csv('Expt3_neuro_data/MD_spatialWM_Categorization.csv')
-dat.MDloc.lang <- read.csv('Expt3_neuro_data/MD_spatialWM_langlocSN.csv')
-dat.cat.cat <- read.csv('Expt3_neuro_data/Catparcels_categorization_categorization.csv')
-dat.cat.lang <- read.csv('Expt3_neuro_data/Catparcels_categorization_langlocSN.csv')
-dat.cat.MD <- read.csv('Expt3_neuro_data/Catparcels_categorization_spatialFIN.csv')
+dat.langloc.lang <- read.csv('../data/Expt3_neuro_data/LHlang_langlocSN_langlocSN.csv')
+dat.langloc.cat <- read.csv('../data/Expt3_neuro_data/LHlang_langlocSN_Categorization.csv')
+dat.MDloc.MD <- read.csv('../data/Expt3_neuro_data/MD_spatialWM_spatialWM.csv')
+dat.MDloc.cat <- read.csv('../data/Expt3_neuro_data/MD_spatialWM_Categorization.csv')
+dat.MDloc.lang <- read.csv('../data/Expt3_neuro_data/MD_spatialWM_langlocSN.csv')
+dat.cat.cat <- read.csv('../data/Expt3_neuro_data/Catparcels_categorization_categorization.csv')
+dat.cat.lang <- read.csv('../data/Expt3_neuro_data/Catparcels_categorization_langlocSN.csv')
+dat.cat.MD <- read.csv('../data/Expt3_neuro_data/Catparcels_categorization_spatialFIN.csv')
 
 # combine
 dat.langloc <- rbind(dat.langloc.lang, dat.langloc.cat)
@@ -460,13 +460,17 @@ plot_cat.ROI
 
 (plot_lang | plot_spacer() | plot_lang.ROI | plot_layout(widths = c(1,0.1,2.5)))
 ggsave("Plots/lang_plot.png", height=8, width=24, units="cm")
+ggsave("Plots/lang_plot.eps", height=8, width=24, units="cm")
 ```
 
 ```{r big figure 2, echo=FALSE}
 
 (plot_md.LH | plot_spacer() | plot_md.ROI.LH | plot_layout(widths = c(1,0.1,2.5)))
 ggsave("Plots/MD_plot_LH.png", height=8, width=24, units="cm")
+ggsave("Plots/MD_plot_LH.eps", height=8, width=24, units="cm")
+
 (plot_md.RH | plot_spacer() | plot_md.ROI.RH | plot_layout(widths = c(1,0.1,2.5)))
 ggsave("Plots/MD_plot_RH.png", height=8, width=24, units="cm")
+ggsave("Plots/MD_plot_RH.eps", height=8, width=24, units="cm")
 ```
 

@@ -1,0 +1,25 @@
+ROI,Regression Term,Beta,p.value.FDR
+PostTemp,Intercept,0.27,0.094
+PostTemp,LD-HD,0.1,0.932
+PostTemp,S-LDHD,1.81,<.001
+PostTemp,N-LDHD,0.26,0.114
+AntTemp,Intercept,-0.02,0.76
+AntTemp,LD-HD,-0.08,0.932
+AntTemp,S-LDHD,1.52,<.001
+AntTemp,N-LDHD,0.22,0.114
+AngG,Intercept,0.24,0.165
+AngG,LD-HD,-0.3,0.575
+AngG,S-LDHD,0.57,<.001
+AngG,N-LDHD,-0.34,0.086
+IFG,Intercept,0.9,<.001
+IFG,LD-HD,0.02,0.932
+IFG,S-LDHD,1.41,<.001
+IFG,N-LDHD,-0.15,0.51
+MFG,Intercept,0.63,0.005
+MFG,LD-HD,0.11,0.932
+MFG,S-LDHD,2.41,<.001
+MFG,N-LDHD,0.75,0.031
+IFGorb,Intercept,0.48,0.005
+IFGorb,LD-HD,0.04,0.932
+IFGorb,S-LDHD,1.21,<.001
+IFGorb,N-LDHD,0.02,0.905

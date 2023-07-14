@@ -287,5 +287,6 @@ e2_rt_bnt
      plot_layout(widths=c(1,0.1,1))) /
   plot_layout(heights=c(1,0.1,1))
 ggsave('Plots/E2_results_acc_RT.png', width=25, height=20, units='cm')
+ggsave('Plots/E2_results_acc_RT.eps', width=25, height=20, units='cm')
 ```
 
